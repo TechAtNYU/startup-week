@@ -5,11 +5,29 @@
 		font-size: @bump;
 	}
 	.intro {
-		width: 75%;
+		//width: 75%;
+	}
+	header.main, .gradient {
+		height: 32em;
 	}
 	header.main {
-		height: 32em;
 		background-position: center bottom;
+	
+		.icon-techatnyulogo {
+			font-size: 22em;
+			margin: auto;
+			//position: absolute;
+		}
+	
+		.site {
+			.tagline {
+				max-height: 32em;
+
+				.copy {
+					margin-top: 6em;
+				}
+			}
+		}
 	}
 }
 @media only screen and (max-width: 70em) {
@@ -25,7 +43,7 @@
 	.post, .post-header, .posts {
 		font-size: @bump * .85;
 	}
-	header.main {
+	header.main, .gradient {
 		height: 20em;
 	}
 }
@@ -33,19 +51,21 @@
 	.site {
 		width: 90%;
 		max-width: 45em;
+		font-size: .85em;
 	}
-	header.main {
-		height: 10em;
+	header.main, .gradient {
+		height: 15em;
 	}
 }
 @media only screen and (max-width: 40em) {
-	header.main {
+	header.main, .gradient {
 		height: 10em;
 	}
 	.site {
 		padding: 1em;
 		width: 100%;
 		max-width: 40em;
+		font-size: .75em;
 	}
 	.posts {
 		h2 {

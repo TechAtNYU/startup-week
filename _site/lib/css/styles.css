@@ -1,3 +1,41 @@
+@font-face {
+  font-family: 'techatnyu';
+  src: url('/lib/fonts/techatnyu.eot');
+  src: url('/lib/fonts/techatnyu.eot?#iefix') format('embedded-opentype'), url('/lib/fonts/techatnyu.woff') format('woff'), url('/lib/fonts/techatnyu.ttf') format('truetype'), url('/lib/fonts/techatnyu.svg#techatnyu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'techatnyu';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-techatnyulogo {
+  font-family: 'techatnyu';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-techatnyulogo:before {
+  content: "\e000";
+}
 body {
   font: 1em 'Open Sans', sans-serif;
   font-weight: normal;
@@ -81,9 +119,6 @@ a:hover {
   min-height: 30em;
   padding: 0 0 2em;
 }
-.intro {
-  margin: auto;
-}
 li {
   list-style: none;
 }
@@ -93,9 +128,46 @@ hr {
   background: #ccc;
 }
 header.main {
-  background-color: #57068c;
+  background-color: black;
   background-image: url(/lib/img/photo.jpg);
   background-repeat: no-repeat;
+}
+header.main .gradient {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.85)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* Opera 12+ */
+
+  background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* IE10+ */
+
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+  position: absolute;
+  width: 100%;
+}
+header.main .site .icon-techatnyulogo {
+  font-size: 15em;
+  color: white;
+}
+header.main .site .tagline {
+  margin: 0 auto;
+  color: white;
+  position: relative;
+}
+header.main .site .tagline h1 {
+  color: red;
 }
 li ul {
   border-bottom: 1px solid #cccccc;
@@ -110,9 +182,19 @@ li ul li {
   width: 24%;
   float: left;
   line-height: 1.25;
+  min-height: 11em;
+}
+li ul li:nth-child(3n - 1) img {
+  width: 8em;
+  height: 8em;
 }
 li ul li:nth-child(3n) {
   width: 50%;
+}
+li ul li:nth-child(3n):after {
+  content: '';
+  width: 100%;
+  display: inline-block;
 }
 .footer {
   margin: 0 auto;
@@ -134,12 +216,22 @@ li ul li:nth-child(3n) {
     width: 60%;
     font-size: 125%;
   }
-  .intro {
-    width: 75%;
+  header.main,
+  .gradient {
+    height: 32em;
   }
   header.main {
-    height: 32em;
     background-position: center bottom;
+  }
+  header.main .icon-techatnyulogo {
+    font-size: 22em;
+    margin: auto;
+  }
+  header.main .site .tagline {
+    max-height: 32em;
+  }
+  header.main .site .tagline .copy {
+    margin-top: 6em;
   }
 }
 @media only screen and (max-width: 70em) {
@@ -157,7 +249,8 @@ li ul li:nth-child(3n) {
   .posts {
     font-size: 106.25%;
   }
-  header.main {
+  header.main,
+  .gradient {
     height: 20em;
   }
 }
@@ -165,19 +258,23 @@ li ul li:nth-child(3n) {
   .site {
     width: 90%;
     max-width: 45em;
+    font-size: .85em;
   }
-  header.main {
-    height: 10em;
+  header.main,
+  .gradient {
+    height: 15em;
   }
 }
 @media only screen and (max-width: 40em) {
-  header.main {
+  header.main,
+  .gradient {
     height: 10em;
   }
   .site {
     padding: 1em;
     width: 100%;
     max-width: 40em;
+    font-size: .75em;
   }
   .posts h2 {
     padding: 1em;

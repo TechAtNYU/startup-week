@@ -20,9 +20,7 @@
 	min-height: 30em;
 	padding: 0 0 2em;
 }
-.intro {
-	margin: auto;
-}
+
 li {
 	list-style: none;
 }
@@ -32,10 +30,47 @@ hr {
 	background: #ccc;
 }
 
+
+
+
 header.main {
-	background-color: @nyu;
+	background-color: black;
 	background-image: url(/lib/img/photo.jpg);
 	background-repeat: no-repeat;
+	
+	
+	.gradient {
+		background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.85))); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		
+		position: absolute;
+		width: 100%;
+	}
+	
+	.site {
+		
+		.icon-techatnyulogo {
+			font-size: 15em;
+			color: white;
+		}
+		
+		.tagline {
+			margin: 0 auto;
+			color: white;
+			
+			position: relative;
+
+			h1 {
+				color: red;
+			}
+		}
+	}
+	
 }
 li {
 	ul {
@@ -50,15 +85,26 @@ li {
 			width: 24%;
 			float: left;
 			line-height: 1.25;
+			min-height: 11em;
 			&:first-child {
 				//background: green;
 			}
-			&:nth-child(2) {
-				//background: yellow;
+			&:nth-child(3n - 1) {
+				
+				img {
+					width: 8em;
+					height: 8em;
+				}
 			}
 			&:nth-child(3n) {
 				width: 50%;
 				//background: blue;
+				&:after {
+					content: '';
+					width: 100%;
+					display: inline-block;
+					
+				}
 			}
 		}
 	}

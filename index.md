@@ -77,7 +77,7 @@ title: tech@NYU Startup Week
 		Courant 109<br>
 		[RSVP](http://www.meetup.com/DemoDays/events/141789122/)
 	*	![Ian White](/lib/img/iwhite.jpg)
-	*	[Ian White](https://www.sailthru.com/company/) is the CTO and co-founder of Sailthru.
+	*	**2:30 - 3:00 PM**<br>[Ian White](https://www.sailthru.com/company/) is the CTO and co-founder of Sailthru.
 	*	
 	*	![DemoDays](/lib/img/code.jpg)
 	*	**3:00 - 5:00 PM**<br>

@@ -20,6 +20,9 @@
 	min-height: 30em;
 	padding: 0 0 2em;
 }
+.intro {
+	margin: auto;
+}
 li {
 	list-style: none;
 }
@@ -30,8 +33,9 @@ hr {
 }
 
 header.main {
-	background: url(http://placekitten.com/900/260) center top repeat-x;
-	height: 300px;
+	background-color: @nyu;
+	background-image: url(/lib/img/photo.jpg);
+	background-repeat: no-repeat;
 }
 li {
 	ul {
@@ -43,7 +47,7 @@ li {
 		border-bottom: 1px solid @grayLight;
 		li {
 			list-style: none !important;
-			width: 28%;
+			width: 24%;
 			float: left;
 			line-height: 1.25;
 			&:first-child {
@@ -52,7 +56,8 @@ li {
 			&:nth-child(2) {
 				//background: yellow;
 			}
-			&:nth-child(3) {
+			&:nth-child(3n) {
+				width: 50%;
 				//background: blue;
 			}
 		}

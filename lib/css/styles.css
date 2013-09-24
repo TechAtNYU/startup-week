@@ -81,6 +81,9 @@ a:hover {
   min-height: 30em;
   padding: 0 0 2em;
 }
+.intro {
+  margin: auto;
+}
 li {
   list-style: none;
 }
@@ -90,8 +93,9 @@ hr {
   background: #ccc;
 }
 header.main {
-  background: url(http://placekitten.com/900/260) center top repeat-x;
-  height: 300px;
+  background-color: #57068c;
+  background-image: url(/lib/img/photo.jpg);
+  background-repeat: no-repeat;
 }
 li ul {
   border-bottom: 1px solid #cccccc;
@@ -103,9 +107,12 @@ li ul:after {
 }
 li ul li {
   list-style: none !important;
-  width: 28%;
+  width: 24%;
   float: left;
   line-height: 1.25;
+}
+li ul li:nth-child(3n) {
+  width: 50%;
 }
 .footer {
   margin: 0 auto;
@@ -130,6 +137,15 @@ li ul li {
   .intro {
     width: 75%;
   }
+  header.main {
+    height: 32em;
+    background-position: center bottom;
+  }
+}
+@media only screen and (max-width: 70em) {
+  header.main {
+    background-position: center center;
+  }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
   .site {
@@ -141,14 +157,23 @@ li ul li {
   .posts {
     font-size: 106.25%;
   }
+  header.main {
+    height: 20em;
+  }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   .site {
     width: 90%;
     max-width: 45em;
   }
+  header.main {
+    height: 10em;
+  }
 }
 @media only screen and (max-width: 40em) {
+  header.main {
+    height: 10em;
+  }
   .site {
     padding: 1em;
     width: 100%;

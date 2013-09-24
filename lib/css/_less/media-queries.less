@@ -1,0 +1,37 @@
+@media only screen and (min-width: 70em) {
+	.site {
+		max-width: 50em;
+		width: 60%;
+		font-size: @bump;
+	}
+	.intro {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 50em) and (max-width: 70em) {
+	.site {
+		max-width: 45em;
+		width: 75%;
+	}
+	.post, .post-header, .posts {
+		font-size: @bump * .85;
+	}
+}
+@media only screen and (min-width:40em) and (max-width: 50em) {
+	.site {
+		width: 90%;
+		max-width: 45em;
+	}
+}
+@media only screen and (max-width: 40em) {
+	.site {
+		padding: 1em;
+		width: 100%;
+		max-width: 40em;
+	}
+	.posts {
+		h2 {
+			padding: 1em;
+		}
+	}
+}

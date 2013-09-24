@@ -1,0 +1,160 @@
+body {
+  font: 1em 'Open Sans', sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-style: italic;
+}
+.intro {
+  font-weight: lighter;
+}
+.intro p {
+  font-size: 1.25em;
+}
+hr {
+  clear: both;
+}
+ul + h5 {
+  margin-top: .5em;
+}
+p {
+  font-size: 100%;
+  line-height: 1.75;
+  margin-bottom: .5em;
+}
+a:link,
+a:visited,
+a:active {
+  color: #57068c;
+}
+a:hover {
+  color: #940aee;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection {
+  background: #57068c;
+  /* Safari */
+
+}
+::-moz-selection {
+  background: #57068c;
+  /* Firefox */
+
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.site {
+  margin: 0 auto;
+}
+.content {
+  min-height: 30em;
+  padding: 0 0 2em;
+}
+li {
+  list-style: none;
+}
+hr {
+  height: .05em;
+  border: none;
+  background: #ccc;
+}
+header.main {
+  background: url(http://placekitten.com/900/260) center top repeat-x;
+  height: 300px;
+}
+li ul {
+  border-bottom: 1px solid #cccccc;
+}
+li ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+li ul li {
+  list-style: none !important;
+  width: 28%;
+  float: left;
+  line-height: 1.25;
+}
+.footer {
+  margin: 0 auto;
+  margin-top: 2em;
+}
+.footer .contact {
+  float: left;
+  padding: .5em 0;
+  width: 33%;
+  min-width: 15em;
+}
+.footer .colophon {
+  clear: both;
+  text-align: right;
+}
+@media only screen and (min-width: 70em) {
+  .site {
+    max-width: 50em;
+    width: 60%;
+    font-size: 125%;
+  }
+  .intro {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 50em) and (max-width: 70em) {
+  .site {
+    max-width: 45em;
+    width: 75%;
+  }
+  .post,
+  .post-header,
+  .posts {
+    font-size: 106.25%;
+  }
+}
+@media only screen and (min-width: 40em) and (max-width: 50em) {
+  .site {
+    width: 90%;
+    max-width: 45em;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .site {
+    padding: 1em;
+    width: 100%;
+    max-width: 40em;
+  }
+  .posts h2 {
+    padding: 1em;
+  }
+}

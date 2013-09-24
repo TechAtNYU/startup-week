@@ -95,7 +95,7 @@ a:hover {
   color: #940aee;
 }
 .see {
-  text-align: right;
+  text-align: center;
 }
 * {
   margin: 0;
@@ -148,6 +148,9 @@ header.main {
 }
 header.main a {
   color: white;
+}
+header.main a:hover {
+  text-decoration: none;
 }
 header.main .gradient {
   background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
@@ -268,11 +271,11 @@ li ul li:nth-child(3n):after {
   header.main .icon-techatnyulogo {
     font-size: 20em;
     left: 10%;
-    margin-top: -0.15em;
+    margin-top: -0.075em;
     margin-left: -0.3em;
   }
   header.main .site .tagline .copy {
-    top: 6em;
+    top: 4.5em;
   }
 }
 @media only screen and (max-width: 70em) {
@@ -300,10 +303,10 @@ li ul li:nth-child(3n):after {
     height: 20em;
   }
   header.main .icon-techatnyulogo {
-    margin-top: -0.15em;
+    margin-top: -0.22em;
   }
   header.main .site .tagline .copy {
-    margin-top: 3em;
+    margin-top: 1.5em;
   }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
@@ -314,7 +317,7 @@ li ul li:nth-child(3n):after {
   }
   header.main,
   .gradient {
-    height: 15em;
+    height: 18em;
   }
   header.main .icon-techatnyulogo {
     margin-top: -0.2em;

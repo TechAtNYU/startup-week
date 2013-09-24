@@ -29,16 +29,17 @@ hr {
 	border: none;
 	background: #ccc;
 }
-
-
-
-
+.intro {
+	padding: 3em 0;
+}
 header.main {
 	background-color: black;
 	background-image: url(/lib/img/photo.jpg);
 	background-repeat: no-repeat;
 	
-	
+	a {
+		color: white;
+	}
 	.gradient {
 		background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%); /* FF3.6+ */
 		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.85))); /* Chrome,Safari4+ */
@@ -53,26 +54,49 @@ header.main {
 	}
 	
 	.site {
-		
-		.icon-techatnyulogo {
-			font-size: 15em;
-			color: white;
-		}
-		
 		.tagline {
 			margin: 0 auto;
 			color: white;
+			text-shadow: 3px 3px 10px rgba(0,0,0, .7);
 			
 			position: relative;
-
+			.icon-techatnyulogo {
+				color: white;
+				position: absolute;
+			}
+			.copy {
+				position: absolute;
+				top: 0;
+			}
 			h1 {
-				color: red;
+				color: #f36c2c;
+				font-style: italic;
+				font-weight: bold;
+			}
+		}
+	}
+	
+	.site {
+		.tagline {
+			max-width: 50em;
+			max-height: 32em;
+			left: 50%;
+			margin-left: -25em;
+			.copy {
+				//top: 6em;
+				left: 27em;
 			}
 		}
 	}
 	
 }
 li {
+	padding: 2%;
+	h2 {
+		font-weight: lighter;
+		text-align: center;
+		padding: .5em 0 1em;
+	}
 	ul {
 		&:after {
 			content: '';
@@ -97,7 +121,8 @@ li {
 				}
 			}
 			&:nth-child(3n) {
-				width: 50%;
+				width: 48%;
+				padding: 4%;
 				//background: blue;
 				&:after {
 					content: '';

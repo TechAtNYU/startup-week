@@ -49,6 +49,7 @@ h5,
 h6 {
   font-weight: normal;
   line-height: 1.25;
+  margin-bottom: .1em;
 }
 h1 {
   font-size: 2.5em;
@@ -93,6 +94,9 @@ a:active {
 a:hover {
   color: #940aee;
 }
+.see {
+  text-align: right;
+}
 * {
   margin: 0;
   padding: 0;
@@ -127,10 +131,16 @@ hr {
   border: none;
   background: #ccc;
 }
+.intro {
+  padding: 3em 0;
+}
 header.main {
   background-color: black;
   background-image: url(/lib/img/photo.jpg);
   background-repeat: no-repeat;
+}
+header.main a {
+  color: white;
 }
 header.main .gradient {
   background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
@@ -157,17 +167,41 @@ header.main .gradient {
   position: absolute;
   width: 100%;
 }
-header.main .site .icon-techatnyulogo {
-  font-size: 15em;
-  color: white;
-}
 header.main .site .tagline {
   margin: 0 auto;
   color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
   position: relative;
 }
+header.main .site .tagline .icon-techatnyulogo {
+  color: white;
+  position: absolute;
+}
+header.main .site .tagline .copy {
+  position: absolute;
+  top: 0;
+}
 header.main .site .tagline h1 {
-  color: red;
+  color: #f36c2c;
+  font-style: italic;
+  font-weight: bold;
+}
+header.main .site .tagline {
+  max-width: 50em;
+  max-height: 32em;
+  left: 50%;
+  margin-left: -25em;
+}
+header.main .site .tagline .copy {
+  left: 27em;
+}
+li {
+  padding: 2%;
+}
+li h2 {
+  font-weight: lighter;
+  text-align: center;
+  padding: .5em 0 1em;
 }
 li ul {
   border-bottom: 1px solid #cccccc;
@@ -189,7 +223,8 @@ li ul li:nth-child(3n - 1) img {
   height: 8em;
 }
 li ul li:nth-child(3n) {
-  width: 50%;
+  width: 48%;
+  padding: 4%;
 }
 li ul li:nth-child(3n):after {
   content: '';
@@ -224,19 +259,23 @@ li ul li:nth-child(3n):after {
     background-position: center bottom;
   }
   header.main .icon-techatnyulogo {
-    font-size: 22em;
-    margin: auto;
-  }
-  header.main .site .tagline {
-    max-height: 32em;
+    font-size: 20em;
+    left: 10%;
+    margin-top: -0.15em;
+    margin-left: -0.3em;
   }
   header.main .site .tagline .copy {
-    margin-top: 6em;
+    top: 6em;
   }
 }
 @media only screen and (max-width: 70em) {
   header.main {
     background-position: center center;
+  }
+  header.main .icon-techatnyulogo {
+    font-size: 20em;
+    left: 10%;
+    margin-left: -0.3em;
   }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
@@ -253,6 +292,12 @@ li ul li:nth-child(3n):after {
   .gradient {
     height: 20em;
   }
+  header.main .icon-techatnyulogo {
+    margin-top: -0.15em;
+  }
+  header.main .site .tagline .copy {
+    margin-top: 3em;
+  }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   .site {
@@ -264,19 +309,69 @@ li ul li:nth-child(3n):after {
   .gradient {
     height: 15em;
   }
+  header.main .icon-techatnyulogo {
+    margin-top: -0.2em;
+  }
+  header.main .site .tagline .copy {
+    margin-top: 2em;
+  }
 }
 @media only screen and (max-width: 40em) {
   header.main,
   .gradient {
-    height: 10em;
+    height: 25em;
   }
   .site {
     padding: 1em;
     width: 100%;
-    max-width: 40em;
     font-size: .75em;
+  }
+  header.main .icon-techatnyulogo {
+    font-size: 18em;
+    left: 50%;
+    position: relative !important;
+    margin-left: -0.7em;
+  }
+  header.main .tagline {
+    position: relative !important;
+    margin: auto !important;
+    left: 0 !important;
+  }
+  header.main .tagline .copy {
+    position: static !important;
+    margin: auto !important;
+    text-align: center;
+    width: 75%;
+    font-size: 1em;
   }
   .posts h2 {
     padding: 1em;
+  }
+  li ul li {
+    list-style: none !important;
+    width: 100%;
+    float: left;
+    min-height: 5em;
+    line-height: 1.5;
+  }
+  li ul li:first-child {
+    text-align: center;
+    font-size: 125%;
+    background: #eee;
+  }
+  li ul li:nth-child(3n - 1) {
+    text-align: center;
+  }
+  li ul li:nth-child(3n - 1) img {
+    width: 10em;
+    height: 10em;
+  }
+  li ul li:nth-child(3n) {
+    width: 100%;
+  }
+  li ul li:nth-child(3n):after {
+    content: '';
+    width: 100%;
+    display: inline-block;
   }
 }

@@ -14,17 +14,17 @@
 		background-position: center bottom;
 	
 		.icon-techatnyulogo {
-			font-size: 22em;
-			margin: auto;
+			font-size: 20em;
+			left: 10%;
+			margin-top: -0.15em;
+			margin-left: -0.3em;
 			//position: absolute;
 		}
 	
 		.site {
 			.tagline {
-				max-height: 32em;
-
 				.copy {
-					margin-top: 6em;
+					top: 6em;
 				}
 			}
 		}
@@ -33,6 +33,12 @@
 @media only screen and (max-width: 70em) {
 	header.main {
 		background-position: center center;
+		.icon-techatnyulogo {
+			font-size: 20em;
+			left: 10%;
+			margin-left: -0.3em;
+			//position: absolute;
+		}
 	}
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
@@ -46,6 +52,14 @@
 	header.main, .gradient {
 		height: 20em;
 	}
+	header.main {
+		.icon-techatnyulogo {
+			margin-top: -0.15em;
+		}
+		.site .tagline .copy {
+			margin-top: 3em;
+		}
+	}
 }
 @media only screen and (min-width:40em) and (max-width: 50em) {
 	.site {
@@ -56,20 +70,86 @@
 	header.main, .gradient {
 		height: 15em;
 	}
+	header.main {
+		.icon-techatnyulogo {
+			margin-top: -0.2em;
+		}
+		.site .tagline .copy {
+			margin-top: 2em;
+		}
+	}
 }
 @media only screen and (max-width: 40em) {
 	header.main, .gradient {
-		height: 10em;
+		height: 25em;
+
 	}
 	.site {
 		padding: 1em;
 		width: 100%;
-		max-width: 40em;
 		font-size: .75em;
 	}
+	
+	header.main {
+		.icon-techatnyulogo {
+			font-size: 18em;
+			left: 50%;
+			position: relative !important;
+			margin-left: -0.7em;
+		}
+		.tagline {
+			position: relative !important;
+			margin: auto !important;
+			left: 0 !important;
+			.copy {
+				position: static !important;
+				margin: auto !important;
+				//top: 6em;
+				text-align: center;
+				width: 75%;
+				font-size: 1em;
+			}
+		}
+	}
+
 	.posts {
 		h2 {
 			padding: 1em;
 		}
 	}
+	
+	li {
+		ul {
+			li {
+				list-style: none !important;
+				width: 100%;
+				float: left;
+				min-height: 5em;
+				line-height: 1.5;
+				&:first-child {
+					text-align: center;
+					font-size: @bump;
+					background: #eee;
+				}
+				&:nth-child(3n - 1) {
+					text-align: center;
+					img {
+						width: 10em;
+						height: 10em;
+					}
+				}
+				&:nth-child(3n) {
+					width: 100%;
+					//background: blue;
+					&:after {
+						content: '';
+						width: 100%;
+						display: inline-block;
+					
+					}
+				}
+			}
+		}
+	}
+
 }

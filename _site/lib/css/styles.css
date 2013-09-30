@@ -177,6 +177,17 @@ header.main .gradient {
   position: absolute;
   width: 100%;
 }
+header.main .sponsor {
+  background: white;
+  color: black;
+  text-shadow: none;
+  position: absolute;
+  width: 10em;
+  text-align: center;
+}
+header.main .sponsor img {
+  max-height: 20%;
+}
 header.main .site .tagline {
   margin: 0 auto;
   color: white;
@@ -274,6 +285,11 @@ li ul li:nth-child(3n):after {
     margin-top: -0.075em;
     margin-left: -0.3em;
   }
+  header.main .sponsor {
+    left: 10%;
+    margin-left: 2.5em;
+    margin-top: 15em;
+  }
   header.main .site .tagline .copy {
     top: 4.5em;
   }
@@ -286,6 +302,11 @@ li ul li:nth-child(3n):after {
     font-size: 20em;
     left: 10%;
     margin-left: -0.3em;
+  }
+  header.main .sponsor {
+    left: 10%;
+    margin-left: 2em;
+    margin-top: 10em;
   }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
@@ -337,11 +358,20 @@ li ul li:nth-child(3n):after {
     width: 100%;
     font-size: .75em;
   }
+  header.main {
+    margin-bottom: 5em;
+  }
   header.main .icon-techatnyulogo {
     font-size: 18em;
     left: 50%;
     position: relative !important;
     margin-left: -0.7em;
+  }
+  header.main .sponsor {
+    position: relative !important;
+    width: 100%;
+    left: 0;
+    margin: 0;
   }
   header.main .tagline {
     position: relative !important;

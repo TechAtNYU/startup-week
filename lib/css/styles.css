@@ -177,8 +177,12 @@ button {
 .startup__mask img {
   display: none;
 }
-svg {
-  z-index: 10;
+.banner {
+  width: 100%;
+}
+.banner svg {
+  background-color: #eee;
+  margin-top: 4em;
 }
 .startup__one {
   font-family: 'Input Mono Compressed', "Helvetica";
@@ -268,19 +272,19 @@ dl .item {
   .startup__one::after {
     color: rgba(21, 42, 91, 0.85);
   }
-  .join h2 {
+  section:nth-child(3) h2 {
     color: #d7552d;
   }
-  .who h2 {
+  section:nth-child(4) h2 {
     color: #911e1c;
   }
-  .happening h2 {
+  section:nth-child(5) h2 {
     color: #65408b;
   }
-  .involved h2 {
+  section:nth-child(6) h2 {
     color: #152a5b;
   }
-  .supporters h2 {
+  section:nth-child(7) h2 {
     color: black;
   }
   .email__techatnyu {

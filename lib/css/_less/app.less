@@ -18,6 +18,39 @@
 		background-color: #eee;
 		margin-top: 4em;
 	}
+	.banner__quote {
+		position: absolute;
+		margin-top: -200px;
+		
+	}
+}
+
+.signup__form, .signup__submit {
+	font: 1.5em @inputCompressed;
+	padding: 0.5em;
+	border: 3px solid @red;
+	float: left;
+	&:focus {
+		outline: none;
+		border-color: @blue;
+	}
+}
+
+.signup__form {
+	width: 60%;
+}
+.signup__submit {
+	color: white;
+	background-color: @red;
+	float: left;
+	width: 30%;
+	&:hover {
+		border-color: @purple;
+		background-color: @purple;
+	}
+	&:focus {
+		background-color: @blue;
+	}
 }
 
 .startup__one {

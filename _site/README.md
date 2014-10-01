@@ -1,2 +1,0 @@
-techatnyu-startup-week
-======================

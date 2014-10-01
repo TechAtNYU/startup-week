@@ -186,7 +186,10 @@ button {
 }
 .banner .banner__quote {
   position: absolute;
-  margin-top: -200px;
+  margin-top: -220px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
 }
 .signup__form,
 .signup__submit {
@@ -396,6 +399,9 @@ dl .item {
   .email__techatnyu {
     display: block;
     text-align: center;
+  }
+  .signup {
+    margin-bottom: 2em;
   }
 }
 @media only screen and (min-width: 40em) {

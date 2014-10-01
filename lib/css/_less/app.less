@@ -1,0 +1,64 @@
+// {?} project specific
+.startup__mask {
+	position: relative;
+	overflow: hidden;
+	background-image: url(/lib/img/crane-bg.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #eee;
+	img {
+		display: none;
+	}
+}
+
+
+.startup__one {
+	font-family: @inputCompressed;
+	font-weight: 300;
+	line-height: 0.55;
+	transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	position:relative;
+	top:.15em;
+
+	&::after {
+		content: "Startup";
+		position: absolute;
+		top: -.04em;
+		left: .04em;
+	}
+}
+
+.logo {
+	position: absolute;
+	top: 1em;
+	right:2em;
+	width: 8em;
+}
+
+.info {
+	.subtitle {
+		font-family: @bodyFont;
+	}
+}
+
+.eboard img {
+	border-radius: 50%;
+}
+
+.happening dd, .happening dt {
+	line-height: 1.3em;
+}
+
+.supporters img, dl .item {
+	display: inline-block;
+	margin-bottom:1em;
+	margin-left: 5%;
+	vertical-align: top;
+}
+
+.supporters img {
+	vertical-align: middle; /* bc the images aren't all the same height */
+}

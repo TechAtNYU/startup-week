@@ -1,0 +1,6 @@
+name: Startup Week
+markdown: redcarpet
+
+collections:
+  events:
+    output: true

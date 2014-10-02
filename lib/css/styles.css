@@ -177,48 +177,6 @@ button {
 .startup__mask img {
   display: none;
 }
-.banner {
-  width: 100%;
-}
-.banner svg {
-  background-color: #eee;
-  margin-top: 4em;
-}
-.banner .banner__quote {
-  position: absolute;
-  margin-top: -220px;
-  font-style: italic;
-  text-align: center;
-  width: 100%;
-}
-.signup__form,
-.signup__submit {
-  font: 1.5em 'Input Mono Compressed', "Helvetica";
-  padding: 0.5em;
-  border: 3px solid #911e1c;
-  float: left;
-}
-.signup__form:focus,
-.signup__submit:focus {
-  outline: none;
-  border-color: #152a5b;
-}
-.signup__form {
-  width: 60%;
-}
-.signup__submit {
-  color: white;
-  background-color: #911e1c;
-  float: left;
-  width: 30%;
-}
-.signup__submit:hover {
-  border-color: #65408b;
-  background-color: #65408b;
-}
-.signup__submit:focus {
-  background-color: #152a5b;
-}
 .startup__one {
   font-family: 'Input Mono Compressed', "Helvetica";
   font-weight: 300;
@@ -243,6 +201,52 @@ button {
 }
 .info .subtitle {
   font-family: ff-meta-web-pro, helvetica, arial, sans-serif;
+}
+.banner {
+  width: 100%;
+}
+.banner svg {
+  background-color: #eee;
+  margin-top: 4em;
+}
+.banner .banner__quote {
+  position: absolute;
+  margin-top: -220px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+.signup__label {
+  display: block;
+  clear: both;
+}
+.signup__form,
+.signup__submit {
+  box-sizing: border-box;
+  font: 1.5em 'Input Mono Compressed', "Helvetica";
+  padding: 0.5em;
+  border: 3px solid #911e1c;
+  float: left;
+}
+.signup__form:focus,
+.signup__submit:focus {
+  outline: none;
+  border-color: #152a5b;
+}
+.signup__form {
+  width: 60%;
+}
+.signup__submit {
+  color: white;
+  background-color: #911e1c;
+  width: 40%;
+}
+.signup__submit:hover {
+  border-color: #65408b;
+  background-color: #65408b;
+}
+.signup__submit:focus {
+  background-color: #152a5b;
 }
 .eboard img {
   border-radius: 50%;
@@ -402,6 +406,11 @@ dl .item {
   }
   .signup {
     margin-bottom: 2em;
+  }
+  .signup__form,
+  .signup__submit {
+    width: 100%;
+    float: none;
   }
 }
 @media only screen and (min-width: 40em) {

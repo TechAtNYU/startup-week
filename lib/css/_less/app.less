@@ -33,7 +33,6 @@
 .logo {
 	position: absolute;
 	top: 1em;
-	right:2em;
 	width: 8em;
 }
 
@@ -67,11 +66,11 @@
 	box-sizing: border-box;
 	font: 1.5em @inputCompressed;
 	padding: 0.5em;
-	border: 3px solid @red;
+	border: 3px solid @blue;
 	float: left;
 	&:focus {
 		outline: none;
-		border-color: @blue;
+		border-color: @orange;
 	}
 }
 .signup__form {
@@ -79,14 +78,19 @@
 }
 .signup__submit {
 	color: white;
-	background-color: @red;
+	background-color: @blue;
 	width: 40%;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 	&:hover {
-		border-color: @purple;
-		background-color: @purple;
+		border-color: @orange;
+		background-color: @orange;
 	}
 	&:focus {
-		background-color: @blue;
+		background-color: @orange;
 	}
 }
 

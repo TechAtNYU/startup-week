@@ -5,19 +5,10 @@
   font-weight: 300;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Input Mono Compressed';
-  src: url('/lib/fonts/inputmonocompressed-medium-webfont.eot');
-  src: url('/lib/fonts/inputmonocompressed-medium-webfont.eot?#iefix') format('embedded-opentype'), url('/lib/fonts/inputmonocompressed-medium-webfont.woff') format('woff'), url('/lib/fonts/inputmonocompressed-medium-webfont.ttf') format('truetype'), url('/lib/fonts/inputmonocompressed-medium-webfont.svg#input_mono_compressedmedium') format('svg');
-  font-weight: 500;
+.inputmonocompressed {
+  font-family: "Input Mono Comp";
   font-style: normal;
-}
-@font-face {
-  font-family: 'Input Mono Compressed';
-  src: url('/lib/fonts/inputmonocompressed-bold-webfont.eot');
-  src: url('/lib/fonts/inputmonocompressed-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/lib/fonts/inputmonocompressed-bold-webfont.woff') format('woff'), url('/lib/fonts/inputmonocompressed-bold-webfont.ttf') format('truetype'), url('/lib/fonts/inputmonocompressed-bold-webfont.svg#input_mono_compressedbold') format('svg');
-  font-weight: 700;
-  font-style: normal;
+  font-weight: normal;
 }
 * {
   margin: 0;
@@ -178,7 +169,7 @@ button {
   display: none;
 }
 .startup__one {
-  font-family: 'Input Mono Compressed', "Helvetica";
+  font-family: "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
   font-weight: 300;
   line-height: 0.55;
   transform: rotate(-15deg);
@@ -222,7 +213,7 @@ button {
 .signup__form,
 .signup__submit {
   box-sizing: border-box;
-  font: 1.5em 'Input Mono Compressed', "Helvetica";
+  font: 1.5em "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
   padding: 0.5em;
   border: 3px solid #152a5b;
   float: left;
@@ -340,7 +331,7 @@ dl .item {
     background: none;
     border-radius: 100px;
     color: #65408b;
-    font: 1.25em 'Input Mono Compressed', "Helvetica";
+    font: 1.25em "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
     padding: 0.333em 0.75em;
     margin-top: 1em;
     display: inline-block;
@@ -599,7 +590,7 @@ dl .item {
   .startup__one {
     position: static;
     overflow: hidden;
-    font-family: 'Input Mono Compressed', "Helvetica";
+    font-family: "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
     font-size: 110pt !important;
     line-height: .85;
     transform: rotate(-65deg);

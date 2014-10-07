@@ -16,9 +16,18 @@ title: welcome
 
 
 <div id="triangles" class="banner">
-	<h3 class="banner__quote">Startup Week schedule coming soon - November 1-9, 2014</h3>
+	<h3 class="banner__quote">Get ready for Startup Week - November 1-9, 2014</h3>
 	
 </div>
+
+
+<section class="supporters">
+{% capture sponsor %}
+{% include sponsors.md %}
+{% endcapture %}
+{{ sponsor | unindent | markdownify }}
+
+</section>
 
 
 {% include cta.html %}

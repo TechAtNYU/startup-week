@@ -3,9 +3,6 @@ layout: main
 title: welcome
 ---
 
-{% include cta.html %}
-
-
 <section class="involved">
 <h2>Get excited.</h2>
 {% capture intro %}
@@ -14,6 +11,7 @@ title: welcome
 {{ intro | unindent | markdownify }}
 </section>
 
+{% include cta.html %}
 
 <div id="triangles" class="banner">
 	<h3 class="banner__quote">Get ready for Startup Week - November 1-9, 2014</h3>
@@ -27,14 +25,4 @@ title: welcome
 {% endcapture %}
 {{ sponsor | unindent | markdownify }}
 
-</section>
-
-
-{% include cta.html %}
-
-
-
-
-<section class="supporters">
-  
 </section>

@@ -378,6 +378,9 @@ dl .item {
   .info .subtitle {
     display: none;
   }
+  #triangles svg {
+    display: none;
+  }
   h2 {
     font-size: 1.75em;
   }
@@ -435,7 +438,7 @@ dl .item {
   .logo {
     left: 2em;
   }
-  section:not(.intro) {
+  .section__sidetype {
     max-width: 35em;
     width: 62%;
     box-sizing: border-box;
@@ -444,7 +447,7 @@ dl .item {
     float: right;
     overflow: visible;
   }
-  section:not(.intro) h2 {
+  .section__sidetype h2 {
     position: absolute;
     left: .8888em;
     width: 33%;
@@ -460,6 +463,11 @@ dl .item {
     content: ' ';
     width: 40em;
     margin-top: 8em;
+  }
+  #mc_embed_signup {
+    position: absolute;
+    margin-top: -220px;
+    width: 100%;
   }
   .eboard img {
     position: absolute;

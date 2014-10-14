@@ -441,7 +441,7 @@ dl .item {
   .startup__one {
     margin-top: 50px;
   }
-  .section__sidetype {
+  .section__righttype {
     max-width: 35em;
     width: 62%;
     box-sizing: border-box;
@@ -450,11 +450,19 @@ dl .item {
     float: right;
     overflow: visible;
   }
-  .section__sidetype h2 {
+  .section__righttype h2 {
     position: absolute;
     left: .8888em;
     width: 33%;
     padding-right: .8888em;
+  }
+  .section__lefttype {
+    max-width: 35em;
+    width: 62%;
+    box-sizing: border-box;
+    margin-top: 4em;
+    padding-left: 2em;
+    float: left;
   }
   .who::before {
     position: absolute;

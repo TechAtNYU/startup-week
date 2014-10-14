@@ -438,6 +438,9 @@ dl .item {
   .logo {
     left: 2em;
   }
+  .startup__one {
+    margin-top: 50px;
+  }
   .section__sidetype {
     max-width: 35em;
     width: 62%;
@@ -467,7 +470,8 @@ dl .item {
   #mc_embed_signup {
     position: absolute;
     margin-top: -220px;
-    width: 100%;
+    width: 90%;
+    left: 5%;
   }
   .eboard img {
     position: absolute;

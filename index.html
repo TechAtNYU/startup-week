@@ -13,11 +13,16 @@ title: welcome
 
 {% include cta.html %}
 
+<section class="schedule section__righttype">
+{% capture schedule %}
+{% include schedule.md %}
+{% endcapture %}
+{{ schedule | unindent | markdownify }}
+</section>
 
 <section class="supporters section__righttype">
 {% capture sponsor %}
 {% include sponsors.md %}
 {% endcapture %}
 {{ sponsor | unindent | markdownify }}
-
 </section>

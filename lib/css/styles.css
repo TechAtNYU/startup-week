@@ -243,8 +243,16 @@ button {
 .signup__submit:focus {
   background-color: #d7552d;
 }
-.eboard img {
-  border-radius: 50%;
+.schedule h3 {
+  border-top: 3px solid #152a5b;
+  padding: 1em 0 0;
+  margin-top: 2em;
+}
+.schedule h3 em {
+  display: block;
+}
+.schedule h4 {
+  margin-top: 1em;
 }
 .happening dd,
 .happening dt {

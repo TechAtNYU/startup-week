@@ -13,12 +13,40 @@ title: welcome
 
 {% include cta.html %}
 
+<!--
 <section class="schedule section__righttype">
 {% capture schedule %}
 {% include schedule.md %}
 {% endcapture %}
 {{ schedule | unindent | markdownify }}
+</section>-->
+
+<section class="section__righttype">
+
+<ul>
+{% for event in site.data.list.events %}
+	<li>
+		<h4>{{ event.title }}</h4>
+		<h5>{{ event.startDateTime | date_to_string }}</h5>
+
+		<p>{{ event.description }}</p>
+
+		<p>{{ event.details }}</p>
+
+		{% for team in event.links.teams %}
+			{% if team == "53f54dd98d1e62ff12539dc1" %}
+				TEST
+			{% endif %}
+		{% endfor %}
+
+
+
+	</li>
+{% endfor %}
+</ul>
+
 </section>
+
 
 <section class="supporters section__righttype">
 {% capture sponsor %}

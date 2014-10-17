@@ -29,21 +29,41 @@ title: welcome
 		<h4>{{ event.title }}</h4>
 		<h5>{{ event.startDateTime | date_to_string }}</h5>
 
+		<h5>
+		{% for presenter in event.links.presenters %}
+			{% for loopPresenter in site.data.list.linked.presenters %}
+				{% if loopPresenter.id == presenter %}
+					{{ loopPresenter.name }}
+
+					{{ loopPresenter.url }}
+
+					{{ loopPresenter.twitterId }}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+		</h5>
+
 		<p>{{ event.description }}</p>
 
 		<p>{{ event.details }}</p>
 
-		{% for team in event.links.teams %}
+
+
+		<!--{% for team in event.links.teams %}
 			{% if team == "53f54dd98d1e62ff12539dc1" %}
 				TEST
 			{% endif %}
-		{% endfor %}
+		{% endfor %}-->
 
 
 
 	</li>
 {% endfor %}
+
 </ul>
+
+
+
 
 </section>
 

@@ -282,6 +282,21 @@ dl .item {
   margin: 5px;
   width: 20%;
 }
+.event__label {
+  border: 3px solid black;
+  border-radius: 50px;
+  padding: 0.25em 0.75em;
+  font-size: 0.75em;
+}
+.event__label.design {
+  border-color: #65408b;
+}
+.event__label.business {
+  border-color: #152a5b;
+}
+.event__label.programming {
+  border-color: #d7552d;
+}
 @media only screen {
   body {
     max-width: 58em;

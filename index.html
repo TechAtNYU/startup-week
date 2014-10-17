@@ -26,8 +26,8 @@ title: welcome
 
 	<h3>Sort by:</h3>
 	<ul>
-		<li>Design</li>
-		<li>Development</li>
+		<li>design</li>
+		<li>programming</li>
 	</ul>
 </section>
 
@@ -61,11 +61,15 @@ title: welcome
 
 					<p>{{ event.description }}</p>
 
-					<!--{% for team in event.links.teams %}
-						{% if team == "53f54dd98d1e62ff12539dc1" %}
-							TEST
+					{% for team in event.links.teams %}
+						{% if team == "53f99d6bc66b44cf6f8f6d82" %}
+							<span class="event__label design">design</label>
+						{% elsif team == "53f54dd98d1e62ff12539dc2" %}
+							<span class="event__label community">community</span>
+						{% elsif team == "53f54dd98d1e62ff12539dc1" %}
+							<span class="event__label programming">programming</span>
 						{% endif %}
-					{% endfor %}-->
+					{% endfor %}
 				</li>
 			{% endif %}
 		{% endfor %}

@@ -21,52 +21,52 @@ title: welcome
 {{ schedule | unindent | markdownify }}
 </section>-->
 
-<div class="js-isotope"
-  data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
+<section>
+	<h1>Schedule</h1>
 
-<ul>
-{% for event in site.data.list.events %}
-	<li class="item">
-		<h4>{{ event.title }}</h4>
-		<h5>{{ event.startDateTime | date_to_string }}</h5>
+	<h3>Sort by:</h3>
+	<ul>
+		<li>Design</li>
+		<li>Development</li>
+	</ul>
+</section>
 
-		<h5>
-		{% for presenter in event.links.presenters %}
-			{% for loopPresenter in site.data.list.linked.presenters %}
-				{% if loopPresenter.id == presenter %}
-					{{ loopPresenter.name }}
+<section class="js-isotope"
+  data-isotope-options='{ "layoutMode": "fitRows", "itemSelector": ".sw__event" }'>
 
-					{{ loopPresenter.url }}
 
-					{{ loopPresenter.twitterId }}
-				{% endif %}
+
+	<ul class="list__events">
+	{% for event in site.data.list.events %}
+		<li class="sw__event">
+			<h4>{{ event.title }}</h4>
+			<h5>{{ event.startDateTime | date_to_string }}</h5>
+
+			<h5>
+			{% for presenter in event.links.presenters %}
+				{% for loopPresenter in site.data.list.linked.presenters %}
+					{% if loopPresenter.id == presenter %}
+						{{ loopPresenter.name }}
+
+						{{ loopPresenter.url }}
+
+						<a href="http://twitter.com/{{ loopPresenter.contact.twitter }}">{{ loopPresenter.contact.twitter }}</a>
+					{% endif %}
+				{% endfor %}
 			{% endfor %}
-		{% endfor %}
-		</h5>
+			</h5>
 
-		<p>{{ event.description }}</p>
+			<p>{{ event.description }}</p>
 
-		<p>{{ event.details }}</p>
-
-
-
-		<!--{% for team in event.links.teams %}
-			{% if team == "53f54dd98d1e62ff12539dc1" %}
-				TEST
-			{% endif %}
-		{% endfor %}-->
-
-
-
-	</li>
-{% endfor %}
-
-</ul>
-
-
-
-
-</div>
+			<!--{% for team in event.links.teams %}
+				{% if team == "53f54dd98d1e62ff12539dc1" %}
+					TEST
+				{% endif %}
+			{% endfor %}-->
+		</li>
+	{% endfor %}
+	</ul>
+</section>
 
 
 <section class="supporters section__righttype">

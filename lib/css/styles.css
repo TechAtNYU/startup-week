@@ -273,6 +273,10 @@ dl .item {
   vertical-align: middle;
   /* bc the images aren't all the same height */
 }
+.item {
+  background-color: purple;
+  width: 25%;
+}
 @media only screen {
   body {
     max-width: 58em;

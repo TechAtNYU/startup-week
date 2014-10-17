@@ -21,11 +21,12 @@ title: welcome
 {{ schedule | unindent | markdownify }}
 </section>-->
 
-<section class="section__righttype">
+<div class="js-isotope"
+  data-isotope-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
 
 <ul>
 {% for event in site.data.list.events %}
-	<li>
+	<li class="item">
 		<h4>{{ event.title }}</h4>
 		<h5>{{ event.startDateTime | date_to_string }}</h5>
 
@@ -65,7 +66,7 @@ title: welcome
 
 
 
-</section>
+</div>
 
 
 <section class="supporters section__righttype">

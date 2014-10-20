@@ -282,6 +282,13 @@ dl .item {
   width: 24%;
   border: 18px solid #eeeeee;
 }
+.sw__event a:link,
+.sw__event a:visited {
+  color: #545454;
+}
+.sw__event a:hover {
+  color: black;
+}
 .sw__event.community {
   border-color: #efbc2e;
 }

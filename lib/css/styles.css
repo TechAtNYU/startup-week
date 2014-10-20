@@ -277,10 +277,28 @@ dl .item {
   list-style: none;
 }
 .sw__event {
-  background-color: #eeeeee;
   padding: 1em;
   margin: 5px;
   width: 24%;
+  border: 18px solid #eeeeee;
+}
+.sw__event.community {
+  border-color: #efbc2e;
+}
+.sw__event.design {
+  border-color: #65408b;
+}
+.sw__event.programming {
+  border-color: #d7552d;
+}
+.sw__event.programming.design {
+  border-color: #911e1c;
+}
+.sw__event.business {
+  border-color: #152a5b;
+}
+.sw__event.afterhours {
+  border-color: black;
 }
 .event__label {
   border: 3px solid black;
@@ -288,14 +306,40 @@ dl .item {
   padding: 0.25em 0.75em;
   font-size: 0.75em;
 }
+.event__label.community {
+  border-color: #efbc2e;
+}
 .event__label.design {
   border-color: #65408b;
+}
+.event__label.programming {
+  border-color: #d7552d;
+}
+.event__label.programming.design {
+  border-color: #911e1c;
 }
 .event__label.business {
   border-color: #152a5b;
 }
-.event__label.programming {
-  border-color: #d7552d;
+.event__label.afterhours {
+  border-color: black;
+}
+.presenter__list {
+  margin: 1em 0 0;
+}
+.presenter {
+  list-style: none;
+  margin: 0.5em 0;
+  font-size: 90%;
+}
+.presenter__title {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.presenter__bio {
+  font-weight: normal;
+  font-size: 0.825em;
+  display: none;
 }
 @media only screen {
   body {

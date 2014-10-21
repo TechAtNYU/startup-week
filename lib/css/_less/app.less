@@ -131,11 +131,12 @@
 .list__events {
 	list-style: none;
 }
+
 .sw__event {
 	//background-color: @grayLightest;
-	padding: 1em;
+	padding: 1rem;
 	margin: 5px;
-	width: 24%;
+	width: 20%;
 	border: 18px solid @grayLightest;
 	a:link, a:visited {
 		color: lighten(black, 33%)
@@ -143,30 +144,64 @@
 	a:hover {
 		color: black;
 	}
+
+	// category - colors
+
 	&.community {
 		border-color: @yellow;
+		.full__rsvp {
+			background-color: @yellow;
+		}
 	}
 	&.design {
 		border-color: @purple;
+		.full__rsvp {
+			background-color: @purple;
+		}
 	}
 	&.programming {
 		border-color: @orange;
+		.full__rsvp {
+			background-color: @orange;
+		}
 	}
 	&.programming.design {
 		border-color: @red;
+		.full__rsvp {
+			background-color: @red;
+		}
 	}
 	&.business {
 		border-color: @blue;
+		.full__rsvp {
+			background-color: @blue;
+		}
 	}
 	&.afterhours {
 		border-color: black;
+		.full__rsvp {
+			background-color: black;
+		}
+	}
+
+	// sizing - priority
+
+	&.priority--1 {
+		font-size: 75%;
+	}
+	&.priority--2 {
+		font-size: 100%;
+	}
+	&.priority--3 {
+		font-size: 135%;
+		border-style: double !important;
 	}
 }
 .event__label {
 	border: 3px solid black;
 	border-radius: 50px;
 	padding: 0.25em 0.75em;
-	font-size: 0.75em;
+	font: 0.75em @inputCompressed;
 	&.community {
 		border-color: @yellow;
 	}
@@ -186,6 +221,26 @@
 		border-color: black;
 	}
 }
+
+.full__rsvp {
+	width: 100%;
+	display: block;
+	margin-left: -1rem;
+	margin-top: 1rem;
+	margin-bottom: -1rem;
+	padding: 0.25em 1rem;
+	background-color: #eee;
+	color: white !important;
+	text-decoration: none;
+	letter-spacing: 0.25em;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom: 3px solid transparent;
+	&:hover {
+		border-bottom: 3px solid white;
+	}
+}
+
 .presenter__list {
 	margin: 1em 0 0;
 }

@@ -277,9 +277,9 @@ dl .item {
   list-style: none;
 }
 .sw__event {
-  padding: 1em;
+  padding: 1rem;
   margin: 5px;
-  width: 24%;
+  width: 20%;
   border: 18px solid #eeeeee;
 }
 .sw__event a:link,
@@ -292,26 +292,54 @@ dl .item {
 .sw__event.community {
   border-color: #efbc2e;
 }
+.sw__event.community .full__rsvp {
+  background-color: #efbc2e;
+}
 .sw__event.design {
   border-color: #65408b;
+}
+.sw__event.design .full__rsvp {
+  background-color: #65408b;
 }
 .sw__event.programming {
   border-color: #d7552d;
 }
+.sw__event.programming .full__rsvp {
+  background-color: #d7552d;
+}
 .sw__event.programming.design {
   border-color: #911e1c;
+}
+.sw__event.programming.design .full__rsvp {
+  background-color: #911e1c;
 }
 .sw__event.business {
   border-color: #152a5b;
 }
+.sw__event.business .full__rsvp {
+  background-color: #152a5b;
+}
 .sw__event.afterhours {
   border-color: black;
+}
+.sw__event.afterhours .full__rsvp {
+  background-color: black;
+}
+.sw__event.priority--1 {
+  font-size: 75%;
+}
+.sw__event.priority--2 {
+  font-size: 100%;
+}
+.sw__event.priority--3 {
+  font-size: 135%;
+  border-style: double !important;
 }
 .event__label {
   border: 3px solid black;
   border-radius: 50px;
   padding: 0.25em 0.75em;
-  font-size: 0.75em;
+  font: 0.75em "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
 }
 .event__label.community {
   border-color: #efbc2e;
@@ -330,6 +358,24 @@ dl .item {
 }
 .event__label.afterhours {
   border-color: black;
+}
+.full__rsvp {
+  width: 100%;
+  display: block;
+  margin-left: -1rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  padding: 0.25em 1rem;
+  background-color: #eee;
+  color: white !important;
+  text-decoration: none;
+  letter-spacing: 0.25em;
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+}
+.full__rsvp:hover {
+  border-bottom: 3px solid white;
 }
 .presenter__list {
   margin: 1em 0 0;

@@ -37,12 +37,11 @@ title: welcome
 
 
 	<ul class="list__events">
-	{% for event in site.data.list.events %}
+	{% for event in site.data.list %}
 		{% for team in event.links.teams %}
 			{% if team contains "5440609d6b0287336dfc51cf" %}
-
-				<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}">
-					<h4>{{ event.title }}</h4>
+				<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %} priority--{{event.priority}}">
+					<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
 					<h5>{{ event.startDateTime | date_to_string }}</h5>
 
 					<ul class="presenter__list">
@@ -57,8 +56,6 @@ title: welcome
 
 								<p class="presenter__title">{{ loopPresenter.title }}</p>
 
-								
-
 								<p class="presenter__bio">{{ loopPresenter.shortBio }}</p>
 								</li>
 							{% endif %}
@@ -70,7 +67,7 @@ title: welcome
 
 					{% for team in event.links.teams %}
 						{% if team == "53f99d6bc66b44cf6f8f6d82" %}
-							<span class="event__label design">design</label>
+							<span class="event__label design">design</span>
 						{% elsif team == "53f99d9bc66b44cf6f8f6d84" %}
 							<span class="event__label community">community</span>
 						{% elsif team == "53f54dd98d1e62ff12539dc1" %}
@@ -79,6 +76,8 @@ title: welcome
 							<span class="event__label afterhours">afterhours</span>
 						{% endif %}
 					{% endfor %}
+
+					<a href="{{ event.rsvpUrl}}" class="full__rsvp">RSVP</a>
 				</li>
 			{% endif %}
 		{% endfor %}

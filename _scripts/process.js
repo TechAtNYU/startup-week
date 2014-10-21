@@ -32,7 +32,7 @@ request({
   //this disables the ssl security (would accept a fake certificate). see:
   //http://stackoverflow.com/questions/20082893/unable-to-verify-leaf-signature
   "rejectUnauthorized": false,
-  'url': 'https://api.tnyu.org/events?teams=5440609d6b0287336dfc51cf&sort=startDateTime',
+  'url': 'https://api.tnyu.org/events?teams=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters',
   'headers': {
     'x-api-key': "E]PzXKhhH5PVBvSmKlKqSZXt$li5J4SjS't"
   },

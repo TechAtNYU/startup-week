@@ -2,7 +2,8 @@ var request = require('request')
   , fs      = require('fs')
   , sys     = require('sys')
   , path    = require('path')
-  , moment  = require('moment');
+  , moment  = require('moment')
+  , momentTimezone = require('moment-timezone');
 
 var manualData = {
   //the event id is the key
@@ -146,8 +147,8 @@ request({
       event.priority   = manualData[id].priority;
     }
     event.dayOfWeek = moment(startDate).format("dddd");
-    event.startTime = moment(event.startDateTime).format("h:mm");
-    event.endTime   = moment(event.endDateTime).format("h:mma");
+    event.startTime = moment.tz(event.startDateTime, 'America/New_York').format("h:mm");
+    event.endTime   = moment.tz(event.endDateTime, 'America/New_York').format("h:mma");
   });
 
   //more processing here??

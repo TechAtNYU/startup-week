@@ -26,22 +26,21 @@ title: welcome
 <!--
 	<h3>Sort by:</h3>
 	<ul id="sort">
-		<li><button data-filter="*">all</button></li>
-		<li><button data-filter=".design">design</button></li>
-		<li><button data-filter=".programming">programming</button></li>
-		<li><button data-filter=".business">business</button></li>
-		<li><button data-filter=".community">community</button></li>
-		<li><button data-filter=".afterhours">afterhours</button></li>
+		<li data-filter="*">all</button></li>
+		<li data-filter=".design">design</button></li>
+		<li data-filter=".programming">programming</button></li>
+		<li data-filter=".business">business</button></li>
+		<li data-filter=".community">community</button></li>
+		<li data-filter=".afterhours">afterhours</button></li>
 	</ul>-->
 
-	<h3>Show</h3>
-	<ul id="filters">
-		<li><button data-filter="*">all</button></li>
-		<li><button data-filter=".programming">programming</button></li>
-		<li><button data-filter=".design">design</button></li>
-		<li><button data-filter=".business">business</button></li>
-		<li><button data-filter=".community">community</button></li>
-		<li><button data-filter=".afterhours">afterhours</button></li>
+	<ul id="filters" class="event__filter">
+		<li><button class="filter__toggle all" data-filter="*">all</button></li>
+		<li><button class="filter__toggle programming" data-filter=".programming">programming</button></li>
+		<li><button class="filter__toggle design" data-filter=".design">design</button></li>
+		<li><button class="filter__toggle business" data-filter=".business">business</button></li>
+		<li><button class="filter__toggle community" data-filter=".community">community</button></li>
+		<li><button class="filter__toggle afterhours" data-filter=".afterhours">afterhours</button></li>
 	</ul>
 </section>
 
@@ -57,9 +56,7 @@ title: welcome
 						<span class="date__dayOf">{{ event.startDateTime | date: "%a" }}</span>
 						<span class="date__date">{{ event.startDateTime | date: "%d" }}</span>
 					</time>
-					
-					
-
+				
 
 					<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
 

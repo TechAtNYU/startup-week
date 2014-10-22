@@ -132,6 +132,10 @@
 	list-style: none;
 }
 
+.event__filter li {
+	display: inline-block;
+}
+
 .sw__event {
 	//background-color: @grayLightest;
 	padding: 1rem;
@@ -197,12 +201,13 @@
 		border-style: double !important;
 	}
 }
-.event__label {
-	border: 3px solid black;
+.event__label, .filter__toggle {
+	border: 3px solid @grayLight;
 	border-radius: 50px;
 	padding: 0.25em 0.75em;
 	font: 0.75em @inputCompressed;
-	display: none;
+	background: none;
+	cursor: pointer;
 	&.community {
 		border-color: @yellow;
 	}
@@ -221,6 +226,33 @@
 	&.afterhours {
 		border-color: black;
 	}
+
+	&:focus, &.active {
+		outline: none;
+		color: white;
+		background-color: @grayLight;
+		&.community {
+			background-color: @yellow;
+		}
+		&.design {
+			background-color: @purple;
+		}
+		&.programming {
+			background-color: @orange;
+		}
+		&.programming.design {
+			background-color: @red;
+		}
+		&.business {
+			background-color: @blue;
+		}
+		&.afterhours {
+			background-color: black;
+		}
+	}
+}
+.event__label {
+	display: none;
 }
 
 .event__date {

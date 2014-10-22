@@ -276,6 +276,9 @@ dl .item {
 .list__events {
   list-style: none;
 }
+.event__filter li {
+  display: inline-block;
+}
 .sw__event {
   padding: 1rem;
   margin: 5px;
@@ -335,30 +338,85 @@ dl .item {
   font-size: 135%;
   border-style: double !important;
 }
-.event__label {
-  border: 3px solid black;
+.event__label,
+.filter__toggle {
+  border: 3px solid #cccccc;
   border-radius: 50px;
   padding: 0.25em 0.75em;
   font: 0.75em "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
-  display: none;
+  background: none;
+  cursor: pointer;
 }
-.event__label.community {
+.event__label.community,
+.filter__toggle.community {
   border-color: #efbc2e;
 }
-.event__label.design {
+.event__label.design,
+.filter__toggle.design {
   border-color: #65408b;
 }
-.event__label.programming {
+.event__label.programming,
+.filter__toggle.programming {
   border-color: #d7552d;
 }
-.event__label.programming.design {
+.event__label.programming.design,
+.filter__toggle.programming.design {
   border-color: #911e1c;
 }
-.event__label.business {
+.event__label.business,
+.filter__toggle.business {
   border-color: #152a5b;
 }
-.event__label.afterhours {
+.event__label.afterhours,
+.filter__toggle.afterhours {
   border-color: black;
+}
+.event__label:focus,
+.filter__toggle:focus,
+.event__label.active,
+.filter__toggle.active {
+  outline: none;
+  color: white;
+  background-color: #cccccc;
+}
+.event__label:focus.community,
+.filter__toggle:focus.community,
+.event__label.active.community,
+.filter__toggle.active.community {
+  background-color: #efbc2e;
+}
+.event__label:focus.design,
+.filter__toggle:focus.design,
+.event__label.active.design,
+.filter__toggle.active.design {
+  background-color: #65408b;
+}
+.event__label:focus.programming,
+.filter__toggle:focus.programming,
+.event__label.active.programming,
+.filter__toggle.active.programming {
+  background-color: #d7552d;
+}
+.event__label:focus.programming.design,
+.filter__toggle:focus.programming.design,
+.event__label.active.programming.design,
+.filter__toggle.active.programming.design {
+  background-color: #911e1c;
+}
+.event__label:focus.business,
+.filter__toggle:focus.business,
+.event__label.active.business,
+.filter__toggle.active.business {
+  background-color: #152a5b;
+}
+.event__label:focus.afterhours,
+.filter__toggle:focus.afterhours,
+.event__label.active.afterhours,
+.filter__toggle.active.afterhours {
+  background-color: black;
+}
+.event__label {
+  display: none;
 }
 .event__date {
   float: right;

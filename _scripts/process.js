@@ -8,7 +8,7 @@ var manualData = {
   //the event id is the key
   //priority: 1 - low; 2 - medium; 3 - high
   "544061d56b0287336dfc51d4": {
-    isBusiness: true,
+    isBusiness: false,
     priority: 3
   }, 
 
@@ -34,7 +34,7 @@ var manualData = {
 
   "5442f9aa32ff61083f0df839": {
     isBusiness: false,
-    priority: 3
+    priority: 2
   },
 
   "5443027c32ff61083f0df840": {

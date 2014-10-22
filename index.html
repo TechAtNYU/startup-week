@@ -24,11 +24,25 @@ title: welcome
 <section>
 	<h1>Schedule</h1>
 
-	<!--<h3>Sort by:</h3>
-	<ul>
-		<li>design</li>
-		<li>programming</li>
-	</ul>-->
+	<h3>Sort by:</h3>
+	<ul id="sort">
+		<li><button data-filter="*">all</button></li>
+		<li><button data-filter=".design">design</button></li>
+		<li><button data-filter=".programming">programming</button></li>
+		<li><button data-filter=".business">business</button></li>
+		<li><button data-filter=".community">community</button></li>
+		<li><button data-filter=".afterhours">afterhours</button></li>
+	</ul>
+
+	<h3>show</h3>
+	<ul id="filters">
+		<li><button data-filter="*">all</button></li>
+		<li><button data-filter=".design">design</button></li>
+		<li><button data-filter=".programming">programming</button></li>
+		<li><button data-filter=".business">business</button></li>
+		<li><button data-filter=".community">community</button></li>
+		<li><button data-filter=".afterhours">afterhours</button></li>
+	</ul>
 </section>
 
 <section class="js-isotope"
@@ -66,12 +80,8 @@ title: welcome
 					{% endfor %}
 					</ul>
 
-					<p>{{ event.description }}</p>
+					<p class="event__description">{{ event.description }}</p>
 
-					
-
-
-						
 
 					{% for team in event.links.teams %}
 						{% if team == "53f99d6bc66b44cf6f8f6d82" %}
@@ -84,12 +94,9 @@ title: welcome
 							<span class="event__label afterhours">afterhours</span>
 						{% endif %}
 					{% endfor %}
-
-
 					{% if event.isBusiness == true %}
 							<span class="event__label business">business</span>
 					{% endif %}
-					{{ event.isBusiness }}
 
 					<a href="{{ event.rsvpUrl}}" class="full__rsvp">RSVP</a>
 				</li>

@@ -1,7 +1,8 @@
 var request = require('request')
   , fs      = require('fs')
   , sys     = require('sys')
-  , path    = require('path');
+  , path    = require('path')
+  , moment  = require('moment');
 
 var manualData = {
   //the event id is the key
@@ -42,10 +43,16 @@ request({
 
   events.forEach(function(event) {
     var id = event.id;
+    var dateTime = event.startDateTime.split("T");
+    var startDate = dateTime[0];
+
     if(manualData[id]) {
       event.isBusiness = manualData[id].isBusiness;
       event.priority   = manualData[id].priority;
     }
+    event.dayOfWeek = moment(startDate).format("dddd");
+    event.startTime = moment(event.startDateTime).format("h:mm");
+    event.endTime   = moment(event.endDateTime).format("h:mma");
   });
 
   //more processing here??

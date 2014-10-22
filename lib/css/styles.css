@@ -340,6 +340,7 @@ dl .item {
   border-radius: 50px;
   padding: 0.25em 0.75em;
   font: 0.75em "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
+  display: none;
 }
 .event__label.community {
   border-color: #efbc2e;
@@ -358,6 +359,35 @@ dl .item {
 }
 .event__label.afterhours {
   border-color: black;
+}
+.event__date {
+  float: right;
+  width: 2.5em;
+  margin-right: -0.5rem;
+  text-align: center;
+  display: block;
+  line-height: 1;
+  border-radius: 5px;
+  color: #eeeeee;
+}
+.event__date > span {
+  display: block;
+}
+.event__date .date__dayOf,
+.event__date .time__month {
+  text-transform: uppercase;
+}
+.event__date .date__dayOf {
+  font-size: 1em;
+}
+.event__date .date__date {
+  font-size: 2em;
+}
+.event__time {
+  font-size: 100%;
+}
+.event__description {
+  font-size: 90%;
 }
 .full__rsvp {
   width: 100%;

@@ -202,6 +202,7 @@
 	border-radius: 50px;
 	padding: 0.25em 0.75em;
 	font: 0.75em @inputCompressed;
+	display: none;
 	&.community {
 		border-color: @yellow;
 	}
@@ -220,6 +221,37 @@
 	&.afterhours {
 		border-color: black;
 	}
+}
+
+.event__date {
+	float: right;
+	width: 2.5em;
+	margin-right: -0.5rem;
+	text-align: center;
+	display: block;
+	line-height: 1;
+	border-radius: 5px;
+	color: @grayLightest;
+	> span {
+		display: block;
+	}
+	.date__dayOf, .time__month {
+		text-transform: uppercase;
+	}
+	.date__dayOf {
+		font-size: 1em;
+	}
+	.date__date {
+		font-size: 2em;
+	}
+}
+
+.event__time {
+	font-size: 100%;
+}
+
+.event__description {
+	font-size: 90%;
 }
 
 .full__rsvp {

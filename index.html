@@ -23,7 +23,7 @@ title: welcome
 
 <section>
 	<h1>Schedule</h1>
-
+<!--
 	<h3>Sort by:</h3>
 	<ul id="sort">
 		<li><button data-filter="*">all</button></li>
@@ -32,13 +32,13 @@ title: welcome
 		<li><button data-filter=".business">business</button></li>
 		<li><button data-filter=".community">community</button></li>
 		<li><button data-filter=".afterhours">afterhours</button></li>
-	</ul>
+	</ul>-->
 
-	<h3>show</h3>
+	<h3>Show</h3>
 	<ul id="filters">
 		<li><button data-filter="*">all</button></li>
-		<li><button data-filter=".design">design</button></li>
 		<li><button data-filter=".programming">programming</button></li>
+		<li><button data-filter=".design">design</button></li>
 		<li><button data-filter=".business">business</button></li>
 		<li><button data-filter=".community">community</button></li>
 		<li><button data-filter=".afterhours">afterhours</button></li>
@@ -48,18 +48,22 @@ title: welcome
 <section class="js-isotope"
   data-isotope-options='{ "layoutMode": "masonry", "itemSelector": ".sw__event", "bindResize" : true }'>
 
-
-
 	<ul class="list__events">
 	{% for event in site.data.list %}
 		{% for team in event.links.teams %}
 			{% if team contains "5440609d6b0287336dfc51cf" %}
 				<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
-					<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
-					<h5>{{ event.startDateTime | date_to_string }}</h5>
-					{{event.dayOfWeek}}
-					{{event.startTime}} - {{event.endTime}}
+					<time class="event__date">
+						<span class="date__dayOf">{{ event.startDateTime | date: "%a" }}</span>
+						<span class="date__date">{{ event.startDateTime | date: "%d" }}</span>
+					</time>
+					
+					
 
+
+					<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
+
+					<h5 class="event__time">{{event.startTime}} - {{event.endTime}}</h5>
 
 					<ul class="presenter__list">
 					{% for presenter in event.links.presenters %}

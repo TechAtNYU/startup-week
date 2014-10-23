@@ -276,13 +276,15 @@ dl .item {
 .list__events {
   list-style: none;
 }
+.event__filter {
+  text-align: center;
+}
 .event__filter li {
   display: inline-block;
 }
 .sw__event {
   padding: 1rem;
   margin: 5px;
-  width: 20%;
   border: 18px solid #eeeeee;
 }
 .sw__event a:link,
@@ -482,6 +484,10 @@ dl .item {
   font-size: 0.825em;
   display: none;
 }
+.events__schedule {
+  width: 90%;
+  margin: auto;
+}
 @media only screen {
   body {
     max-width: 58em;
@@ -573,6 +579,15 @@ dl .item {
     margin-right: -1em;
     right: 2em;
   }
+  .events__schedule {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .sw__event {
+    width: 80%;
+    font-size: 1rem !important;
+  }
   section {
     padding: 3em 5% 0;
   }
@@ -654,6 +669,9 @@ dl .item {
   }
   .logo {
     left: 2em;
+  }
+  .sw__event {
+    width: 25%;
   }
   .startup__one {
     margin-top: 50px;

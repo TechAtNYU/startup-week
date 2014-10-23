@@ -21,7 +21,7 @@ title: welcome
 {{ schedule | unindent | markdownify }}
 </section>-->
 
-<section>
+<section class="events__schedule">
 	<h1>Schedule</h1>
 <!--
 	<h3>Sort by:</h3>
@@ -34,6 +34,8 @@ title: welcome
 		<li data-filter=".afterhours">afterhours</button></li>
 	</ul>-->
 
+	<p>All events are open to the public! You do not need to be a student or go to NYU to attend Startup Week.</p>
+
 	<ul id="filters" class="event__filter">
 		<li><button class="filter__toggle all" data-filter="*">all</button></li>
 		<li><button class="filter__toggle programming" data-filter=".programming">programming</button></li>
@@ -44,7 +46,7 @@ title: welcome
 	</ul>
 </section>
 
-<section class="js-isotope"
+<section class="events__schedule js-isotope"
   data-isotope-options='{ "layoutMode": "masonry", "itemSelector": ".sw__event", "bindResize" : true }'>
 
 	<ul class="list__events">

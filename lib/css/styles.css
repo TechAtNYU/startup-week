@@ -489,20 +489,19 @@ dl .item {
   margin: auto;
 }
 @media only screen {
-  body {
+  .container {
+    position: relative;
     max-width: 58em;
-    margin: 0 auto;
-  }
-  html {
-    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
   body::after {
     display: block;
-    width: 1000%;
-    margin-left: -50%;
+    width: 100%;
     z-index: 1;
     position: absolute;
     top: 0;
+    left: 0;
     background-color: #eee;
     content: ' ';
   }

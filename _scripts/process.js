@@ -2,8 +2,7 @@ var request = require('request')
   , fs      = require('fs')
   , sys     = require('sys')
   , path    = require('path')
-  , moment  = require('moment')
-  , momentTimezone = require('moment-timezone');
+  , moment  = require('moment-timezone');
 
 var manualData = {
   //the event id is the key
@@ -141,22 +140,25 @@ request({
     , finalJSON;
 
   events.forEach(function(event) {
-    var id = event.id;
-    var dateTime = event.startDateTime.split("T");
-    var startDate = dateTime[0];
+    var id = event.id
+      , startTime = moment.tz(event.startDateTime, 'America/New_York')
+      , endTime   = moment.tz(event.endDateTime, 'America/New_York');
 
     if(manualData[id]) {
       event.isBusiness = manualData[id].isBusiness;
       event.priority   = manualData[id].priority;
     }
+
+    event.dayOfWeek = startTime.format("dddd");
+    event.startTime = startTime.format("h:mm");
+    event.endTime   = endTime.format("h:mma");
+
+    //add presenter data into each events
     //this is slower than if we first read the presenters into an object
     //keyed by id, which we could then read in constant time. But whatever.
-    event.presenters = event.presenters.map(function(presenterId) {
+    event.presenters = ((event.links && event.links.presenters) || []).map(function(presenterId) {
       return presenters.filter(function(it) { return it.id == presenterId; })[0];
     });
-    event.dayOfWeek = moment(startDate).format("dddd");
-    event.startTime = moment.tz(event.startDateTime, 'America/New_York').format("h:mm");
-    event.endTime   = moment.tz(event.endDateTime, 'America/New_York').format("h:mma");
   });
 
   //more processing here??
@@ -164,10 +166,10 @@ request({
   //output merged events
   try {
     finalJSON = JSON.stringify(events);
-    fs.writeFileSync('../_data/list.yaml', finalJSON);
+    fs.writeFileSync(path.resolve(__dirname, '../_data/list.yaml'), finalJSON);
 
     //rebuild jekyll
-    var parentDir = path.resolve(process.cwd(), '..');
+    var parentDir = path.resolve(__dirname, '..');
     var exec = require('child_process').exec;
     var puts = function (error, stdout, stderr){
       sys.puts(stdout)
@@ -176,6 +178,7 @@ request({
   }
 
   catch(e) {
+    console.log('ERROR');
     //something went wrong converting the json...
     //just don't update the old file.
   }

@@ -67,7 +67,7 @@ title: welcome
 			{% for presenter in event.presenters %}
 				<li class="presenter">
 					<strong>{{ presenter.name }}</strong>
-					<a href="{{ loopPresenter.url }}"><span class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach"></span></a>
+					<a href="{{ presenter.url }}"><span class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach"></span></a>
 
 					<a href="http://twitter.com/{{ presenter.contact.twitter }}"><span class="ion-social-twitter" data-pack="social" data-tags="follow, post, share"></span></a>
 

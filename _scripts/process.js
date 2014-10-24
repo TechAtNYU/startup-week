@@ -135,7 +135,10 @@ request({
   },
   timeout: 100000
 }, function(err, response, body) {
-  var events = JSON.parse(body)["events"], finalJSON;
+  var apiJson = JSON.parse(body)
+    , events = apiJson["events"]
+    , presenters = apiJson["linked"]["presenters"]
+    , finalJSON;
 
   events.forEach(function(event) {
     var id = event.id;
@@ -146,6 +149,11 @@ request({
       event.isBusiness = manualData[id].isBusiness;
       event.priority   = manualData[id].priority;
     }
+    //this is slower than if we first read the presenters into an object
+    //keyed by id, which we could then read in constant time. But whatever.
+    event.presenters = event.presenters.map(function(presenterId) {
+      return presenters.filter(function(it) { return it.id == presenterId; })[0];
+    });
     event.dayOfWeek = moment(startDate).format("dddd");
     event.startTime = moment.tz(event.startDateTime, 'America/New_York').format("h:mm");
     event.endTime   = moment.tz(event.endDateTime, 'America/New_York').format("h:mma");

@@ -64,21 +64,17 @@ title: welcome
 					<h5 class="event__time">{{event.startTime}} - {{event.endTime}}</h5>
 
 					<ul class="presenter__list">
-					{% for presenter in event.links.presenters %}
-						{% for loopPresenter in site.data.list.linked.presenters %}
-							{% if loopPresenter.id == presenter %}
-								<li class="presenter">
-								<strong>{{ loopPresenter.name }}</strong>
-								<a href="{{ loopPresenter.url }}"><span class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach"></span></a>
+					{% for presenter in event.presenters %}
+						<li class="presenter">
+							<strong>{{ presenter.name }}</strong>
+							<a href="{{ loopPresenter.url }}"><span class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach"></span></a>
 
-								<a href="http://twitter.com/{{ loopPresenter.contact.twitter }}"><span class="ion-social-twitter" data-pack="social" data-tags="follow, post, share"></span></a>
-
-								<p class="presenter__title">{{ loopPresenter.title }}</p>
-
-								<p class="presenter__bio">{{ loopPresenter.shortBio }}</p>
-								</li>
-							{% endif %}
-						{% endfor %}
+							<a href="http://twitter.com/{{ presenter.contact.twitter }}"><span class="ion-social-twitter" data-pack="social" data-tags="follow, post, share"></span></a>
+	
+							<p class="presenter__title">{{ presenter.title }}</p>
+	
+							<p class="presenter__bio">{{ presenter.shortBio }}</p>
+						</li>
 					{% endfor %}
 					</ul>
 

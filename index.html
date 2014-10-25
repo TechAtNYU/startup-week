@@ -94,6 +94,10 @@ title: welcome
 					<span class="event__label business">business</span>
 			{% endif %}
 
+			{% if event.id == '54431029e5ac6ddf5357c43e' %}
+				<a href="http://www.eventbrite.com/e/first-annual-new-york-city-tech-party-tickets-13771030523?discount=Tech@NYU"><img src="https://scontent-b-iad.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/s720x720/10616212_976762449007080_2517417717230099081_n.jpg?oh=bc6b105a1022116ae9c6070e021c9478&oe=54B8B608"></a>
+			{% endif %}
+
 			<a href="{{ event.rsvpUrl}}" class="full__rsvp">RSVP</a>
 		</li>
 	{% endfor %}

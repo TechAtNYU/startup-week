@@ -2,22 +2,21 @@
 @media only screen {
 	//a fake "extension" div to match the mask bg color
 	//when the body reaches its max width.
-	body {
+	.container {
+		position: relative;
 		max-width: 58em;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	html {
-		overflow-x: hidden;
-	}
 
 	body::after {
 		display:block;
-		width:1000%;
-		margin-left: -50%;
+		width:100%;
 		z-index: 1;
 		position:absolute;
 		top:0;
+		left: 0;
 		background-color: #eee;
 		content: ' ';
 	}

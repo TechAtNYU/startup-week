@@ -51,59 +51,51 @@ title: welcome
 
 	<ul class="list__events">
 	{% for event in site.data.list %}
-		{% for team in event.links.teams %}
-			{% if team contains "5440609d6b0287336dfc51cf" %}
-				<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
-					<time class="event__date">
-						<span class="date__dayOf">{{ event.startDateTime | date: "%a" }}</span>
-						<span class="date__date">{{ event.startDateTime | date: "%d" }}</span>
-					</time>
-				
-					<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
+		<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
+			<time class="event__date">
+				<span class="date__dayOf">{{ event.startDateTime | date: "%a" }}</span>
+				<span class="date__date">{{ event.startDateTime | date: "%d" }}</span>
+			</time>
+		
+			<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
 
-					<h5 class="event__time">{{event.startTime}} - {{event.endTime}}</h5>
+			<h5 class="event__time">{{event.startTime}} &ndash; {{event.endTime}}</h5>
 
-					<ul class="presenter__list">
-					{% for presenter in event.links.presenters %}
-						{% for loopPresenter in site.data.list.linked.presenters %}
-							{% if loopPresenter.id == presenter %}
-								<li class="presenter">
-								<strong>{{ loopPresenter.name }}</strong>
-								<a href="{{ loopPresenter.url }}"><span class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach"></span></a>
+			<p class="event__description">{{ event.description }}</p>
 
-								<a href="http://twitter.com/{{ loopPresenter.contact.twitter }}"><span class="ion-social-twitter" data-pack="social" data-tags="follow, post, share"></span></a>
+			<ul class="presenter__list">
+			{% for presenter in event.presenters %}
+				<li class="presenter">
+					<strong>{{ presenter.name }}</strong>
+					<a href="{{ presenter.url }}"><span class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach"></span></a>
 
-								<p class="presenter__title">{{ loopPresenter.title }}</p>
+					<a href="http://twitter.com/{{ presenter.contact.twitter }}"><span class="ion-social-twitter" data-pack="social" data-tags="follow, post, share"></span></a>
 
-								<p class="presenter__bio">{{ loopPresenter.shortBio }}</p>
-								</li>
-							{% endif %}
-						{% endfor %}
-					{% endfor %}
-					</ul>
+					<p class="presenter__title">{{ presenter.title }}</p>
 
-					<p class="event__description">{{ event.description }}</p>
-
-
-					{% for team in event.links.teams %}
-						{% if team == "53f99d6bc66b44cf6f8f6d82" %}
-							<span class="event__label design">design</span>
-						{% elsif team == "53f99d9bc66b44cf6f8f6d84" %}
-							<span class="event__label community">community</span>
-						{% elsif team == "53f54dd98d1e62ff12539dc1" %}
-							<span class="event__label programming">programming</span>
-						{% elsif team == "53f54dd98d1e62ff12539dc2" %}
-							<span class="event__label afterhours">afterhours</span>
-						{% endif %}
-					{% endfor %}
-					{% if event.isBusiness == true %}
-							<span class="event__label business">business</span>
-					{% endif %}
-
-					<a href="{{ event.rsvpUrl}}" class="full__rsvp">RSVP</a>
+					<p class="presenter__bio">{{ presenter.shortBio }}</p>
 				</li>
+			{% endfor %}
+			</ul>
+
+
+			{% for team in event.links.teams %}
+				{% if team == "53f99d6bc66b44cf6f8f6d82" %}
+					<span class="event__label design">design</span>
+				{% elsif team == "53f99d9bc66b44cf6f8f6d84" %}
+					<span class="event__label community">community</span>
+				{% elsif team == "53f54dd98d1e62ff12539dc1" %}
+					<span class="event__label programming">programming</span>
+				{% elsif team == "53f54dd98d1e62ff12539dc2" %}
+					<span class="event__label afterhours">afterhours</span>
+				{% endif %}
+			{% endfor %}
+			{% if event.isBusiness == true %}
+					<span class="event__label business">business</span>
 			{% endif %}
-		{% endfor %}
+
+			<a href="{{ event.rsvpUrl}}" class="full__rsvp">RSVP</a>
+		</li>
 	{% endfor %}
 	</ul>
 </section>

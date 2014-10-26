@@ -57,6 +57,26 @@
 	}
 }
 
+.button {
+	background: @blue;
+	color: white !important;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+	padding: 0.5em;
+	font: 1.5em @inputCompressed;
+	text-decoration: none;
+	&:hover, &:focus {
+		background-color: @orange;
+	}
+}
+
+.button.full {
+	display: block;
+	margin-bottom: 1em;
+}
 
 .signup__label {
 	display: block;
@@ -78,20 +98,7 @@
 }
 .signup__submit {
 	color: white;
-	background-color: @blue;
 	width: 40%;
-    -webkit-transition: background-color 0.5s ease-in-out;
-    -moz-transition: background-color 0.5s ease-in-out;
-    -ms-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
-	&:hover {
-		border-color: @orange;
-		background-color: @orange;
-	}
-	&:focus {
-		background-color: @orange;
-	}
 }
 
 .schedule {
@@ -131,9 +138,12 @@
 .list__events {
 	list-style: none;
 }
+
 .event__filter {
-	text-align: center;
+	display:inline-block;
+	vertical-align: middle;
 }
+
 .event__filter li {
 	display: inline-block;
 }
@@ -325,5 +335,11 @@
 }
 .events__schedule {
 	width: 90%;
-	margin: auto;
+	clear: both;
+	padding-top: 2em;
+	margin: 0 auto;
+}
+.events__schedule h2 {
+	display:inline-block;
+	margin-right: 2em;
 }

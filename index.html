@@ -3,40 +3,22 @@ layout: main
 title: welcome
 ---
 
-<section class="involved section__righttype">
-<h2>Get excited.</h2>
-{% capture intro %}
-  {% include intro.md %}
-{% endcapture %}
-{{ intro | unindent | markdownify }}
+
+<section class="involved section__righttype events__schedule" style="z-index:4;">
+	<h2>Get Excited.</h2>
+
+	{% capture intro %}{% include intro.md %}{% endcapture %}
+	{{ intro | unindent | markdownify }}
+
+	<p>All events are open to the public! You do not need to be a student or go to NYU to attend Startup Week. But you do need a ticket!</p>
+	{% include tickets.html %}
 </section>
-
-{% include cta.html %}
-
-<!--
-<section class="schedule section__righttype">
-{% capture schedule %}
-{% include schedule.md %}
-{% endcapture %}
-{{ schedule | unindent | markdownify }}
-</section>-->
+<div id="triangles" style="position:absolute; margin-top:10em; z-index:1;"></div>
 
 <section class="events__schedule">
-	<h1>Schedule</h1>
-<!--
-	<h3>Sort by:</h3>
-	<ul id="sort">
-		<li data-filter="*">all</button></li>
-		<li data-filter=".design">design</button></li>
-		<li data-filter=".programming">programming</button></li>
-		<li data-filter=".business">business</button></li>
-		<li data-filter=".community">community</button></li>
-		<li data-filter=".afterhours">afterhours</button></li>
-	</ul>-->
-
-	<p>All events are open to the public! You do not need to be a student or go to NYU to attend Startup Week.</p>
-
+	<h2>Schedule</h2>
 	<ul id="filters" class="event__filter">
+		<li>Filter Events: </li>
 		<li><button class="filter__toggle all" data-filter="*">all</button></li>
 		<li><button class="filter__toggle programming" data-filter=".programming">programming</button></li>
 		<li><button class="filter__toggle design" data-filter=".design">design</button></li>
@@ -45,10 +27,8 @@ title: welcome
 		<li><button class="filter__toggle afterhours" data-filter=".afterhours">afterhours</button></li>
 	</ul>
 </section>
-
 <section class="events__schedule js-isotope"
-  data-isotope-options='{ "layoutMode": "masonry", "itemSelector": ".sw__event", "bindResize" : true }'>
-
+  data-isotope-options='{ "layoutMode": "masonry", "itemSelector": ".sw__event", "bindResize" : true }' style="clear:both;padding-top:0;">
 	<ul class="list__events">
 	{% for event in site.data.list %}
 		<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">

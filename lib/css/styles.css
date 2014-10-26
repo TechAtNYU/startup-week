@@ -206,6 +206,26 @@ button {
   text-align: center;
   width: 100%;
 }
+.button {
+  background: #152a5b;
+  color: white !important;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  padding: 0.5em;
+  font: 1.5em "Input Mono Comp", 'Input Mono Compressed', "Helvetica";
+  text-decoration: none;
+}
+.button:hover,
+.button:focus {
+  background-color: #d7552d;
+}
+.button.full {
+  display: block;
+  margin-bottom: 1em;
+}
 .signup__label {
   display: block;
   clear: both;
@@ -228,20 +248,7 @@ button {
 }
 .signup__submit {
   color: white;
-  background-color: #152a5b;
   width: 40%;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -ms-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
-}
-.signup__submit:hover {
-  border-color: #d7552d;
-  background-color: #d7552d;
-}
-.signup__submit:focus {
-  background-color: #d7552d;
 }
 .schedule h3 {
   border-top: 3px solid #152a5b;
@@ -277,7 +284,8 @@ dl .item {
   list-style: none;
 }
 .event__filter {
-  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 .event__filter li {
   display: inline-block;
@@ -486,7 +494,13 @@ dl .item {
 }
 .events__schedule {
   width: 90%;
-  margin: auto;
+  clear: both;
+  padding-top: 2em;
+  margin: 0 auto;
+}
+.events__schedule h2 {
+  display: inline-block;
+  margin-right: 2em;
 }
 @media only screen {
   .container {

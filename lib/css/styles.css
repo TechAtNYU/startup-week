@@ -453,6 +453,7 @@ dl .item {
 }
 .event__time {
   font-size: 100%;
+  text-transform: lowercase;
 }
 .event__description {
   font-size: 90%;

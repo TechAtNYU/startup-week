@@ -144,18 +144,16 @@ request({
     , finalJSON;
 
   events.forEach(function(event) {
-    var id = event.id
-      , startTime = moment.tz(event.startDateTime, 'America/New_York')
-      , endTime   = moment.tz(event.endDateTime, 'America/New_York');
+    var id = event.id;
+
+    //explicitly set dates' timezone to nyc
+    event.endDateTime = moment.tz(event.endDateTime, 'America/New_York').format();
+    event.startDateTime = moment.tz(event.startDateTime, 'America/New_York').format();
 
     if(manualData[id]) {
       event.isBusiness = manualData[id].isBusiness;
       event.priority   = manualData[id].priority;
     }
-
-    event.dayOfWeek = startTime.format("dddd");
-    event.startTime = startTime.format("h:mm");
-    event.endTime   = endTime.format("h:mma");
 
     //add presenter data into each events
     //this is slower than if we first read the presenters into an object

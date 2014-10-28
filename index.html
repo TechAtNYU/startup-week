@@ -38,8 +38,10 @@ title: welcome
 			</time>
 		
 			<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
-
-			<h5 class="event__time">{{event.startTime}} &ndash; {{event.endTime}}</h5>
+			{% capture endTimeAMPM %}{{event.endDateTime | date: "%p"}}{% endcapture %}
+			{% capture startTimeAMPM %}{{event.startDateTime | date: "%p"}}{% endcapture %}
+			{% capture startTimeFormat %}%I:%M{% if startTimeAMPM != endTimeAMPM %} %p{% endif %}{% endcapture %}
+			<h5 class="event__time">{{event.startDateTime | date:startTimeFormat }} &ndash; {{event.endDateTime | date: "%I:%M%p"}}</h5>
 
 			<p class="event__description">{{ event.description }}</p>
 

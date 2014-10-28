@@ -1,5 +1,6 @@
 name: Startup Week
 markdown: redcarpet
+timezone: "America/New_York"
 
 collections:
   events:

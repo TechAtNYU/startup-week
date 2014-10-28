@@ -80,6 +80,10 @@ var manualData = {
     isBusiness: true,
     priority: 3
   },
+  "544bfa11ba0c38886d68cfd1": {
+    isBusiness: true,
+    priority: 3
+  },
   "54430d08e5ac6ddf5357c438": {
     isBusiness: true,
     priority: 3

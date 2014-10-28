@@ -74,27 +74,27 @@ var manualData = {
 
   "544305e3e5ac6ddf5357c429": {
     isBusiness: true,
-    priority: 1
+    priority: 3
   },
   "54430c45e5ac6ddf5357c436": {
     isBusiness: true,
-    priority: 1
+    priority: 3
   },
   "54430d08e5ac6ddf5357c438": {
     isBusiness: true,
-    priority: 1
+    priority: 3
   },
   "54430d6be5ac6ddf5357c43b": {
     isBusiness: true,
-    priority: 1
+    priority: 3
   },
   "54430efbe5ac6ddf5357c43c": {
     isBusiness: true,
-    priority: 1
+    priority: 3
   },
   "54430f4be5ac6ddf5357c43d": {
     isBusiness: true,
-    priority: 1
+    priority: 3
   },
 
   "5443037c32ff61083f0df841": {

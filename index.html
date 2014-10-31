@@ -39,9 +39,10 @@ title: welcome
 			{% assign eventLength    = endTimestamp|minus:startTimestamp %}
 			{% assign startTimeAMPM  = (event.startDateTime | date: "%p") %}
 			{% assign endTimeAMPM    = (event.endDateTime | date: "%p") %}
-			{% capture startTimeFormat %}%I:%M{% if startTimeAMPM != endTimeAMPM %} <abbr class='meridian'>%p</abbr>{% endif %}{% endcapture %}
+			{% capture startTimeFormat %}%I:%M{% if startTimeAMPM != endTimeAMPM %}<abbr class='meridian'>%p</abbr>{% endif %}{% endcapture %}
 		
 			<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
+
 			<time class="event__date" datetime="{{event.startDateTime}}">
 				{% if endDayOfWeek == startDayOfWeek and eventLength < 86400 %}
 					<span class="date__dayOf">{{ event.startDateTime | date: "%A, %b %-d" }}</span>

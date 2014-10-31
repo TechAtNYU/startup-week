@@ -149,7 +149,6 @@ a:hover {
 }
 a,
 button {
-  font-weight: normal;
   -webkit-transition: color 0.5s ease-in-out;
   -moz-transition: color 0.5s ease-in-out;
   -ms-transition: color 0.5s ease-in-out;
@@ -294,13 +293,17 @@ dl .item {
   padding: 1rem;
   margin: 5px;
   border: 18px solid #eeeeee;
-}
-.sw__event a:link,
-.sw__event a:visited {
   color: #545454;
 }
+.sw__event h4 a,
 .sw__event a:hover {
   color: black;
+}
+.sw__event a {
+  color: #545454;
+}
+.sw__event a:visited {
+  color: #545454;
 }
 .sw__event.community {
   border-color: #efbc2e;
@@ -429,31 +432,16 @@ dl .item {
   display: none;
 }
 .event__date {
-  float: right;
-  width: 2.5em;
-  margin-right: -0.5rem;
-  text-align: center;
+  font-family: freight-text-pro;
+  line-height: 1.5;
+  margin-top: .75em;
   display: block;
-  line-height: 1;
-  border-radius: 5px;
-  color: #eeeeee;
+  margin-bottom: .5em;
+  font-style: italic;
 }
 .event__date > span {
   display: block;
-}
-.event__date .date__dayOf,
-.event__date .time__month {
-  text-transform: uppercase;
-}
-.event__date .date__dayOf {
-  font-size: 1em;
-}
-.event__date .date__date {
-  font-size: 2em;
-}
-.event__time {
-  font-size: 100%;
-  text-transform: lowercase;
+  font-size: 90%;
 }
 .event__description {
   font-size: 90%;
@@ -502,6 +490,9 @@ dl .item {
 .events__schedule h2 {
   display: inline-block;
   margin-right: 2em;
+}
+.meridian {
+  text-transform: lowercase;
 }
 @media only screen {
   .container {

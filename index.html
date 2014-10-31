@@ -32,16 +32,27 @@ title: welcome
 	<ul class="list__events">
 	{% for event in site.data.list %}
 		<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
-			<time class="event__date">
-				<span class="date__dayOf">{{ event.startDateTime | date: "%a" }}</span>
-				<span class="date__date">{{ event.startDateTime | date: "%d" }}</span>
-			</time>
+			{% assign startDayOfWeek = (event.startDateTime | date: "%a") %}
+			{% assign endDayOfWeek   = (event.endDateTime | date: "%a") %}
+			{% assign startTimestamp = (event.startDateTime | date: "%s") %}
+			{% assign endTimestamp   = (event.endDateTime | date: "%s") %}
+			{% assign eventLength    = endTimestamp|minus:startTimestamp %}
+			{% assign startTimeAMPM  = (event.startDateTime | date: "%p") %}
+			{% assign endTimeAMPM    = (event.endDateTime | date: "%p") %}
+			{% capture startTimeFormat %}%I:%M{% if startTimeAMPM != endTimeAMPM %} <abbr class='meridian'>%p</abbr>{% endif %}{% endcapture %}
 		
 			<h4><a href="{{ event.rsvpUrl}}">{{ event.title }}</a></h4>
-			{% capture endTimeAMPM %}{{event.endDateTime | date: "%p"}}{% endcapture %}
-			{% capture startTimeAMPM %}{{event.startDateTime | date: "%p"}}{% endcapture %}
-			{% capture startTimeFormat %}%I:%M{% if startTimeAMPM != endTimeAMPM %} %p{% endif %}{% endcapture %}
-			<h5 class="event__time">{{event.startDateTime | date:startTimeFormat }} &ndash; {{event.endDateTime | date: "%I:%M%p"}}</h5>
+			<time class="event__date" datetime="{{event.startDateTime}}">
+				{% if endDayOfWeek == startDayOfWeek and eventLength < 86400 %}
+					<span class="date__dayOf">{{ event.startDateTime | date: "%A, %b %-d" }}</span>
+					<span class="event__time h5">{{event.startDateTime | date:startTimeFormat }} &ndash; {{event.endDateTime | date: "%I:%M<abbr class='meridian'>%p</abbr>"}}</span>
+				{% else %}
+					<span class="date__dayOf">
+						{{ event.startDateTime | date: "%A, %b %-d at %I:%M<abbr class='meridian'>%p</abbr>" }} &ndash; 
+						{{ event.endDateTime | date: "%A, %b %-d at %I:%M<abbr class='meridian'>%p</abbr>" }}
+					</span>
+				{% endif %}
+			</time>
 
 			<p class="event__description">{{ event.description }}</p>
 

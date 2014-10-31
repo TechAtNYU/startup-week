@@ -153,11 +153,15 @@
 	padding: 1rem;
 	margin: 5px;
 	border: 18px solid @grayLightest;
-	a:link, a:visited {
-		color: lighten(black, 33%)
-	}
-	a:hover {
+	color: lighten(black, 33%);
+	h4 a, a:hover {
 		color: black;
+	}
+	a {
+		color: lighten(black, 33%);
+	}
+	a:visited {
+		color: lighten(black, 33%)
 	}
 
 	// category - colors
@@ -267,31 +271,16 @@
 }
 
 .event__date {
-	float: right;
-	width: 2.5em;
-	margin-right: -0.5rem;
-	text-align: center;
+	font-family: freight-text-pro;
+	line-height: 1.5;
+	margin-top: .75em;
 	display: block;
-	line-height: 1;
-	border-radius: 5px;
-	color: @grayLightest;
+	margin-bottom: .5em;
+	font-style: italic;
 	> span {
 		display: block;
+		font-size: 90%;
 	}
-	.date__dayOf, .time__month {
-		text-transform: uppercase;
-	}
-	.date__dayOf {
-		font-size: 1em;
-	}
-	.date__date {
-		font-size: 2em;
-	}
-}
-
-.event__time {
-	font-size: 100%;
-	text-transform: lowercase;
 }
 
 .event__description {
@@ -343,4 +332,8 @@
 .events__schedule h2 {
 	display:inline-block;
 	margin-right: 2em;
+}
+
+.meridian {
+	text-transform: lowercase;
 }

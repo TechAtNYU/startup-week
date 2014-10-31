@@ -124,6 +124,12 @@ var manualData = {
   "54431029e5ac6ddf5357c43e": {
     isBusiness: false,
     priority: 3
+  },
+
+  //LSM
+  "54514b5eba0c38886d68cfd8": {
+    isBusiness: true,
+    priority: 3
   }
 }
 

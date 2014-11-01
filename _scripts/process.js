@@ -156,6 +156,9 @@ request({
     event.endDateTime = moment.tz(event.endDateTime, 'America/New_York').format();
     event.startDateTime = moment.tz(event.startDateTime, 'America/New_York').format();
 
+    //add past event property to hide / move past events
+    event.isPast = moment(event.endDateTime).isBefore(moment());
+
     if(manualData[id]) {
       event.isBusiness = manualData[id].isBusiness;
       event.priority   = manualData[id].priority;

@@ -491,6 +491,15 @@ dl .item {
   display: inline-block;
   margin-right: 2em;
 }
+.event__past {
+  opacity: 0.40;
+  transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+}
+.event__past:hover {
+  opacity: 1;
+}
 .meridian {
   text-transform: lowercase;
 }

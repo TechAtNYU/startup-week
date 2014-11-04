@@ -62,11 +62,6 @@ var manualData = {
     priority: 2
   },
 
-  "544304c6e5ac6ddf5357c428": {
-    isBusiness: false,
-    priority: 3
-  },
-
   "544307aee5ac6ddf5357c42f": {
     isBusiness: true,
     priority: 2

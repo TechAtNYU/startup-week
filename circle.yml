@@ -12,7 +12,8 @@ machine:
 
 dependencies:
   post:
-    - bundle exec jekyll build:
+    - gem install jekyll
+    - jekyll build:
         timeout: 300 # 5 min
 
 test:
@@ -23,4 +24,5 @@ deployment:
   production:
     branch: master
     commands:
+      - jekyll build
       - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/_site -c $CONTAINER

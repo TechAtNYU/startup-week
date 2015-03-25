@@ -1,0 +1,26 @@
+general:
+  branches:
+    only:
+      - master
+
+machine:
+  timezone:
+    America/Los_Angeles
+  ruby:
+    version:
+      2.1.1
+
+dependencies:
+  post:
+    - bundle exec jekyll build:
+        timeout: 300 # 5 min
+
+test:
+  override:
+    - echo "No tests are needed"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/_site -c $CONTAINER

@@ -24,8 +24,6 @@ deployment:
   production:
     branch: master
     commands:
-      - cd _scripts
-      - npm install
-      - node process.js
+      - cd _scripts && npm install && node process.js
       - jekyll build
       - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/_site -c $CONTAINER

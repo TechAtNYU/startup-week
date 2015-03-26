@@ -128,6 +128,7 @@ var manualData = {
   }
 }
 
+
 //the processing
 request({
   //this disables the ssl security (would accept a fake certificate). see:
@@ -142,9 +143,13 @@ request({
   var apiJson = JSON.parse(body)
     , events = apiJson["events"]
     , presenters = apiJson["linked"]["presenters"]
-    , finalJSON;
+    , finalJSON
+    , pastJSON;
 
-  events.forEach(function(event) {
+  var currentEventsList = [],
+      pastEventsList = [];
+
+  events.forEach(function(event, idx) {
     var id = event.id;
 
     //explicitly set dates' timezone to nyc
@@ -165,14 +170,34 @@ request({
     event.presenters = ((event.links && event.links.presenters) || []).map(function(presenterId) {
       return presenters.filter(function(it) { return it.id == presenterId; })[0];
     });
+
+    // Check if event happened before the cutoff (currently 3 months ago)
+    var eventTime = moment(event.endDateTime)
+      , eventMonth = eventTime.month()
+      , eventYear = eventTime.year()
+      , currentYear = moment().year()
+      , currentMonth = new Date().getMonth();
+
+    var cutOff = currentMonth > 3 ? [currentMonth - 3, currentYear] : [12 + (currentMonth - 3), currentYear - 1];
+    var cutOffMoment = moment({month: cutOff[0], year: cutOff[1]});
+    var isAfterCutoff = eventTime.isAfter(cutOffMoment);
+
+    if (!isAfterCutoff) {
+      pastEventsList.push(event);
+    } else {
+      currentEventsList.push(event);
+    }
   });
 
   //more processing here??
 
   //output merged events
   try {
-    finalJSON = JSON.stringify(events);
-    fs.writeFileSync(path.resolve(__dirname, '../_data/list.yaml'), finalJSON);
+    finalJSON = JSON.stringify(currentEventsList);
+    fs.writeFileSync(path.resolve(__dirname, '../_data/current.yaml'), finalJSON);
+
+    pastJSON = JSON.stringify(pastEventsList);
+    fs.writeFileSync(path.resolve(__dirname, '../_data/past.yaml'), pastJSON);
 
     //rebuild jekyll
     var parentDir = path.resolve(__dirname, '..');

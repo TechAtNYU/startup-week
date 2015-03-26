@@ -26,5 +26,4 @@ deployment:
     commands:
       - mkdir _data
       - cd _scripts && npm install && node process.js
-      - jekyll build
       - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/_site -c $CONTAINER

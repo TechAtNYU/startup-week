@@ -13,6 +13,8 @@ machine:
 dependencies:
   post:
     - gem install jekyll
+    - mkdir $HOME/$CIRCLE_PROJECT_REPONAME/_data
+    - cd $HOME/$CIRCLE_PROJECT_REPONAME/_scripts && npm install && node process.js
     - jekyll build:
         timeout: 300 # 5 min
 
@@ -24,6 +26,4 @@ deployment:
   production:
     branch: master
     commands:
-      - mkdir _data
-      - cd _scripts && npm install && node process.js
       - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/_site -c $CONTAINER

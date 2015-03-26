@@ -7,4 +7,4 @@ The marketing site ([nyusw.com](http://nyusw.com)) for tech@NYU Startup Week, a 
 
 ### Structure
 
-- Built using CircleCI
+- Built using CircleCI & Rackspace Cloud Files

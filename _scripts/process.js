@@ -10,7 +10,7 @@ var manualData = {
   "544061d56b0287336dfc51d4": {
     isBusiness: false,
     priority: 3
-  }, 
+  },
 
   "5441a5ac3f621ea514e8dbfc": {
     isBusiness: false,
@@ -29,7 +29,7 @@ var manualData = {
 
   "5441b5ef3f621ea514e8dc00": {
     isBusiness: false,
-    priority: 2 
+    priority: 2
   },
 
   "5442f9aa32ff61083f0df839": {
@@ -110,11 +110,11 @@ var manualData = {
     isBusiness: false,
     priority: 2
   },
- 
+
   "54432632e5ac6ddf5357c44c": {
     isBusiness: false,
     priority: 3
-  }, 
+  },
 
   "54431029e5ac6ddf5357c43e": {
     isBusiness: false,
@@ -209,6 +209,7 @@ request({
   }
 
   catch(e) {
+    console.log(e)
     console.log('ERROR');
     //something went wrong converting the json...
     //just don't update the old file.

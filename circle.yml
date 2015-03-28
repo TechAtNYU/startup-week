@@ -16,7 +16,6 @@ machine:
 dependencies:
   post:
     - gem install jekyll
-    - mkdir $HOME/$CIRCLE_PROJECT_REPONAME/_data
     - cd $HOME/$CIRCLE_PROJECT_REPONAME/_scripts && npm install && node process.js
 
 test:

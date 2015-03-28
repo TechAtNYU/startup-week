@@ -136,7 +136,7 @@ request({
   "rejectUnauthorized": false,
   'url': 'https://api.tnyu.org/v1.0/events?teams=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters',
   'headers': {
-    'x-api-key': "E]PzXKhhH5PVBvSmKlKqSZXt$li5J4SjS't"
+    'x-api-key': process.env.ApiKey
   },
   timeout: 100000
 }, function(err, response, body) {

@@ -145,6 +145,7 @@ var manualData = {
     isBusiness: true,
     priority: 2
   },
+  // New CEO event
   "5522eb7cc301c3ca3d0a580e": {
     isBusiness: true,
     priority: 2

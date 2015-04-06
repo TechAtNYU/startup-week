@@ -144,6 +144,10 @@ var manualData = {
   "55148b47cfe3d0fc24adacec": {
     isBusiness: true,
     priority: 2
+  },
+  "5522eb7cc301c3ca3d0a580e": {
+    isBusiness: true,
+    priority: 2
   }
 }
 

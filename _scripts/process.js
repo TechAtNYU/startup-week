@@ -125,6 +125,25 @@ var manualData = {
   "54514b5eba0c38886d68cfd8": {
     isBusiness: true,
     priority: 3
+  },
+
+  // SPRING 2015
+  "55147e1b1fd70b97a5af5c2c": {
+    isBusiness: false,
+    priority: 2
+  },
+  // CEO Exclusive with Neil Capel
+  "55148acf8f51d26667868b3b": {
+    isBusiness: true,
+    priority: 2
+  },
+  "55148b061a397320064d090e": {
+    isBusiness: true,
+    priority: 2
+  },
+  "55148b47cfe3d0fc24adacec": {
+    isBusiness: true,
+    priority: 2
   }
 }
 

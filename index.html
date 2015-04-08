@@ -97,7 +97,7 @@ title: welcome
 			<a href="{{ event.rsvpUrl}}" class="full__rsvp">RSVP</a>
 		</li>
 	{% endfor %}
-	{% for event in site.data.list %}
+	{% for event in site.data.current %}
     	{% if event.isPast %}
     		<li class="sw__event event__past{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
     			{% assign startDayOfWeek = (event.startDateTime | date: "%a") %}

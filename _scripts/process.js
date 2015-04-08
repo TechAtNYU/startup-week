@@ -152,7 +152,6 @@ var manualData = {
   }
 }
 
-
 //the processing
 request({
   //this disables the ssl security (would accept a fake certificate). see:
@@ -212,8 +211,6 @@ request({
       currentEventsList.push(event);
     }
   });
-
-  //more processing here??
 
   //output merged events
   try {

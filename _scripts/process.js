@@ -149,6 +149,10 @@ var manualData = {
   "5522eb7cc301c3ca3d0a580e": {
     isBusiness: true,
     priority: 2
+  },
+  // HUGE
+  "55148371cf8676fd52012566": {
+    priority: 3
   }
 }
 

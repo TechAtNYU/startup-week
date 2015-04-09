@@ -161,15 +161,15 @@ request({
   //this disables the ssl security (would accept a fake certificate). see:
   //http://stackoverflow.com/questions/20082893/unable-to-verify-leaf-signature
   "rejectUnauthorized": false,
-  'url': 'https://api.tnyu.org/v1.0/events?teams=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters',
+  'url': 'https://api.tnyu.org/v2/events?teams=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters',
   'headers': {
     'x-api-key': process.env.ApiKey
   },
   timeout: 100000
 }, function(err, response, body) {
   var apiJson = JSON.parse(body)
-    , events = apiJson["events"]
-    , presenters = apiJson["linked"]["presenters"]
+    , events = apiJson["data"]
+    , presenters = apiJson["included"]
     , finalJSON
     , pastJSON;
 
@@ -177,7 +177,7 @@ request({
       pastEventsList = [];
 
   events.forEach(function(event, idx) {
-    var id = event.id;
+    var id = event.id, presentersLinkage;
 
     //explicitly set dates' timezone to nyc
     event.endDateTime = moment.tz(event.endDateTime, 'America/New_York').format();
@@ -194,8 +194,11 @@ request({
     //add presenter data into each events
     //this is slower than if we first read the presenters into an object
     //keyed by id, which we could then read in constant time. But whatever.
-    event.presenters = ((event.links && event.links.presenters) || []).map(function(presenterId) {
-      return presenters.filter(function(it) { return it.id == presenterId; })[0];
+    try { presentersLinkage = event.links.presenters.linkage; }
+    catch(e) { presentersLinkage = []; }
+
+    event.presenters = presentersLinkage.map(function(presenterLinkage) {
+      return presenters.filter(function(it) { return it.id === presenterLinkage.id; })[0];
     });
 
     // Check if event happened before the cutoff (currently 3 months ago)

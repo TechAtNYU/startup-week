@@ -33,7 +33,7 @@ title: welcome
     {% if event.isPast %}
       {% continue %}
     {% endif %}
-		<li class="sw__event{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
+		<li class="sw__event{% for team in event.links.teams.linkage %}{% if team.id == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team.id == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team.id == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team.id == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
 			{% assign startDayOfWeek = (event.startDateTime | date: "%a") %}
 			{% assign endDayOfWeek   = (event.endDateTime | date: "%a") %}
 			{% assign startTimestamp = (event.startDateTime | date: "%s") %}
@@ -99,7 +99,7 @@ title: welcome
 	{% endfor %}
 	{% for event in site.data.current %}
     	{% if event.isPast %}
-    		<li class="sw__event event__past{% for team in event.links.teams %}{% if team == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
+    		<li class="sw__event event__past{% for team in event.links.teams.linkage %}{% if team.id == '53f99d6bc66b44cf6f8f6d82' %} design{% elsif team.id == '53f99d9bc66b44cf6f8f6d84' %} community{% elsif team.id == '53f54dd98d1e62ff12539dc1' %} programming{% elsif team.id == '53f54dd98d1e62ff12539dc2' %} afterhours{% endif %}{% endfor %}{% if event.isBusiness == true %} business{% endif %} priority--{{event.priority}}">
     			{% assign startDayOfWeek = (event.startDateTime | date: "%a") %}
 				{% assign endDayOfWeek   = (event.endDateTime | date: "%a") %}
 				{% assign startTimestamp = (event.startDateTime | date: "%s") %}

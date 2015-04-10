@@ -161,9 +161,10 @@ request({
   //this disables the ssl security (would accept a fake certificate). see:
   //http://stackoverflow.com/questions/20082893/unable-to-verify-leaf-signature
   "rejectUnauthorized": false,
-  'url': 'https://api.tnyu.org/v2/events?teams=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters',
+  'url': 'https://api.tnyu.org/v2/events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=&2bstartDateTime&include=presenters',
   'headers': {
-    'x-api-key': process.env.ApiKey
+    'x-api-key': process.env.ApiKey,
+    'accept': 'application/vnd.api+json'
   },
   timeout: 100000
 }, function(err, response, body) {
@@ -197,8 +198,8 @@ request({
     try { presentersLinkage = event.links.presenters.linkage; }
     catch(e) { presentersLinkage = []; }
 
-    event.presenters = presentersLinkage.map(function(presenterLinkage) {
-      return presenters.filter(function(it) { return it.id === presenterLinkage.id; })[0];
+    event.presenters = presentersLinkage.map(function(linkageObject) {
+      return presenters.filter(function(it) { return it.id === linkageObject.id; })[0];
     });
 
     // Check if event happened before the cutoff (currently 3 months ago)

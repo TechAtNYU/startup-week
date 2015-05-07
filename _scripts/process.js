@@ -184,11 +184,11 @@ request({
 		var presentersLinkage;
 
 		//explicitly set dates' timezone to nyc
-		event.endDateTime = moment.tz(event.endDateTime, 'America/New_York').format();
-		event.startDateTime = moment.tz(event.startDateTime, 'America/New_York').format();
+		event.attributes.endDateTime = moment.tz(event.attributes.endDateTime, 'America/New_York').format();
+		event.attributes.startDateTime = moment.tz(event.attributes.startDateTime, 'America/New_York').format();
 
 		//add past event property to hide / move past events
-		event.isPast = moment(event.endDateTime).isBefore(moment());
+		event.isPast = moment(event.attributes.endDateTime).isBefore(moment());
 
 		if (manualData[id]) {
 			event.isBusiness = manualData[id].isBusiness;
@@ -206,7 +206,7 @@ request({
 		});
 
 		// Check if event happened before the cutoff (currently 3 months ago)
-		var eventTime = moment(event.endDateTime);
+		var eventTime = moment(event.attributes.endDateTime);
 		var currentYear = moment().year();
 		var currentMonth = new Date().getMonth();
 

@@ -1,4 +1,4 @@
-tech@NYU Startup Week
+Tech@NYU Startup Week
 --------
 
 [![Circle CI](https://circleci.com/gh/TechAtNYU/startup-week.svg?style=svg)](https://circleci.com/gh/TechAtNYU/startup-week)

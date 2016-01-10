@@ -15,8 +15,8 @@ machine:
 
 dependencies:
   post:
-    - gem install jekyll
-    - gem install redcarpet
+    - gem install bundler
+    - bundle install
     - cd $HOME/$CIRCLE_PROJECT_REPONAME/_scripts && npm install && node process.js
 
 test:

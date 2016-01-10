@@ -7,8 +7,9 @@ The marketing site ([nyusw.com](http://nyusw.com)) for tech@NYU Startup Week, a 
 
 ## Installing dependencies
 
-1. `gem install jekyll`
-2. `cd _scripts && npm install`
+1. `gem install bundler`
+2. `bundle install`
+3. `cd _scripts && npm install`
 
 ## Cloning and running the site
 

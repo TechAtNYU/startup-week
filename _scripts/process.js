@@ -235,7 +235,7 @@ request({
 		var puts = function (error, stdout, stderr) {
 			sys.puts(stdout);
 		};
-		exec('jekyll build', {cwd: parentDir}, puts);
+		exec('bundle exec jekyll build', {cwd: parentDir}, puts);
 	}
 
 	catch (e) {

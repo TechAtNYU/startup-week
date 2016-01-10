@@ -9,11 +9,11 @@ title: welcome
 	{% capture intro %}{% include intro.md %}{% endcapture %}
 	{{ intro | unindent | markdownify }}
 
-	{% include tickets.html %}
+	<!-- {% include tickets.html %} -->
 </section>
-<div id="triangles" style="position:absolute; margin-top:10em; z-index:1;"></div>
+<div id="triangles" style="position:absolute; z-index:1;"></div>
 
-<section class="events__schedule">
+<!-- <section class="events__schedule">
 	<h2>Schedule</h2>
 	<ul id="filters" class="event__filter">
 		<li>Filter Events: </li>
@@ -141,12 +141,12 @@ title: welcome
     	{% endif %}
     {% endfor %}
 	</ul>
-</section>
+</section> -->
 
 
-<section class="supporters section__righttype">
+<!-- <section class="supporters section__righttype">
 {% capture sponsor %}
 {% include sponsors.md %}
 {% endcapture %}
 {{ sponsor | unindent | markdownify }}
-</section>
+</section> -->

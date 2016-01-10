@@ -1,18 +1,25 @@
 Tech@NYU Startup Week
 --------
-## HOW TO RUN THE SITE
-1. cd startup-week
-2. Jekyll Serve
 
 [![Circle CI](https://circleci.com/gh/TechAtNYU/startup-week.svg?style=svg)](https://circleci.com/gh/TechAtNYU/startup-week)
 
 The marketing site ([nyusw.com](http://nyusw.com)) for tech@NYU Startup Week, a once-a-semester weeklong celebration of hacking, designing, networking, and learning in NYC.
 
-### Structure
+## Installing dependencies
 
-- Built using CircleCI & Rackspace Cloud Files
+1. `gem install jekyll`
+2. `cd _scripts && npm install`
 
-### throw new Error('"name" and "value" are required for setHeader().'); error?
+## Cloning and running the site
 
-ADD THE API KEY TO YOUR ENVIRONMENT VARIABLES!!! Ask Abhi for more details
+1. `git clone git@github.com:TechAtNYU/startup-week.git`
+2. `cd startup-week`
+3. `jekyll serve` (serves on port 4000) or `jekyll build` (to build the site)
 
+## Running scripts
+
+1. `cd _scripts`
+2. `export $ApiKey = ""`
+3. `node process.js`
+4. `cd ..`
+5. `jekyll serve`

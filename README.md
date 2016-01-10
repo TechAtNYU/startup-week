@@ -19,7 +19,7 @@ The marketing site ([nyusw.com](http://nyusw.com)) for tech@NYU Startup Week, a 
 ## Running scripts
 
 1. `cd _scripts`
-2. `export $ApiKey = ""`
+2. `export $ApiKey=""`
 3. `node process.js`
 4. `cd ..`
 5. `jekyll serve`

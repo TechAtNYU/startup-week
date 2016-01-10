@@ -536,7 +536,8 @@ dl .item {
     display: inline-block;
     list-style-type: none;
   }
-  .info li:first-child::after {
+  .info li:nth-child(1)::after,
+  li:nth-child(2)::after {
     padding-right: .5em;
     padding-left: .5em;
     content: "|";

@@ -1,7 +1,0 @@
-.DS_Store
-*/_site/
-_site/
-/_site/
-*.codekit
-_scripts/node_modules
-_data/*

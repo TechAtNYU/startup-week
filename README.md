@@ -1,26 +1,12 @@
-Tech@NYU Startup Week
---------
+# startup-week
 
-[![Circle CI](https://circleci.com/gh/TechAtNYU/startup-week.svg?style=svg)](https://circleci.com/gh/TechAtNYU/startup-week)
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.14.0.
 
-The marketing site ([nyusw.com](http://nyusw.com)) for tech@NYU Startup Week, a once-a-semester weeklong celebration of hacking, designing, networking, and learning in NYC.
+## Build & development
 
-## Installing dependencies
+Run `grunt` for building and `grunt serve` for preview.
 
-1. `gem install bundler`
-2. `bundle install`
-3. `cd _scripts && npm install`
+## Testing
 
-## Cloning and running the site
-
-1. `git clone git@github.com:TechAtNYU/startup-week.git`
-2. `cd startup-week`
-3. `jekyll serve` (serves on port 4000) or `jekyll build` (to build the site)
-
-## Running scripts
-
-1. `cd _scripts`
-2. `export $ApiKey=""`
-3. `node process.js`
-4. `cd ..`
-5. `jekyll serve`
+Running `grunt test` will run the unit tests with karma.

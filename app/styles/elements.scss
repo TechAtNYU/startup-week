@@ -1,0 +1,39 @@
+body {
+	font-family: $body-font;
+	background: $background-blue;
+	color: white;
+}
+h1, h2, h3, p, ul li {
+	padding: 5px;
+}
+h1, h2, h3 {
+	font-family: $heading-font;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	border-bottom: 2px solid $salmon;
+}
+h1 {
+	font-size: 7em;
+}
+h2 {
+	font-size: 3em;
+}
+p {
+	font-size: 1.2em;
+	max-width: 650px;
+}
+ul li {
+	display: inline;
+}
+ul li, span {
+	font-size: 1em;
+}
+footer {
+	margin-top: 150px;
+	background: $teal;
+	height: 60px;
+	bottom: 0;
+}

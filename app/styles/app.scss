@@ -1,0 +1,44 @@
+
+.intro {
+	height: 100vh;
+	display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+	h1 {
+		max-width: 500px;
+		margin: auto;
+		float: center;
+	}
+	img {
+		position: absolute;
+		top: 10px;
+		left: 0px;
+		margin: 15px;
+	}
+	.info {
+		position: absolute;
+		bottom: 50px;
+		right: 10px;
+		max-width: 400px;
+	}
+}
+.full-description, .supporters {
+	margin: 40px;
+}
+.full-description {
+	top: 150px;
+	height: 500px;
+	h2 {
+		float: left;
+	}
+	p {
+		float: right;
+	}
+}
+.supporters {
+	div, p {
+		float: right;
+	}
+}

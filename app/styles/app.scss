@@ -4,12 +4,13 @@
 	display:flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 
 	h1 {
-		max-width: 500px;
-		margin: auto;
-		float: center;
+		width: 500px;
+		left: 50%;
+		margin-left: -250px;
+		top: 25%;
+		position: absolute;
 	}
 	img {
 		position: absolute;
@@ -23,6 +24,7 @@
 		right: 10px;
 		max-width: 400px;
 	}
+	
 }
 .full-description, .supporters {
 	margin: 40px;

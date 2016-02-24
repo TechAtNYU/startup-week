@@ -1,3 +1,4 @@
+@import 'variables';
 body {
 	font-family: $body-font;
 	background: $background-blue;
@@ -9,6 +10,7 @@ h1, h2, h3, p, ul li {
 h1, h2, h3 {
 	font-family: $heading-font;
 	text-align: center;
+	font-weight: 400;
 }
 a {
 	text-decoration: none;
@@ -17,6 +19,7 @@ a {
 }
 h1 {
 	font-size: 7em;
+	z-index: 100;
 }
 h2 {
 	font-size: 3em;
@@ -37,3 +40,13 @@ footer {
 	height: 60px;
 	bottom: 0;
 }
+canvas {
+	background: red;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: 600px;
+    z-index: -10;
+	}

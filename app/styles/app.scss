@@ -30,8 +30,8 @@
 	margin: 40px;
 }
 .full-description {
-	top: 150px;
-	height: 100px;
+	top: $big-space;
+	height: 150px;
 	p {
 		float: right;
 	}
@@ -54,6 +54,8 @@
 	}
 }
 .supporters {
+	margin-top: $big-space;
+	min-height: 150px;
 	div, p {
 		float: right;
 	}

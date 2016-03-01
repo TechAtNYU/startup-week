@@ -36,12 +36,13 @@ ul li, span {
 	font-size: 1em;
 }
 footer {
-	margin-top: 150px;
+	margin-top: $big-space;
 	background: $teal;
 	height: 60px;
 	bottom: 0;
 	span {
 		width: 100%;
+		top: 50%;
 		display: inline-block;
 		text-align: center;
 		float: center;

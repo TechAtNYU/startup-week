@@ -15,11 +15,11 @@ angular.module('startupWeekApp')
       	var circles = [];
 
       	function drawCircles() {
-      		for (var i = 0; i <= 20; i++) {
-      			circles[i] = new Circle(getColor(), Math.random()*10); 
+      		for (var i = 0; i <= 30; i++) {
+      			circles[i] = new Circle(getColor(), Math.random()*5); 
             circles[i].draw();
       		}
-          for (var i = 0; i <= 20; i++) {
+          for (var i = 0; i <= 30; i++) {
             circles[i].draw();
           }
       	}
@@ -30,8 +30,8 @@ angular.module('startupWeekApp')
   		}
 
     		function Circle(color, size) {
-          this.x = (canvas.width * Math.random());
-          this.y = (canvas.height * Math.random());
+          this.x = ((canvas.width-50) * Math.random());
+          this.y = ((canvas.height-50) * Math.random());
     			this.size = size;
     			this.color = color;
 

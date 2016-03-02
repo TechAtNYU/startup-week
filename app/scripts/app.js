@@ -9,15 +9,32 @@
  * Main module of the application.
  */
  
-var app = angular.module('startupWeekApp', []);
-app.controller('MainCtrl', function () {
-
-
+var app = angular.module('startupWeekApp', ['restangular']).config(function(RestangularProvider) {
+	RestangularProvider.setBaseUrl('https://api.tnyu.org/v3');
+	// Configuring Restangular to work with JSONAPI spec
+	RestangularProvider.setDefaultHeaders({
+	'Accept': 'application/vnd.api+json, application/*, */*',
+	'Content-Type': 'application/vnd.api+json; ext=bulk'
+	});
+	RestangularProvider.addResponseInterceptor(function(data) {
+		return data;
+	});
 });
+app.controller('MainCtrl', function ($scope, Restangular) {
+	$scope.description = "A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.";
+	$scope.about = "Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is back—and our event lineup is better than ever! We've got workshops, speakers, panels, demos, and a party!";
+	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=&2bstartDateTime&include=presenters')
+ 	.get()
+      .then(function(data) {
+      		console.log(data.data);
+        	var sw_sp2016 = data.data.filter(function(event) {
 
-app.directive("drawing", function(){
+        	})
+      }); 
+});
+app.directive('drawing', function(){
   return {
-    restrict: "A",
+    restrict: 'A',
     link: function(scope, element){
 		var context = element[0].getContext('2d');
 		var circles = [];

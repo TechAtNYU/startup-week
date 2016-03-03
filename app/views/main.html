@@ -17,109 +17,19 @@
 </section>
 <section class="schedule">
       <h2> Schedule </h2>
-      {{days}}
       <section class="day" ng-repeat="day in days">
-        <!--<h3>Monday, April 4th</h3>-->
+        <h3>{{day}}</h3>
         <ul>
-            <li ng-repeat="event in day.children"><section class="event">
+            <li ng-repeat="event in day"><section class="event">
                 <ul>
-                   <li><h4>{{event.attributes.title}}</h4></li>
+                   <li><h4>{{event.title}}</h4></li>
                    <li>{{event.time}}</li> 
                    <li><p>{{event.description}}</p></li>
                    <li>{{event.location}}</li> 
                 </ul>
             </section></li>
-            <!--<li><section class="event">
-              <h4>HackDays: Web Scraping and Automation</h4>
-              <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Rights taxidermy beard meggings forage marfa 90's beard plaid rights them lumbersexual small fap tumblr rights etsy tofu cred it put pitchfork austin probably.</p> </li>
-                 <li>Mongo DB</li> 
-            </ul>
-            </section></li>
-            <li><section class="event">
-              <h4>Diversity Panel</h4>
-              <ul>
-                <li>5 - 6.30 pm </li> 
-                <li><p>Slow-carb irony knausgaard etsy organic, brunch them pug chicharrones goth pork fashion fixie moonbeard?</p></li>
-                <li>Hired NYC </li> 
-              </ul>
-            </section></li>-->
         </ul>
     </section>
-     <!--<section class="day">
-        <h3>Tuesday, April 5th</h3>
-        <ul>
-            <li><section class="event">
-              <h4>Business Careers In Tech</h4>
-                <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Viral cardigan drinking fashion cold-pressed pitchfork bag cold-pressed williamsburg booth four fingerstache direct offal ramps +1 shabby food put selfies truffaut meditation lomo fixie health mumblecore.</p></li>
-                 <li>Roof of stern</li> 
-            </section></li>
-            <li><section class="event">
-              <h4>Diversity Panel</h4>
-              <ul>
-                <li>5 - 6.30 pm </li> 
-                <li><p>Slow-carb irony knausgaard etsy organic, brunch them pug chicharrones goth pork fashion fixie moonbeard?</p></li>
-                <li>Hired NYC </li> 
-              </ul>
-            </section></li>
-        </ul>
-    </section>
-    <section class="day">
-        <h3>Wednesday, April 6th</h3>
-        <ul>
-            <li><section class="event">
-              <h4>Business Careers In Tech</h4>
-                <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Viral cardigan drinking fashion cold-pressed pitchfork bag cold-pressed williamsburg booth four fingerstache direct offal ramps +1 shabby food put selfies truffaut meditation lomo fixie health mumblecore.</p></li>
-                 <li>Roof of stern</li> 
-            </section></li>
-            <li><section class="event">
-              <h4>HackDays: Web Scraping and Automation</h4>
-              <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Rights taxidermy beard meggings forage marfa 90's beard plaid rights them lumbersexual small fap tumblr rights etsy tofu cred it put pitchfork austin probably.</p> </li>
-                 <li>Mongo DB</li> 
-            </ul>
-            </section></li>
-        </ul>
-    </section>
-    <section class="day">
-        <h3>Thursday, April 7th</h3>
-        <ul>
-            <li><section class="event">
-              <h4>Business Careers In Tech</h4>
-                <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Viral cardigan drinking fashion cold-pressed pitchfork bag cold-pressed williamsburg booth four fingerstache direct offal ramps +1 shabby food put selfies truffaut meditation lomo fixie health mumblecore.</p></li>
-                 <li>Roof of stern</li> 
-            </section></li>
-            <li><section class="event">
-              <h4>HackDays: Web Scraping and Automation</h4>
-              <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Rights taxidermy beard meggings forage marfa 90's beard plaid rights them lumbersexual small fap tumblr rights etsy tofu cred it put pitchfork austin probably.</p> </li>
-                 <li>Mongo DB</li> 
-            </ul>
-            </section></li>
-        </ul>
-    </section>
-    <section class="day">
-        <h3>Friday, April 8th</h3>
-        <ul>
-            <li><section class="event">
-              <h4>HackDays: Web Scraping and Automation</h4>
-              <ul>
-                 <li>5 - 6.30 pm </li> 
-                 <li><p>Rights taxidermy beard meggings forage marfa 90's beard plaid rights them lumbersexual small fap tumblr rights etsy tofu cred it put pitchfork austin probably.</p> </li>
-                 <li>Mongo DB</li> 
-            </ul>
-            </section></li>
-        </ul>
-    </section>-->
 </section>
 <span class="border"></span>
 <section class="supporters">

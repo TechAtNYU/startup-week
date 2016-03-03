@@ -6,7 +6,7 @@
   <div class="info">
     <p class="description">{{description}}</p>
     <ul>
-        <li>April 4–10, 2016 | </li><li>New York City | </li><li><a href="https://balloon.io/techatnyuresumedrop" target="_blank">Resume Drop</a></li><br>
+        <li>April 4–8, 2016 | </li><li>New York City | </li><li><a href="https://balloon.io/techatnyuresumedrop" target="_blank">Resume Drop</a></li><br>
     </ul>    
   </div>
 </section>
@@ -17,10 +17,10 @@
 </section>
 <section class="schedule">
       <h2> Schedule </h2>
-      <section class="day" ng-repeat="day in days">
+      <section class="day" ng-repeat="(day, events) in days">
         <h3>{{day}}</h3>
         <ul>
-            <li ng-repeat="event in day"><section class="event">
+            <li ng-repeat="event in events"><section class="event">
                 <ul>
                    <li><h4>{{event.title}}</h4></li>
                    <li>{{event.time}}</li> 

@@ -23,6 +23,7 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 app.controller('MainCtrl', function ($scope, Restangular) {
 	$scope.description = "A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.";
 	$scope.about = "Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is back—and our event lineup is better than ever! We've got workshops, speakers, panels, demos, and a party!";
+	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th',];
 	$scope.days = {};
 	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=&2bstartDateTime&include=presenters')
  	.get()
@@ -35,7 +36,7 @@ app.controller('MainCtrl', function ($scope, Restangular) {
         	});
 
         	for (var i = 0; i < sw_sp2016.length; i++) {
-        		var dow = moment(sw_sp2016[i].attributes.startDateTime);
+        		var dayOfWeek = moment(sw_sp2016[i].attributes.startDateTime);
         		var details = sw_sp2016[i].attributes;
     			var title = details.title;
     			var description = details.description;
@@ -45,35 +46,35 @@ app.controller('MainCtrl', function ($scope, Restangular) {
     				'description': description,
     				'location': location
     			};
-        		if (dow.isoWeekday() === 1) {
-        			if (!($scope.days.monday)) {
-        				$scope.days.monday = [];
+        		if (dayOfWeek.isoWeekday() === 1) {
+        			if (!($scope.days[dow[0]])) {
+        				$scope.days[dow[0]] = [];
         			}
-        			$scope.days.monday.push(theEvent);
+        			$scope.days[dow[0]].push(theEvent);
         		}
-        		else if (dow.isoWeekday() === 2) {
-        			if (!($scope.days.tuesday)) {
-        				$scope.days.tuesday = [];
+        		else if (dayOfWeek.isoWeekday() === 2) {
+        			if (!($scope.days[dow[1]])) {
+        				$scope.days[dow[1]] = [];
         			}
-        			$scope.days.tuesday.push(theEvent);
+        			$scope.days[dow[1]].push(theEvent);
         		}
-        		else if (dow.isoWeekday() === 3) {
-        			if (!($scope.days.wednesday)) {
-        				$scope.days.wednesday = [];
+        		else if (dayOfWeek.isoWeekday() === 3) {
+        			if (!($scope.days[dow[2]])) {
+        				$scope.days[dow[2]] = [];
         			}
-        			$scope.days.wednesday.push(theEvent);
+        			$scope.days[dow[2]].push(theEvent);
         		}
-        		else if (dow.isoWeekday() === 4) {
-        			if (!($scope.days.thursday)) {
-        				$scope.days.thursday = [];
+        		else if (dayOfWeek.isoWeekday() === 4) {
+        			if (!($scope.days[dow[3]])) {
+        				$scope.days[dow[3]] = [];
         			}
-        			$scope.days.thursday.push(theEvent);
+        			$scope.days[dow[3]].push(theEvent);
         		}
-        		else if (dow.isoWeekday() === 5) {
-        			if (!($scope.days.friday)) {
-        				$scope.days.friday = [];
+        		else if (dayOfWeek.isoWeekday() === 5) {
+        			if (!($scope.days[dow[4]])) {
+        				$scope.days[dow[4]] = [];
         			}
-        			$scope.days.friday.push(theEvent);
+        			$scope.days[dow[4]].push(theEvent);
         		}
         	}
         });

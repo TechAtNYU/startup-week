@@ -20,7 +20,9 @@
          <input type="email" value="" name="EMAIL" class="email signup__form" id="mce-EMAIL" placeholder="email address" required>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;"><input type="text" name="b_260d258c262a03b1f8f599591_a7523c433b" tabindex="-1" value=""></div>
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+          <div class="hvr-underline-from-center">
+            <input type="submit" class="hvr-outline-in" value="Subscribe" name="subscribe">
+          </div>
       </form>
     </div>
 </div>
@@ -47,7 +49,7 @@
   <h2> Previous Sponsors</h2>
   <div class="right">
     <ul class="grid">
-      <li ng-repeat="sponsor in prevSponsorsImg"><a class="img" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
+      <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
     </ul>
     <p>If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
   </div>
@@ -55,6 +57,6 @@
 <footer>
   <span>Made with Contempt in NYC.</span>
   <ul class="social-media">
-      <li ng-repeat="platform in socialMedia"><a class="img" href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
+      <li ng-repeat="platform in socialMedia"><a href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
   </ul>
 </footer>

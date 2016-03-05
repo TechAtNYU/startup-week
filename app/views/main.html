@@ -1,0 +1,62 @@
+
+<section class="intro">
+  <canvas id="circles" width="600" height="600" drawing></canvas>
+  <h1>Startup Week</h1>
+  <img src="/images/techatnyu.png" alt="tech@nyu" class="logo"/>
+  <div class="info">
+    <p class="description">{{description}}</p>
+    <ul>
+        <li>April 4–8, 2016 | </li><li>New York City | </li><li><a href="https://balloon.io/techatnyuresumedrop" target="_blank">Resume Drop</a></li><br>
+    </ul>    
+  </div>
+</section>
+<span class="border"></span>
+<section class="full-description">
+  <h2> Get Excited. </h2>
+  <div class="right">
+    <p class="about">{{about}}</p>
+    <div id="signup">
+      <form action="//techatnyu.us1.list-manage.com/subscribe/post?u=260d258c262a03b1f8f599591&amp;id=a7523c433b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+         <input type="email" value="" name="EMAIL" class="email signup__form" id="mce-EMAIL" placeholder="email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_260d258c262a03b1f8f599591_a7523c433b" tabindex="-1" value=""></div>
+          <div class="hvr-underline-from-center">
+            <input type="submit" class="hvr-outline-in" value="Subscribe" name="subscribe">
+          </div>
+      </form>
+    </div>
+</div>
+</section>
+<!--
+<section class="schedule">
+      <h2> Schedule </h2>
+      <section class="day" ng-repeat="(day, events) in days">
+        <h3>{{day}}</h3>
+        <ul class="events">
+            <li ng-repeat="event in events"><section class="event hidden">
+                <ul>
+                   <li><h4>{{event.title}}</h4></li>
+                   <li>{{event.time}}</li> 
+                   <li><p>{{event.description}}</p></li>
+                   <li>{{event.location}}</li> 
+                </ul>
+            </section></li>
+        </ul>
+    </section>
+</section>
+<span class="border"></span>-->
+<section class="supporters">
+  <h2> Previous Sponsors</h2>
+  <div class="right">
+    <ul class="grid">
+      <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
+    </ul>
+    <p>If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
+  </div>
+</section> 
+<footer>
+  <span>Made with Contempt in NYC.</span>
+  <ul class="social-media">
+      <li ng-repeat="platform in socialMedia"><a href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
+  </ul>
+</footer>

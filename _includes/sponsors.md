@@ -1,5 +1,0 @@
-<!-- ##Special thanks to our supporters
-
-<img src="/lib/logos/chatid.png" alt="ChatID" class="two-n-plus-oneth three-n-plus-oneth" /><img src="/lib/logos/core.png" alt="CORE at Columbia" class="two-n-plus-oneth" /><img src="/lib/logos/elab.png" alt="NYU Leslie Entrepreneurship Institute" class="two-n-plus-oneth"><img src="/lib/logos/google.png" alt="Google" class="two-n-plus-oneth three-n-plus-oneth" /><img src="/lib/logos/microsoft.png" alt="Microsoft" class="two-n-plus-oneth" /><img src="/lib/logos/itp.png" alt="NYU ITP at Tisch" class="two-n-plus-oneth" /><img src="/lib/logos/spotify.png" alt="Spotify" class="two-n-plus-oneth three-n-plus-oneth" /><img src="/lib/logos/square.png" alt="Square" class="two-n-plus-oneth" /><img src="/lib/logos/work-bench.png" class="two-n-plus-oneth" /><img src="http://files.tnyu.org/upload_4888f906ad62ef510d3326ad6dc8f668_2f0ccd08-dc86-11e4-92bf-17509d290d64.jpg" alt="CowanNYC" class="two-n-plus-oneth" /> -->
-
-If you want to sponsor, please email [startupweek@techatnyu.org](mailto:startupweek@techatnyu.org) for the partner prospectus.

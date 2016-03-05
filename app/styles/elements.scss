@@ -12,12 +12,12 @@ h1, h2, h3 {
 	text-align: center;
 	font-weight: 400;
 }
-a::not(.sponsors) {
+a:not(.sponsors) {
 	text-decoration: none;
 	color: inherit;
 	position: relative;
 }
-a::not(.sponsors):after{
+a:not(.sponsors):after{
   display: block;
   position: absolute;
   left: 0;
@@ -28,7 +28,7 @@ a::not(.sponsors):after{
   content: "";
   transition: width 0.2s;
 }
-a::not(.sponsors):hover:after{
+a:not(.sponsors):hover:after{
   width: 100%;
 }
 h1 {

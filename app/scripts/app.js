@@ -22,9 +22,85 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 });
 app.controller('MainCtrl', function ($scope, Restangular) {
 	$scope.description = "A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.";
-	$scope.about = "Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is back—and our event lineup is better than ever! We've got workshops, speakers, panels, demos, and a party!";
+	$scope.about = "Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is coming soon—and our event lineup is better than ever! We've got workshops, speakers, panels, demos, and a party! Sign up to hear about it first!";
 	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th',];
 	$scope.days = {};
+	$scope.prevSponsorsImg = [
+		  {
+            href: "http://www.chatid.com/",
+            title: "chatid",
+            src: "../images/logos/chatid.png",
+            alt: "chatid"
+          },
+          {
+            href: "http://coreatcu.com/",
+            title: "CORE at Columbia",
+            src: "../images/logos/core.png",
+            alt: "CORE at Columbia"
+          },
+          {
+            href: "http://entrepreneur.nyu.edu/",
+            title: "NYU Leslie Entrepreneurship Institute",
+            src: "../images/logos/elab.png",
+            alt: "NYU Leslie Entrepreneurship Institute"
+          },
+          {
+            href: "https://www.google.com",
+            title: "Google",
+            src: "../images/logos/google.png",
+            alt: "Google"
+          },
+          {
+            href: "http://www.work-bench.com/",
+            title: "Work Bench",
+            src: "../images/logos/workbench.png",
+            alt: "Work Bench"
+          },
+          {
+            href: "https://squareup.com/",
+            title: "Square",
+            src: "../images/logos/square.jpeg",
+            alt: "Square"
+          },
+          {
+            href: "https://www.spotify.com",
+            title: "Spotify",
+            src: "../images/logos/spotify.png",
+            alt: "Spotify"
+          },
+          {
+            href: "https://www.facebook.com/parsonscodeclub",
+            title: "NYU ITP at Tisch",
+            src: "../images/logos/itp.png",
+            alt: "NYU ITP at Tisch"
+          },
+          {
+            href: "https://www.microsoft.com/en-us/",
+            title: "Microsoft",
+            src: "../images/logos/microsoft.png",
+            alt: "Microsoft"
+          },
+          /*{
+            href: "http://www.cowen.com/",
+            title: "Cowan NYC",
+            src: "http://files.tnyu.org/upload_4888f906ad62ef510d3326ad6dc8f668_2f0ccd08-dc86-11e4-92bf-17509d290d64.jpg",
+            alt: "Cowan NYC"
+          }*/
+        ];
+        $scope.socialMedia = [
+        	{
+            href: "https://www.facebook.com/TechatNYU/",
+            title: "Facebook",
+            src: "../images/icons/facebook.png",
+            alt: "Facebook"
+          },
+          {
+            href: "https://twitter.com/TechatNYU",
+            title: "Twitter",
+            src: "../images/icons/twitter.png",
+            alt: "Twitter"
+          }
+        ];
 	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=&2bstartDateTime&include=presenters')
  	.get()
 		.then(function(data) {
@@ -111,8 +187,8 @@ app.directive('drawing', function(){
 			this.y = ((element[0].height-50) * Math.random());
 			this.size = size;
 			this.color = color;
-			this.minSpeed = .05;
- 			this.maxSpeed = .5;
+			this.minSpeed = 0.05;
+ 			this.maxSpeed = 0.5;
  			this.xVelocity = Math.random(this.minSpeed, this.maxSpeed);
  			this.yVelocity = Math.random(this.minSpeed, this.maxSpeed);
 

@@ -4,14 +4,14 @@
 // generator-karma 1.0.1
 
 module.exports = function(config) {
-  'use strict';
+  "use strict";
 
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
     // base path, that will be used to resolve files and exclude
-    basePath: '../',
+    basePath: "../",
 
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
@@ -22,10 +22,10 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // bower:js
-      'bower_components/angular/angular.js',
-      'bower_components/moment/moment.js',
-      'bower_components/angular-moment/angular-moment.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      "bower_components/angular/angular.js",
+      "bower_components/moment/moment.js",
+      "bower_components/angular-moment/angular-moment.js",
+      "bower_components/angular-mocks/angular-mocks.js",
       // endbower
       "app/scripts/*.js",
       "test/mock/*.js",
@@ -67,11 +67,11 @@ module.exports = function(config) {
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_INFO,
 
-    // Uncomment the following lines if you are using grunt's server to run the tests
+    // Uncomment the following lines if you are using grunt"s server to run the tests
     // proxies: {
-    //   '/': 'http://localhost:9000/'
+    //   "/": "http://localhost:9000/"
     // },
     // URL root prevent conflicts with the site root
-    // urlRoot: '_karma_'
+    // urlRoot: "_karma_"
   });
 };

@@ -4,17 +4,17 @@ $pink: #dda6a2;
 $teal: #246c78;
 $big-space: 150px;
 @font-face {
-    font-family: 'pier_sansregular';
-    src: url('fonts/pier-regular-webfont.eot');
-    src: url('fonts/pier-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/pier-regular-webfont.woff2') format('woff2'),
-         url('fonts/pier-regular-webfont.woff') format('woff'),
-         url('fonts/pier-regular-webfont.ttf') format('truetype'),
-         url('fonts/pier-regular-webfont.svg#pier_sansregular') format('svg');
+    font-family: "pier_sansregular";
+    src: url("fonts/pier-regular-webfont.eot");
+    src: url("fonts/pier-regular-webfont.eot?#iefix") format("embedded-opentype"),
+	url("fonts/pier-regular-webfont.woff2") format("woff2"),
+	url("fonts/pier-regular-webfont.woff") format("woff"),
+	url("fonts/pier-regular-webfont.ttf") format("truetype"),
+	url("fonts/pier-regular-webfont.svg#pier_sansregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-$heading-font: 'pier_sansregular', 'Inconsolata', 'Helvetica', sans-serif;
-$body-font: 'Inconsolata', sans-serif;
+$heading-font: "pier_sansregular", "Inconsolata", "Helvetica", sans-serif;
+$body-font: "Inconsolata", sans-serif;
 
 

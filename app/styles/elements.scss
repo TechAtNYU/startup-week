@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 body {
 	font-family: $body-font;
 	background: $background-blue;
@@ -12,10 +12,24 @@ h1, h2, h3 {
 	text-align: center;
 	font-weight: 400;
 }
-a {
+a::not(.sponsors) {
 	text-decoration: none;
 	color: inherit;
-	border-bottom: 2px solid $salmon;
+	position: relative;
+}
+a::not(.sponsors):after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: $salmon;
+  content: "";
+  transition: width 0.2s;
+}
+a::not(.sponsors):hover:after{
+  width: 100%;
 }
 h1 {
 	font-size: 7em;
@@ -35,17 +49,41 @@ ul li {
 ul li, span {
 	font-size: 1em;
 }
+input, input:focus {
+	outline: none;
+	background: white;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input {
+	display: inline;
+	font-family: $body-font;
+}
+input[type="email"] {
+	width: 50%;
+	padding: 10px;
+}
+input[type="submit"] {
+	border: none;
+	background: transparent;
+	width: 80px;
+	padding: 5px;
+	margin: 5px;
+	color: white;
+}
 footer {
-	margin-top: 150px;
+	margin-top: 400px;
 	background: $teal;
 	height: 60px;
 	bottom: 0;
 	span {
 		width: 100%;
-		top: 50%;
 		display: inline-block;
 		text-align: center;
 		float: center;
+		position: relative;
+		top: 25px;
 	}
 }
 canvas {

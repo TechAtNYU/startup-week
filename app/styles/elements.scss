@@ -1,4 +1,5 @@
 @import "variables";
+
 body {
 	font-family: $body-font;
 	background: $background-blue;
@@ -73,19 +74,18 @@ input[type="submit"] {
 	color: white;
 }
 footer {
-	margin-top: 400px;
+	z-index: 10;
 	background: $teal;
+	width: 100%;
 	height: 60px;
+	position: relative;
 	bottom: 0;
-	span {
-		width: 100%;
-		display: inline-block;
+	/*span {
 		text-align: center;
 		float: center;
-		position: relative;
-		top: 25px;
-	}
+	}*/
 }
+
 canvas {
 	padding-left: 0;
     padding-right: 0;

@@ -69,7 +69,7 @@ app.controller('MainCtrl', function ($scope, Restangular) {
             alt: "Spotify"
           },
           {
-            href: "https://www.facebook.com/parsonscodeclub",
+            href: "http://tisch.nyu.edu/itp",
             title: "NYU ITP at Tisch",
             src: "../images/logos/itp.png",
             alt: "NYU ITP at Tisch"

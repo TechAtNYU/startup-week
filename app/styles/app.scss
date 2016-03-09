@@ -21,10 +21,13 @@
 	.info {
 		position: absolute;
 		bottom: 50px;
-		right: 40px;
+		right: 2%;
 		max-width: 400px;
 	}
 	
+}
+.logo {
+	 filter: invert(100%);
 }
 .full-description, .supporters, .schedule {
 	margin: 50px;
@@ -41,6 +44,7 @@
 	position: relative;
 	padding: 20px;
 	top: 20px;
+	margin-bottom: 50px;
 }
 .day {
 	position: relative;
@@ -66,29 +70,30 @@
 .right {
 	margin-top: 30px;
 	float: right;
-	width: 50%;
 }
 .supporters {
-	min-height: 250px;
+	margin-bottom: 100px;
 	div > p {
-		margin-top: 30px
+		margin-top: 30px;
 	}
 }
 
 .supporters .grid {
+	position: relative;
+	max-width: 600px;
   	img {
   		padding: 10px;
   	}
 }
 /** in footer **/
-.social-media {
+/*.social-media {
 	float: right;
 	margin-right: 15px;
 	img {
 		height: 100%;
 		padding: 2px;
 	}
-}
+}*/
 
 /** button effects */
 

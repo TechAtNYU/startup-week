@@ -22,7 +22,7 @@
 		position: absolute;
 		bottom: 50px;
 		right: 2%;
-		max-width: 400px;
+		max-width: 395px;
 	}
 	
 }
@@ -42,9 +42,10 @@
 }
 #signup {
 	position: relative;
-	padding: 20px;
 	top: 20px;
 	margin-bottom: 50px;
+	bottom: 50px;
+	padding: 5px;
 }
 .day {
 	position: relative;
@@ -72,29 +73,56 @@
 	float: right;
 }
 .supporters {
-	margin-bottom: 100px;
+	position: relative;
+	margin-bottom: 400px;
 	div > p {
 		margin-top: 30px;
 	}
 }
 
 .supporters .grid {
-	position: relative;
+	min-height: 250px;
 	max-width: 600px;
   	img {
   		padding: 10px;
   	}
 }
 /** in footer **/
-/*.social-media {
+.social-media {
 	float: right;
 	margin-right: 15px;
+	width: 100px;
 	img {
 		height: 100%;
-		padding: 2px;
+		margin: 5% auto;
+		padding-left: 8px;
 	}
-}*/
+}
 
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
 /** button effects */
 
 /* Underline From Center */

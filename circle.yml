@@ -1,0 +1,31 @@
+general:
+  branches:
+    only:
+      - v2
+
+machine:
+  timezone:
+    America/Los_Angeles
+  ruby:
+    version:
+      2.1.1
+  node:
+    version: 
+      5.0.0
+
+dependencies:
+  post:
+    - npm install -g grunt
+    - npm install
+    - bower install
+    - grunt build
+
+test:
+  override:
+    - echo "No tests are needed"
+
+deployment:
+  production:
+    branch: v2
+    commands:
+      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/dist -c $CONTAINER

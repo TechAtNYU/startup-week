@@ -10,8 +10,10 @@
         </ul>    
       </div>
     </section>
-    <span class="border"></span>
     <section class="full-description">
+      <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
+        Shape <!-- fallback image in CSS -->
+      </object>
       <h2> Get Excited. </h2>
       <div class="right">
         <p class="about">{{about}}</p>
@@ -25,10 +27,20 @@
               </div>
           </form>
         </div>
+        <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
+            Shape <!-- fallback image in CSS -->
+        </object>
+        <object type="image/svg+xml" data="/images/green.svg" class="shape size1">
+            Shape <!-- fallback image in CSS -->
+        </object>
       </div>
     </section>
     <section class="schedule">
           <h2> Schedule </h2>
+          <div class="clear"></div>
+          <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
+            Shape <!-- fallback image in CSS -->
+          </object>
           <section class="day" ng-repeat="(day, events) in days">
             <h3>{{day}}</h3>
             <ul class="events">
@@ -44,12 +56,27 @@
         </section>
     </section>
     <section class="supporters">
+      <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
+          Shape <!-- fallback image in CSS -->
+      </object>
+      <object type="image/svg+xml" data="/images/blue.svg" class="shape size3">
+            Shape <!-- fallback image in CSS -->
+      </object>
       <h2> Previous Sponsors</h2>
       <div class="right">
         <ul class="grid">
           <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
         </ul>
+        <object type="image/svg+xml" data="/images/peach.svg" class="shape size1">
+            Shape <!-- fallback image in CSS -->
+        </object>
         <p>If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
+        <object type="image/svg+xml" data="/images/blue.svg" class="shape size1">
+            Shape <!-- fallback image in CSS -->
+        </object>
+        <object type="image/svg+xml" data="/images/green.svg" class="shape size2">
+            Shape <!-- fallback image in CSS -->
+        </object>
       </div>
     </section> 
     <div class="clear"></div>
@@ -60,3 +87,14 @@
       <li ng-repeat="platform in socialMedia"><a href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
   </ul>
 </footer>
+<style>
+  .shape.size1 {
+    width: 60px;
+  }
+  .shape.size2 {
+    width: 50px;
+  }
+  .shape.size3 {
+    width: 30px;
+  }
+</style>

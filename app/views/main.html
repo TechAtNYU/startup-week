@@ -27,12 +27,14 @@
               </div>
           </form>
         </div>
-        <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
-            Shape <!-- fallback image in CSS -->
-        </object>
-        <object type="image/svg+xml" data="/images/green.svg" class="shape size1">
-            Shape <!-- fallback image in CSS -->
-        </object>
+        <div class="shapes">
+          <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
+              Shape <!-- fallback image in CSS -->
+          </object>
+          <object type="image/svg+xml" data="/images/green.svg" class="shape size1">
+              Shape <!-- fallback image in CSS -->
+          </object>
+        </div>
       </div>
     </section>
     <object type="image/svg+xml" data="/images/salmon.svg" class="shape size3">
@@ -46,9 +48,6 @@
           </object>
           <section class="day" ng-repeat="(day, events) in days">
             <h3>{{day}}</h3>
-            <object type="image/svg+xml" data="/images/green.svg" class="shape size2">
-                Shape <!-- fallback image in CSS -->
-            </object>
             <ul class="events">
                 <li ng-repeat="event in events"><section class="event hidden">
                     <ul>
@@ -62,12 +61,12 @@
         </section>
     </section>
     <section class="supporters">
-      <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
-          Shape <!-- fallback image in CSS -->
-      </object>
-      <object type="image/svg+xml" data="/images/blue.svg" class="shape size3">
+        <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
             Shape <!-- fallback image in CSS -->
-      </object>
+        </object>
+        <object type="image/svg+xml" style="position:relative;top: 20px;" data="/images/blue.svg" class="shape size3">
+              Shape <!-- fallback image in CSS -->
+        </object>
       <h2> Previous Sponsors</h2>
       <div class="right">
         <object type="image/svg+xml" data="/images/pink.svg" class="shape size3">
@@ -76,16 +75,18 @@
         <ul class="grid">
           <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
         </ul>
-        <object type="image/svg+xml" data="/images/peach.svg" class="shape size1">
+        <object style="position:relative;right:40%" type="image/svg+xml" data="/images/peach.svg" class="shape size1">
             Shape <!-- fallback image in CSS -->
         </object>
         <p>If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
-        <object type="image/svg+xml" data="/images/blue.svg" class="shape size1">
-            Shape <!-- fallback image in CSS -->
-        </object>
-        <object type="image/svg+xml" data="/images/green.svg" class="shape size2">
-            Shape <!-- fallback image in CSS -->
-        </object>
+        <div class="shapes">
+          <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
+              Shape <!-- fallback image in CSS -->
+          </object>
+          <object type="image/svg+xml" data="/images/blue.svg" class="shape size1">
+              Shape <!-- fallback image in CSS -->
+          </object>
+        </div>
       </div>
     </section> 
     <div class="clear"></div>
@@ -108,5 +109,23 @@
   }
   .shape.size3 {
     width: 30px;
+  }
+  .shapes {
+    width: 120px;
+  }
+  .schedule > object, .right > .shapes {
+    position: relative;
+  }
+  .right > .shapes {
+    left: 80%;
+  }
+  .right > .shapes object:nth-child(odd) {
+      position: relative;
+      top: 10px;
+      left: 20px;
+  }
+  .schedule > object {
+     left: 60%;
+     top: 40px;
   }
 </style>

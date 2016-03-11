@@ -35,6 +35,9 @@
         </object>
       </div>
     </section>
+    <object type="image/svg+xml" data="/images/salmon.svg" class="shape size3">
+        Shape <!-- fallback image in CSS -->
+    </object>
     <section class="schedule">
           <h2> Schedule </h2>
           <div class="clear"></div>
@@ -64,6 +67,9 @@
       </object>
       <h2> Previous Sponsors</h2>
       <div class="right">
+        <object type="image/svg+xml" data="/images/pink.svg" class="shape size3">
+            Shape <!-- fallback image in CSS -->
+        </object>
         <ul class="grid">
           <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
         </ul>
@@ -88,6 +94,9 @@
   </ul>
 </footer>
 <style>
+  .shape:nth-child(3n+1) {
+    opacity: 0.6;
+  }
   .shape.size1 {
     width: 60px;
   }

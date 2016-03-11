@@ -46,6 +46,9 @@
           </object>
           <section class="day" ng-repeat="(day, events) in days">
             <h3>{{day}}</h3>
+            <object type="image/svg+xml" data="/images/green.svg" class="shape size2">
+                Shape <!-- fallback image in CSS -->
+            </object>
             <ul class="events">
                 <li ng-repeat="event in events"><section class="event hidden">
                     <ul>
@@ -95,7 +98,7 @@
 </footer>
 <style>
   .shape:nth-child(3n+1) {
-    opacity: 0.6;
+    opacity: 0.8;
   }
   .shape.size1 {
     width: 60px;

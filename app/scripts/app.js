@@ -21,132 +21,134 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 	});
 });
 app.controller('MainCtrl', function ($scope, Restangular) {
-	$scope.description = "A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.";
-	$scope.about = "Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is coming soon—and our event lineup is better than ever! We've got workshops, speakers, panels, demos, and a party! Sign up to hear about it first!";
-	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th',];
+	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
+	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is coming soon—and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a party! Sign up to hear about it first!';
+	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
 		  {
-            href: "http://www.chatid.com/",
-            title: "chatid",
-            src: "../images/logos/chatid.png",
-            alt: "chatid"
+            href: 'http://www.chatid.com/',
+            title: 'chatid',
+            src: '../images/logos/chatid.png',
+            alt: 'chatid'
           },
           {
-            href: "http://coreatcu.com/",
-            title: "CORE at Columbia",
-            src: "../images/logos/core.png",
-            alt: "CORE at Columbia"
+            href: 'http://coreatcu.com/',
+            title: 'CORE at Columbia',
+            src: '../images/logos/core.png',
+            alt: 'CORE at Columbia'
           },
           {
-            href: "http://entrepreneur.nyu.edu/",
-            title: "NYU Leslie Entrepreneurship Institute",
-            src: "../images/logos/elab.png",
-            alt: "NYU Leslie Entrepreneurship Institute"
+            href: 'http://entrepreneur.nyu.edu/',
+            title: 'NYU Leslie Entrepreneurship Institute',
+            src: '../images/logos/elab.png',
+            alt: 'NYU Leslie Entrepreneurship Institute'
           },
           {
-            href: "https://www.google.com",
-            title: "Google",
-            src: "../images/logos/google.png",
-            alt: "Google"
+            href: 'https://www.google.com',
+            title: 'Google',
+            src: '../images/logos/google.png',
+            alt: 'Google'
           },
           {
-            href: "http://www.work-bench.com/",
-            title: "Work Bench",
-            src: "../images/logos/workbench.png",
-            alt: "Work Bench"
+            href: 'http://www.work-bench.com/',
+            title: 'Work Bench',
+            src: '../images/logos/workbench.png',
+            alt: 'Work Bench'
           },
           {
-            href: "https://squareup.com/",
-            title: "Square",
-            src: "../images/logos/square.jpeg",
-            alt: "Square"
+            href: 'https://squareup.com/',
+            title: 'Square',
+            src: '../images/logos/square.jpeg',
+            alt: 'Square'
           },
           {
-            href: "https://www.spotify.com",
-            title: "Spotify",
-            src: "../images/logos/spotify.png",
-            alt: "Spotify"
+            href: 'https://www.spotify.com',
+            title: 'Spotify',
+            src: '../images/logos/spotify.png',
+            alt: 'Spotify'
           },
           {
-            href: "http://tisch.nyu.edu/itp",
-            title: "NYU ITP at Tisch",
-            src: "../images/logos/itp.png",
-            alt: "NYU ITP at Tisch"
+            href: 'http://tisch.nyu.edu/itp',
+            title: 'NYU ITP at Tisch',
+            src: '../images/logos/itp.png',
+            alt: 'NYU ITP at Tisch'
           },
           {
-            href: "https://www.microsoft.com/en-us/",
-            title: "Microsoft",
-            src: "../images/logos/microsoft.png",
-            alt: "Microsoft"
+            href: 'https://www.microsoft.com/en-us/',
+            title: 'Microsoft',
+            src: '../images/logos/microsoft.png',
+            alt: 'Microsoft'
           },
           /*{
-            href: "http://www.cowen.com/",
-            title: "Cowan NYC",
-            src: "http://files.tnyu.org/upload_4888f906ad62ef510d3326ad6dc8f668_2f0ccd08-dc86-11e4-92bf-17509d290d64.jpg",
-            alt: "Cowan NYC"
+            href: 'http://www.cowen.com/',
+            title: 'Cowan NYC',
+            src: 'http://files.tnyu.org/upload_4888f906ad62ef510d3326ad6dc8f668_2f0ccd08-dc86-11e4-92bf-17509d290d64.jpg',
+            alt: 'Cowan NYC'
           }*/
         ];
         $scope.socialMedia = [
         	{
-            href: "https://www.facebook.com/TechatNYU/",
-            title: "Facebook",
-            src: "../images/icons/facebook.png",
-            alt: "Facebook"
+            href: 'https://www.facebook.com/TechatNYU/',
+            title: 'Facebook',
+            src: '../images/icons/facebook.png',
+            alt: 'Facebook'
           },
           {
-            href: "https://twitter.com/TechatNYU",
-            title: "Twitter",
-            src: "../images/icons/twitter.png",
-            alt: "Twitter"
+            href: 'https://twitter.com/TechatNYU',
+            title: 'Twitter',
+            src: '../images/icons/twitter.png',
+            alt: 'Twitter'
           }
         ];
 	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=&2bstartDateTime&include=presenters')
  	.get()
 		.then(function(data) {
-        	var sw_sp2016 = data.data.filter(function(event) {
+        	var swSp2016 = data.data.filter(function(event) {
         		var now = moment();
         		var theEvent = moment(event.attributes.startDateTime);
         		var springMonth = 3; //april is the 3rd month in moment
         		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth));
         	});
 
-        	for (var i = 0; i < sw_sp2016.length; i++) {
-        		var dayOfWeek = moment(sw_sp2016[i].attributes.startDateTime);
-        		var details = sw_sp2016[i].attributes;
+        	for (var i = 0; i < swSp2016.length; i++) {
+        		var timing = moment(swSp2016[i].attributes.startDateTime);
+        		var details = swSp2016[i].attributes;
     			var title = details.title;
     			var description = details.description;
     			var location = details.venue;
+                var time = timing.format('HH:mm') + ' - ' + moment(details.endDateTime).format('HH:mm');
     			var theEvent = {
     				'title': title,
     				'description': description,
-    				'location': location
+    				'location': location,
+                    'time': time
     			};
-        		if (dayOfWeek.isoWeekday() === 1) {
+        		if (timing.isoWeekday() === 1) {
         			if (!($scope.days[dow[0]])) {
         				$scope.days[dow[0]] = [];
         			}
         			$scope.days[dow[0]].push(theEvent);
         		}
-        		else if (dayOfWeek.isoWeekday() === 2) {
+        		else if (timing.isoWeekday() === 2) {
         			if (!($scope.days[dow[1]])) {
         				$scope.days[dow[1]] = [];
         			}
         			$scope.days[dow[1]].push(theEvent);
         		}
-        		else if (dayOfWeek.isoWeekday() === 3) {
+        		else if (timing.isoWeekday() === 3) {
         			if (!($scope.days[dow[2]])) {
         				$scope.days[dow[2]] = [];
         			}
         			$scope.days[dow[2]].push(theEvent);
         		}
-        		else if (dayOfWeek.isoWeekday() === 4) {
+        		else if (timing.isoWeekday() === 4) {
         			if (!($scope.days[dow[3]])) {
         				$scope.days[dow[3]] = [];
         			}
         			$scope.days[dow[3]].push(theEvent);
         		}
-        		else if (dayOfWeek.isoWeekday() === 5) {
+        		else if (timing.isoWeekday() === 5) {
         			if (!($scope.days[dow[4]])) {
         				$scope.days[dow[4]] = [];
         			}
@@ -155,6 +157,29 @@ app.controller('MainCtrl', function ($scope, Restangular) {
         	}
         });
 });
+
+app.directive('fade', function($window){
+    return {
+        restrict: 'A',
+        link: function(element){
+            console.log(element); 
+            angular.element($window).bind('scroll', function() {    
+                $('.fade').each( function(i){
+                    console.log(i);
+                    var bottomOfObject = $(this).offset().top + $(this).outerHeight();
+                    var bottomOfWindow = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottomOfWindow > bottomOfObject-300 ){
+                        $(this).animate(
+                            {'opacity':'1'}, 1000);
+                    }
+                });
+            });
+        }
+    };
+});
+
 app.directive('drawing', function(){
   return {
     restrict: 'A',

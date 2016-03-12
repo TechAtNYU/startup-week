@@ -46,10 +46,10 @@
           <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
             Shape <!-- fallback image in CSS -->
           </object>
-          <section class="day" ng-repeat="(day, events) in days">
+          <section fade class="day fade" ng-repeat="(day, events) in days">
             <h3>{{day}}</h3>
             <ul class="events">
-                <li ng-repeat="event in events"><section class="event hidden">
+                <li ng-repeat="event in events"><section class="event">
                     <ul>
                        <li><h4>{{event.title}}</h4></li>
                        <li>{{event.time}}</li> 
@@ -58,6 +58,7 @@
                     </ul>
                 </section></li>
             </ul>
+          <div class="clear"></div>
         </section>
     </section>
     <section class="supporters">

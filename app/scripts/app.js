@@ -20,7 +20,7 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 		return data;
 	});
 });
-app.controller('MainCtrl', function ($scope, Restangular) {
+app.controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
 	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is coming soon—and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a party! Sign up to hear about it first!';
 	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th'];
@@ -118,11 +118,13 @@ app.controller('MainCtrl', function ($scope, Restangular) {
     			var description = details.description;
     			var location = details.venue;
                 var time = timing.format('HH:mm') + ' - ' + moment(details.endDateTime).format('HH:mm');
+                var speakers = details.presenters;
     			var theEvent = {
     				'title': title,
     				'description': description,
     				'location': location,
-                    'time': time
+                    'time': time,
+                    'speakers': speakers
     			};
         		if (timing.isoWeekday() === 1) {
         			if (!($scope.days[dow[0]])) {
@@ -161,11 +163,9 @@ app.controller('MainCtrl', function ($scope, Restangular) {
 app.directive('fade', function($window){
     return {
         restrict: 'A',
-        link: function(element){
-            console.log(element); 
+        link: function(){
             angular.element($window).bind('scroll', function() {    
-                $('.fade').each( function(i){
-                    console.log(i);
+                $('.fade').each( function(){
                     var bottomOfObject = $(this).offset().top + $(this).outerHeight();
                     var bottomOfWindow = $(window).scrollTop() + $(window).height();
 

@@ -54,6 +54,7 @@
                        <li><h4>{{event.title}}</h4></li>
                        <li>{{event.time}}</li> 
                        <li><p>{{event.description}}</p></li>
+                       <li>{{event.speakers}}</li> 
                        <li>{{event.location}}</li> 
                     </ul>
                 </section></li>
@@ -61,6 +62,7 @@
           <div class="clear"></div>
         </section>
     </section>
+    <div class="clear"></div>
     <section class="supporters">
         <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
             Shape <!-- fallback image in CSS -->
@@ -93,7 +95,6 @@
     <div class="clear"></div>
 </div>
 <footer>
-  <p>Made with Contempt in NYC.</p>
   <ul class="social-media">
       <li ng-repeat="platform in socialMedia"><a href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
   </ul>

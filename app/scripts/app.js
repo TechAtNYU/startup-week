@@ -57,6 +57,18 @@ app.controller('MainCtrl', function ($scope, Restangular) {
             alt: "Work Bench"
           },
           {
+            href: "http://tisch.nyu.edu/itp",
+            title: "NYU ITP at Tisch",
+            src: "../images/logos/itp.png",
+            alt: "NYU ITP at Tisch"
+          },
+          {
+            href: "https://www.thisalso.com",
+            title: "This Also",
+            src: "../images/logos/thisalso.jpg",
+            alt: "This Also"
+          },
+          {
             href: "https://squareup.com/",
             title: "Square",
             src: "../images/logos/square.jpeg",
@@ -69,17 +81,11 @@ app.controller('MainCtrl', function ($scope, Restangular) {
             alt: "Spotify"
           },
           {
-            href: "http://tisch.nyu.edu/itp",
-            title: "NYU ITP at Tisch",
-            src: "../images/logos/itp.png",
-            alt: "NYU ITP at Tisch"
-          },
-          {
             href: "https://www.microsoft.com/en-us/",
             title: "Microsoft",
             src: "../images/logos/microsoft.png",
             alt: "Microsoft"
-          },
+          }
           /*{
             href: "http://www.cowen.com/",
             title: "Cowan NYC",

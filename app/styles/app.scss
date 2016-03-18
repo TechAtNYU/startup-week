@@ -67,7 +67,7 @@
 	h4 {
 		font-size: 1.8em;
 	}
-	ul li {
+	> ul li {
 		font-size: 1em;
 		display: block;
 	}
@@ -76,19 +76,19 @@
 	background: $teal;
 }
 
-#speakers {
+.speakers {
     list-style: none;
     padding:0;
     margin:0;
+    width: 200px;
 }
 
-#speakers > li { 
-    padding-left: 1em; 
+.speakers > li { 
+    padding-left: 1.5em; 
     text-indent: -.7em;
-    background: red;
 }
 
-#speakers > li:before {
+.speakers > li:before {
     content: "• ";
     color: $pink;
 }

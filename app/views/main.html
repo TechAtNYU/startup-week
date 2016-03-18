@@ -54,9 +54,9 @@
                        <li><h4>{{event.title}}</h4></li>
                        <li>{{event.time}}</li> 
                        <li class="description"><p>{{event.description}}</p></li>
-                       <li>Speaker(s): 
-                          <ul id="speakers">
-                            <li><a ng-repeat="speaker in event.speakers" href="{{speaker.url}}"> {{speaker.name}}</a></li> 
+                       <li>
+                          <ul class="speakers">
+                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.url}}"> {{speaker.name}}</a></li>
                           </ul>
                       </li>
                        <li>{{event.location}}</li> 

@@ -61,17 +61,36 @@
 	padding: 10px 0 10px;
 	border-bottom: 2px solid $pink;
 	h4, ul li {
-		padding: 5px;
+		padding-bottom: 5px;
+		padding-top: 5px;
 	}
 	h4 {
 		font-size: 1.8em;
 	}
 	ul li {
 		font-size: 1em;
+		display: block;
 	}
 }
 .event:hover {
-	background: $salmon;
+	background: $teal;
+}
+
+#speakers {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+#speakers > li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+    background: red;
+}
+
+#speakers > li:before {
+    content: "• ";
+    color: $pink;
 }
 .right {
 	margin-top: 30px;

@@ -19,7 +19,7 @@ body {
 	background: $background-blue;
 	color: white;
 }
-h1, h2, h3, p {
+h1, h2, h3 {
 	padding: 5px;
 }
 h1, h2, h3 {
@@ -58,12 +58,12 @@ p {
 	font-size: 1.2em;
 	max-width: 650px;
 }
-ul li {
+/*ul li {
 	display: inline;
 }
 ul li, span {
 	font-size: 1em;
-}
+}*/
 input, input:focus {
 	outline: none;
 	background: white;

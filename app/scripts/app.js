@@ -23,7 +23,7 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 app.controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
 	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is coming soon—and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a party! Sign up to hear about it first!';
-	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th'];
+	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th', 'Saturday, April 9th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
 		  {
@@ -101,7 +101,7 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             alt: 'Twitter'
           }
         ];
-	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=&2bstartDateTime&include=presenters')
+	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters,venue')
  	.get()
 		.then(function(data) {
         	var swSp2016 = data.data.filter(function(event) {
@@ -110,22 +110,52 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
         		var springMonth = 3; //april is the 3rd month in moment
         		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth));
         	});
+            //presenters and venues data
+            var additionalData = data.included;
+            var l = additionalData.length;
+            var venues = {};
+            var thePresenters = {};
+            for (var m = 0; m < l; m++) {
+                if (additionalData[m].type === 'presenters') {
+                    thePresenters[additionalData[m].id] = {
+                        name: additionalData[m].attributes.name,
+                        url: additionalData[m].attributes.url,
+                    };
+                }
+                else if (additionalData[m].type === 'venues') {
+                    venues[additionalData[m].id] = {
+                        name: additionalData[m].attributes.name,
+                        address: additionalData[m].attributes.address,
+                    };
+                }
+            }
 
         	for (var i = 0; i < swSp2016.length; i++) {
-        		var timing = moment(swSp2016[i].attributes.startDateTime);
-        		var details = swSp2016[i].attributes;
+                var current = swSp2016[i];
+        		var timing = moment(current.attributes.startDateTime);
+        		var details = current.attributes;
     			var title = details.title;
     			var description = details.description;
-    			var location = details.venue;
                 var time = timing.format('HH:mm') + ' - ' + moment(details.endDateTime).format('HH:mm');
-                var speakers = details.presenters;
-    			var theEvent = {
-    				'title': title,
-    				'description': description,
-    				'location': location,
+                var speakers = [];
+                var presenters = current.relationships.presenters.data;
+                if (presenters) {
+                    for (var j = 0; j < presenters.length; j++) {
+                        if (presenters[j]) {
+                            speakers.push(thePresenters[presenters[j].id]);
+                        }
+                    }
+                }
+                var locationDetails = current.relationships.venue.data ? venues[current.relationships.venue.data.id]: '';
+                var location = locationDetails.name + ' - ' + locationDetails.address;
+                var theEvent = {
+                    'title': title,
+                    'description': description,
                     'time': time,
-                    'speakers': speakers
-    			};
+                    'speakers': speakers,
+                    'location': location
+                };
+                console.log(theEvent.speakers);
         		if (timing.isoWeekday() === 1) {
         			if (!($scope.days[dow[0]])) {
         				$scope.days[dow[0]] = [];
@@ -156,6 +186,12 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
         			}
         			$scope.days[dow[4]].push(theEvent);
         		}
+                else if (timing.isoWeekday() === 6) {
+                    if (!($scope.days[dow[5]])) {
+                        $scope.days[dow[5]] = [];
+                    }
+                    $scope.days[dow[5]].push(theEvent);
+                }
         	}
         });
 });

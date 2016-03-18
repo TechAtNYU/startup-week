@@ -6,7 +6,7 @@
       <div class="info">
         <p class="description">{{description}}</p>
         <ul>
-            <li>April 4–8, 2016 | </li><li>New York City | </li><li><a href="https://balloon.io/techatnyuresumedrop" target="_blank">Resume Drop</a></li><br>
+            <li>April 4–9, 2016 | </li><li>New York City | </li><li><a href="https://balloon.io/techatnyuresumedrop" target="_blank">Resume Drop</a></li><br>
         </ul>    
       </div>
     </section>
@@ -53,8 +53,12 @@
                     <ul>
                        <li><h4>{{event.title}}</h4></li>
                        <li>{{event.time}}</li> 
-                       <li><p>{{event.description}}</p></li>
-                       <li>{{event.speakers}}</li> 
+                       <li class="description"><p>{{event.description}}</p></li>
+                       <li>Speaker(s): 
+                          <ul id="speakers">
+                            <li><a ng-repeat="speaker in event.speakers" href="{{speaker.url}}"> {{speaker.name}}</a></li> 
+                          </ul>
+                      </li>
                        <li>{{event.location}}</li> 
                     </ul>
                 </section></li>

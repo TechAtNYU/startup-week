@@ -125,7 +125,7 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
                 else if (additionalData[m].type === 'venues') {
                     venues[additionalData[m].id] = {
                         name: additionalData[m].attributes.name,
-                        address: additionalData[m].attributes.address,
+                        address: 'http://maps.google.com/?q=' + additionalData[m].attributes.address,
                     };
                 }
             }
@@ -147,15 +147,13 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
                     }
                 }
                 var locationDetails = current.relationships.venue.data ? venues[current.relationships.venue.data.id]: '';
-                var location = locationDetails.name + ' - ' + locationDetails.address;
                 var theEvent = {
                     'title': title,
                     'description': description,
                     'time': time,
                     'speakers': speakers,
-                    'location': location
+                    'location': locationDetails
                 };
-                console.log(theEvent.speakers);
         		if (timing.isoWeekday() === 1) {
         			if (!($scope.days[dow[0]])) {
         				$scope.days[dow[0]] = [];

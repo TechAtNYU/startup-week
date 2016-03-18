@@ -70,10 +70,14 @@
 	> ul li {
 		font-size: 1em;
 		display: block;
+		padding: 8px;
 	}
 }
 .event:hover {
 	background: $teal;
+}
+.description > p {
+	max-width: 800px;
 }
 
 .speakers {
@@ -84,6 +88,7 @@
 }
 
 .speakers > li { 
+	padding: 0.5em;
     padding-left: 1.5em; 
     text-indent: -.7em;
 }

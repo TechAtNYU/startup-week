@@ -52,14 +52,13 @@
                 <li ng-repeat="event in events"><section class="event">
                     <ul>
                        <li><h4>{{event.title}}</h4></li>
-                       <li>{{event.time}}</li> 
                        <li class="description"><p>{{event.description}}</p></li>
                        <li>
                           <ul class="speakers">
                             Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.url}}"> {{speaker.name}}</a></li>
                           </ul>
                       </li>
-                       <li>{{event.location}}</li> 
+                       <li><span class="time">{{event.time}}</span> | <a href="{{event.location.address}}">{{event.location.name}}</a></li>
                     </ul>
                 </section></li>
             </ul>

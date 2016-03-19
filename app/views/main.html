@@ -10,8 +10,10 @@
         </ul>    
       </div>
     </section>
-    <span class="border"></span>
     <section class="full-description">
+      <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
+        Shape <!-- fallback image in CSS -->
+      </object>
       <h2> Get Excited. </h2>
       <div class="right">
         <p class="about">{{about}}</p>
@@ -25,31 +27,72 @@
               </div>
           </form>
         </div>
+        <div class="shapes">
+          <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
+              Shape <!-- fallback image in CSS -->
+          </object>
+          <object type="image/svg+xml" data="/images/green.svg" class="shape size1">
+              Shape <!-- fallback image in CSS -->
+          </object>
+        </div>
       </div>
     </section>
-   <!-- <section class="schedule">
+    <object type="image/svg+xml" data="/images/salmon.svg" class="shape size3">
+        Shape <!-- fallback image in CSS -->
+    </object>
+    <section class="schedule">
           <h2> Schedule </h2>
-          <section class="day" ng-repeat="(day, events) in days">
+          <div class="clear"></div>
+          <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
+            Shape <!-- fallback image in CSS -->
+          </object>
+          <section fade class="day fade" ng-repeat="(day, events) in days">
             <h3>{{day}}</h3>
             <ul class="events">
-                <li ng-repeat="event in events"><section class="event hidden">
+                <li ng-repeat="event in events"><section class="event">
                     <ul>
                        <li><h4>{{event.title}}</h4></li>
-                       <li>{{event.time}}</li> 
-                       <li><p>{{event.description}}</p></li>
-                       <li>{{event.location}}</li> 
+                       <li class="description"><p>{{event.description}}</p></li>
+                       <li>
+                          <ul class="speakers">
+                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.url}}"> {{speaker.name}}</a></li>
+                          </ul>
+                      </li>
+                       <li><span class="time">{{event.time}}</span> | <a href="{{event.location.address}}">{{event.location.name}}</a></li>
                     </ul>
                 </section></li>
             </ul>
+          <div class="clear"></div>
         </section>
-    </section> -->
+    </section>
+    <div class="clear"></div>
     <section class="supporters">
+        <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
+            Shape <!-- fallback image in CSS -->
+        </object>
+        <object type="image/svg+xml" style="position:relative;top: 20px;" data="/images/blue.svg" class="shape size3">
+              Shape <!-- fallback image in CSS -->
+        </object>
       <h2> Previous Sponsors</h2>
       <div class="right">
+        <object type="image/svg+xml" data="/images/pink.svg" class="shape size3">
+            Shape <!-- fallback image in CSS -->
+        </object>
         <ul class="grid">
           <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
         </ul>
+        <object style="position:relative;right:40%" type="image/svg+xml" data="/images/peach.svg" class="shape size1">
+            Shape <!-- fallback image in CSS -->
+        </object>
         <p>If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
+        <div class="shapes">
+          <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
+              Shape <!-- fallback image in CSS -->
+          </object>
+          <object type="image/svg+xml" data="/images/blue.svg" class="shape size1">
+              Shape <!-- fallback image in CSS -->
+          </object>
+        </div>
       </div>
     </section> 
     <div class="clear"></div>
@@ -59,3 +102,35 @@
       <li ng-repeat="platform in socialMedia"><a href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
   </ul>
 </footer>
+<style>
+  .shape:nth-child(3n+1) {
+    opacity: 0.8;
+  }
+  .shape.size1 {
+    width: 60px;
+  }
+  .shape.size2 {
+    width: 50px;
+  }
+  .shape.size3 {
+    width: 30px;
+  }
+  .shapes {
+    width: 120px;
+  }
+  .schedule > object, .right > .shapes {
+    position: relative;
+  }
+  .right > .shapes {
+    left: 80%;
+  }
+  .right > .shapes object:nth-child(odd) {
+      position: relative;
+      top: 10px;
+      left: 20px;
+  }
+  .schedule > object {
+     left: 60%;
+     top: 40px;
+  }
+</style>

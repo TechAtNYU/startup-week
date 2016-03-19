@@ -50,23 +50,52 @@
 .day {
 	position: relative;
 	top: 50px;
-	h3 {
-		text-align: center;
-		float: center;
-	}
+	margin-top: 50px;
 }
+.fade  {
+  opacity:0;
+}
+
 .event {
-	padding: 20px 0 20px;
+	transition: background 0.8s ease;
+	padding: 10px 0 10px;
 	border-bottom: 2px solid $pink;
 	h4, ul li {
-		padding: 5px;
+		padding-bottom: 5px;
+		padding-top: 5px;
 	}
 	h4 {
 		font-size: 1.8em;
 	}
-	ul li {
+	> ul li {
 		font-size: 1em;
+		display: block;
+		padding: 8px;
 	}
+}
+.event:hover {
+	background: $teal;
+}
+.description > p {
+	max-width: 800px;
+}
+
+.speakers {
+    list-style: none;
+    padding:0;
+    margin:0;
+    width: 200px;
+}
+
+.speakers > li { 
+	padding: 0.5em;
+    padding-left: 1.5em; 
+    text-indent: -.7em;
+}
+
+.speakers > li:before {
+    content: "• ";
+    color: $pink;
 }
 .right {
 	margin-top: 30px;
@@ -84,7 +113,7 @@
 	min-height: 250px;
 	max-width: 600px;
   	img {
-  		padding: 10px;
+  		padding: 15px;
   	}
 }
 /** in footer **/

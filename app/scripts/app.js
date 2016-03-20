@@ -20,6 +20,7 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 		return data;
 	});
 });
+
 app.controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
 	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is here and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a mixer to get to know all of you! Make sure to subsribe to our newsletter to get all the latest news and updates!';
@@ -57,10 +58,10 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             alt: 'Work Bench'
           },
           {
-            href: "https://www.thisalso.com",
-            title: "This Also",
-            src: "../images/logos/thisalso.jpg",
-            alt: "This Also"
+            href: 'https://www.thisalso.com',
+            title: 'This Also',
+            src: '../images/logos/thisalso.jpg',
+            alt: 'This Also'
           },
           {
             href: 'https://squareup.com/',
@@ -139,9 +140,11 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
         	for (var i = 0; i < swSp2016.length; i++) {
                 var current = swSp2016[i];
         		var timing = moment(current.attributes.startDateTime);
+                console.log(current);
         		var details = current.attributes;
     			var title = details.title;
     			var description = details.description;
+                var url = details.rsvpUrl;
                 var time = timing.format('HH:mm') + ' - ' + moment(details.endDateTime).format('HH:mm');
                 var speakers = [];
                 var presenters = current.relationships.presenters.data;
@@ -155,6 +158,7 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
                 var locationDetails = current.relationships.venue.data ? venues[current.relationships.venue.data.id]: '';
                 var theEvent = {
                     'title': title,
+                    'url': url,
                     'description': description,
                     'time': time,
                     'speakers': speakers,

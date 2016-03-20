@@ -22,7 +22,7 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 });
 app.controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
-	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is coming soon—and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a party! Sign up to hear about it first!';
+	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is here and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a mixer to get to know all of you! Make sure to subsribe to our newsletter to get all the latest news and updates!';
 	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th', 'Saturday, April 9th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [

@@ -140,7 +140,6 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
         	for (var i = 0; i < swSp2016.length; i++) {
                 var current = swSp2016[i];
         		var timing = moment(current.attributes.startDateTime);
-                console.log(current);
         		var details = current.attributes;
     			var title = details.title;
     			var description = details.description;

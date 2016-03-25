@@ -122,9 +122,18 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             var l = additionalData.length;
             var venues = {};
             var thePresenters = {};
+            var organizations = {};
             for (var m = 0; m < l; m++) {
                 if (additionalData[m].type === 'presenters') {
+                    //console.log(additionalData[m]);
                     thePresenters[additionalData[m].id] = {
+                        name: additionalData[m].attributes.name,
+                        url: additionalData[m].attributes.url,
+                    };
+                }
+                else if (additionalData[m].type === 'organizations') {
+                    //console.log(additionalData[m]);
+                    organizations[additionalData[m].id] = {
                         name: additionalData[m].attributes.name,
                         url: additionalData[m].attributes.url,
                     };

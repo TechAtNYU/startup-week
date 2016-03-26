@@ -60,7 +60,7 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
           {
             href: 'https://www.thisalso.com',
             title: 'This Also',
-            src: '../images/logos/thisalso.jpg',
+            src: '../images/logos/thisalso.png',
             alt: 'This Also'
           },
           {

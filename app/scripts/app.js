@@ -76,12 +76,6 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             alt: 'Spotify'
           },
           {
-            href: 'http://tisch.nyu.edu/itp',
-            title: 'NYU ITP at Tisch',
-            src: '../images/logos/itp.png',
-            alt: 'NYU ITP at Tisch'
-          },
-          {
             href: 'https://www.microsoft.com/en-us/',
             title: 'Microsoft',
             src: '../images/logos/microsoft.png',

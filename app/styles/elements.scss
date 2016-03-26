@@ -59,6 +59,9 @@ p {
 	font-size: 1.2em;
 	max-width: 650px;
 }
+p, ul li {
+	line-height: 1.1;
+}
 ul li {
 	display: inline;
 }

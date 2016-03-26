@@ -55,7 +55,7 @@
                        <li class="description"><p>{{event.description}}</p></li>
                        <li>
                           <ul class="speakers">
-                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.url}}"> {{speaker.name}}</a></li>
+                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.url}}"> {{speaker.name}}</a>, <a href="{{speaker.currentEmployer.url}}">{{speaker.currentEmployer.name}}</a></li>
                           </ul>
                       </li>
                        <li><span class="time">{{event.time}}</span> | <a href="{{event.location.address}}">{{event.location.name}}</a></li>

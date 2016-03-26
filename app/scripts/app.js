@@ -117,26 +117,42 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
         		var springMonth = 3; //april is the 3rd month in moment
         		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth));
         	});
-            //presenters and venues data
             var additionalData = data.included;
             var l = additionalData.length;
             var venues = {};
             var thePresenters = {};
-            var organizations = {};
+            var presenterID, orgID;
+
+            function assign(presenterID, orgID) {
+                Restangular.one('organizations/' + orgID + '/')
+                  .get()
+                  .then(function(data) {
+                    var employerData;
+                    if (data) {
+                        var info = data.data.attributes;
+                        var employer = info.name;
+                        var employerUrl = info.url;
+                        employerData = {
+                            name: employer,
+                            url: employerUrl
+                        };
+                    }
+                    thePresenters[presenterID].currentEmployer = employerData;
+                 });
+            }
             for (var m = 0; m < l; m++) {
                 if (additionalData[m].type === 'presenters') {
-                    //console.log(additionalData[m]);
+                    orgID = additionalData[m].relationships.currentEmployer.data;
+                    orgID = orgID ? orgID.id : '';
                     thePresenters[additionalData[m].id] = {
                         name: additionalData[m].attributes.name,
                         url: additionalData[m].attributes.url,
+                        orgID: orgID
                     };
-                }
-                else if (additionalData[m].type === 'organizations') {
-                    //console.log(additionalData[m]);
-                    organizations[additionalData[m].id] = {
-                        name: additionalData[m].attributes.name,
-                        url: additionalData[m].attributes.url,
-                    };
+                    presenterID = additionalData[m].id;
+                    if (orgID) {
+                        thePresenters[presenterID].currentEmployer = assign(presenterID, orgID);
+                    }
                 }
                 else if (additionalData[m].type === 'venues') {
                     venues[additionalData[m].id] = {
@@ -145,7 +161,6 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
                     };
                 }
             }
-
         	for (var i = 0; i < swSp2016.length; i++) {
                 var current = swSp2016[i];
         		var timing = moment(current.attributes.startDateTime);

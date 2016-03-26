@@ -23,6 +23,10 @@
 		bottom: 50px;
 		right: 2%;
 		max-width: 395px;
+
+		.description {
+			padding-bottom: 8px;
+		}
 	}
 	
 }
@@ -84,7 +88,7 @@
     list-style: none;
     padding:0;
     margin:0;
-    width: 200px;
+    width: 280px;
 }
 
 .speakers > li { 
@@ -194,6 +198,8 @@
 @media all and (max-width: 400px){
 	body {
 		overflow-x: hidden;
+		width: 100%;
+		padding: none;
 	}
 	h1 {
 		font-size: 5em;
@@ -204,11 +210,17 @@
 	}
 	.fade {
 		opacity: 1;
+	}
+	footer {
+		width: 100%;
+		padding: none;
 	}
 }
 @media only screen and (max-width: 480px){
 	body {
 		overflow-x: hidden;
+		width: 100%;
+		padding: none;
 	}
 	h1 {
 		font-size: 5em;
@@ -219,5 +231,9 @@
 	}
 	.fade {
 		opacity: 1;
+	}
+	footer {
+		width: 100%;
+		padding: none;
 	}
 }

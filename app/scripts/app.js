@@ -27,35 +27,11 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
 	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th', 'Saturday, April 9th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
-		  {
-            href: 'http://www.chatid.com/',
-            title: 'chatid',
-            src: '../images/logos/chatid.png',
-            alt: 'chatid'
-          },
-          {
-            href: 'http://coreatcu.com/',
-            title: 'CORE at Columbia',
-            src: '../images/logos/core.png',
-            alt: 'CORE at Columbia'
-          },
-          {
-            href: 'http://entrepreneur.nyu.edu/',
-            title: 'NYU Leslie Entrepreneurship Institute',
-            src: '../images/logos/elab.png',
-            alt: 'NYU Leslie Entrepreneurship Institute'
-          },
-          {
-            href: 'https://www.google.com',
-            title: 'Google',
-            src: '../images/logos/google.png',
-            alt: 'Google'
-          },
-          {
-            href: 'http://www.work-bench.com/',
-            title: 'Work Bench',
-            src: '../images/logos/workbench.png',
-            alt: 'Work Bench'
+        {
+            href: 'http://devbootcamp.com/',
+            title: 'Dev Bootcamp',
+            src: '../images/logos/dev-bootcamp.png',
+            alt: 'Devbootcamp'
           },
           {
             href: 'https://www.thisalso.com',
@@ -64,23 +40,47 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             alt: 'This Also'
           },
           {
-            href: 'https://squareup.com/',
-            title: 'Square',
-            src: '../images/logos/square.jpeg',
-            alt: 'Square'
-          },
-          {
-            href: 'https://www.spotify.com',
-            title: 'Spotify',
-            src: '../images/logos/spotify.png',
-            alt: 'Spotify'
-          },
-          {
             href: 'https://www.microsoft.com/en-us/',
             title: 'Microsoft',
             src: '../images/logos/microsoft.png',
             alt: 'Microsoft'
           },
+          {
+            href: 'https://hired.com',
+            title: 'Hired',
+            src: '../images/logos/hired.png',
+            alt: 'Hired'
+          },
+          {
+            href: 'https://www.clarifai.com/',
+            title: 'Clarifai',
+            src: '../images/logos/clarifai.png',
+            alt: 'Clarifai'
+          },
+        {
+            href: 'https://www.handy.com/',
+            title: 'Handy',
+            src: '../images/logos/handy.png',
+            alt: 'Handy'
+          },
+          {
+            href: 'http://entrepreneur.nyu.edu/',
+            title: 'NYU Leslie Entrepreneurship Institute',
+            src: '../images/logos/elab.png',
+            alt: 'NYU Leslie Entrepreneurship Institute'
+          },
+          {
+            href: 'http://coreatcu.com/',
+            title: 'CORE at Columbia',
+            src: '../images/logos/core.png',
+            alt: 'CORE at Columbia'
+          },
+          {
+            href: 'https://www.mongodb.com',
+            title: 'MongoDB',
+            src: '../images/logos/mongo.png',
+            alt: 'MongoDB'
+          }
           /*{
             href: 'http://www.cowen.com/',
             title: 'Cowan NYC',

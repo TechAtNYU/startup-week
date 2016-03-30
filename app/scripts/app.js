@@ -52,6 +52,12 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             alt: 'Hired'
           },
           {
+            href: 'http://www.sheworx.co',
+            title: 'SheWorx',
+            src: '../images/logos/sheworx.png',
+            alt: 'SheWorx'
+          },
+          {
             href: 'https://www.clarifai.com/',
             title: 'Clarifai',
             src: '../images/logos/clarifai.png',

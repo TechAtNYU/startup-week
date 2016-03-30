@@ -69,12 +69,6 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             src: '../images/logos/clarifai.png',
             alt: 'Clarifai'
           },
-        {
-            href: 'https://www.handy.com/',
-            title: 'Handy',
-            src: '../images/logos/handy.png',
-            alt: 'Handy'
-          },
           {
             href: 'http://entrepreneur.nyu.edu/',
             title: 'NYU Leslie Entrepreneurship Institute',
@@ -92,13 +86,13 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             title: 'MongoDB',
             src: '../images/logos/mongo.png',
             alt: 'MongoDB'
+          },
+           {
+            href: 'https://www.handy.com/',
+            title: 'Handy',
+            src: '../images/logos/handy.png',
+            alt: 'Handy'
           }
-          /*{
-            href: 'http://www.cowen.com/',
-            title: 'Cowan NYC',
-            src: 'http://files.tnyu.org/upload_4888f906ad62ef510d3326ad6dc8f668_2f0ccd08-dc86-11e4-92bf-17509d290d64.jpg',
-            alt: 'Cowan NYC'
-          }*/
         ];
         $scope.socialMedia = [
         	{

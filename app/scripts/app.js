@@ -40,6 +40,12 @@ app.controller('MainCtrl', function ($scope, Restangular, moment) {
             alt: 'This Also'
           },
           {
+            href: 'https://www.tumblr.com',
+            title: 'Tumblr',
+            src: '../images/logos/tumblr.png',
+            alt: 'Tumblr'
+          },
+          {
             href: 'https://www.microsoft.com/en-us/',
             title: 'Microsoft',
             src: '../images/logos/microsoft.png',

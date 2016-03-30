@@ -20,7 +20,3 @@ var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).con
 		return data;
 	});
 });
-
-
-
-

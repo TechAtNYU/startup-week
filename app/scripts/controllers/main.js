@@ -27,10 +27,10 @@ angular.module('startupWeekApp')
             alt: 'This Also'
           },
           {
-            href: 'https://www.tumblr.com',
-            title: 'Tumblr',
-            src: '../images/logos/tumblr.png',
-            alt: 'Tumblr'
+            href: 'http://roughdraft.vc/',
+            title: 'Rough Draft Ventures',
+            src: '../images/logos/rdv.png',
+            alt: 'Rough Draft Ventures'
           },
           {
             href: 'https://www.microsoft.com/en-us/',
@@ -43,6 +43,12 @@ angular.module('startupWeekApp')
             title: 'Hired',
             src: '../images/logos/hired.png',
             alt: 'Hired'
+          },
+          {
+            href: 'https://www.tumblr.com',
+            title: 'Tumblr',
+            src: '../images/logos/tumblr.png',
+            alt: 'Tumblr'
           },
           {
             href: 'http://www.sheworx.co',
@@ -61,12 +67,6 @@ angular.module('startupWeekApp')
             title: 'NYU Leslie Entrepreneurship Institute',
             src: '../images/logos/elab.png',
             alt: 'NYU Leslie Entrepreneurship Institute'
-          },
-          {
-            href: 'http://coreatcu.com/',
-            title: 'CORE at Columbia',
-            src: '../images/logos/core.png',
-            alt: 'CORE at Columbia'
           },
           {
             href: 'https://www.mongodb.com',
@@ -102,7 +102,8 @@ angular.module('startupWeekApp')
         		var now = moment();
         		var theEvent = moment(event.attributes.startDateTime);
         		var springMonth = 3; //april is the 3rd month in moment
-        		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth));
+                var isPast = theEvent.isAfter(now) ? false: true;
+        		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth) && !isPast);
         	});
             var additionalData = data.included;
             var l = additionalData.length;

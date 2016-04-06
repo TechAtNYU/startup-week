@@ -1,0 +1,43 @@
+
+@media all and (max-width: 400px){
+	body, .page-wrap {
+		overflow-x: hidden;
+		width: 100%;
+		padding: none;
+	}
+	h1 {
+		font-size: 5em;
+	}
+	.intro .info {
+		width: 90%;
+		margin: auto;
+	}
+	.fade {
+		opacity: 1;
+	}
+	footer {
+		width: 100%;
+		padding: none;
+	}
+}
+@media only screen and (max-width: 480px){
+	body, .page-wrap {
+		overflow-x: hidden;
+		width: 100%;
+		padding: none;
+	}
+	h1 {
+		font-size: 5em;
+	}
+	.intro .info {
+		width: 90%;
+		margin: auto;
+	}
+	.fade {
+		opacity: 1;
+	}
+	footer {
+		width: 100%;
+		padding: none;
+	}
+}

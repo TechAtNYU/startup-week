@@ -10,6 +10,7 @@ html, body {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: 100px; 
+  overflow-x: hidden;
 }
 .page-wrap:after {
   content: "";
@@ -60,7 +61,7 @@ p {
 	max-width: 650px;
 }
 p, ul li {
-	line-height: 1.1;
+	line-height: 1.3;
 }
 ul li {
 	display: inline;

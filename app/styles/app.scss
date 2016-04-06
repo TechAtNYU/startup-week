@@ -20,7 +20,7 @@
 	}
 	.info {
 		position: absolute;
-		bottom: 50px;
+		top: 80%;
 		right: 2%;
 		max-width: 395px;
 
@@ -34,7 +34,7 @@
 	 filter: invert(100%);
 }
 .full-description, .supporters, .schedule {
-	margin: 50px;
+	margin: 35px;
 	margin-top: 100px;
 	margin-bottom: 50px;
 }
@@ -194,45 +194,3 @@
 }
 
 
-@media all and (max-width: 400px){
-	body {
-		overflow-x: hidden;
-		width: 100%;
-		padding: none;
-	}
-	h1 {
-		font-size: 5em;
-	}
-	.intro .info {
-		width: 90%;
-		margin: auto;
-	}
-	.fade {
-		opacity: 1;
-	}
-	footer {
-		width: 100%;
-		padding: none;
-	}
-}
-@media only screen and (max-width: 480px){
-	body {
-		overflow-x: hidden;
-		width: 100%;
-		padding: none;
-	}
-	h1 {
-		font-size: 5em;
-	}
-	.intro .info {
-		width: 90%;
-		margin: auto;
-	}
-	.fade {
-		opacity: 1;
-	}
-	footer {
-		width: 100%;
-		padding: none;
-	}
-}

@@ -21,6 +21,13 @@ body {
 	background: $background-blue;
 	color: white;
 }
+::-moz-selection { 
+	background: $pink; 
+}
+::selection { 
+	background: $pink; 
+}
+
 h1, h2, h3 {
 	padding: 5px;
 }

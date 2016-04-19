@@ -19,6 +19,6 @@
   "moduleName": "startupWeekApp",
   "resolutions": {
     "moment": "~2.11.2",
-    "angular": "1.5.3"
+    "angular": "1.5.5"
   }
 }

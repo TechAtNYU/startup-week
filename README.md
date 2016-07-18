@@ -9,7 +9,8 @@ version 0.11.1.
   1. git clone git@github.com:TechAtNYU/startup-week.git
   2. These instructions apply to the all branches except master and old-sw-site.
   3. cd startup-week
-  4. grunt serve for preview (grunt build to build the site)
+  4. `npm install; bower install; [sudo] gem install compass`
+  5. grunt serve for preview (grunt build to build the site)
 
 ## Testing
 

@@ -15,7 +15,7 @@
 	img {
 		position: absolute;
 		top: 10px;
-		left: 0px;
+		left: 10px;
 		margin: 15px;
 	}
 	.info {
@@ -28,7 +28,7 @@
 			padding-bottom: 8px;
 		}
 	}
-	
+
 }
 .logo {
 	 filter: invert(100%);
@@ -91,9 +91,9 @@
     max-width: 400px;
 }
 
-.speakers > li { 
+.speakers > li {
 	padding: 0.5em;
-    padding-left: 1.5em; 
+    padding-left: 1.5em;
     text-indent: -.7em;
 }
 
@@ -193,4 +193,9 @@
   border-bottom: none;
 }
 
+// temporatily hide supporters until we get them
 
+section.supporters {
+
+	display: none;
+}

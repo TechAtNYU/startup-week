@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
- 
+
 var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).config(function(RestangularProvider) {
 	RestangularProvider.setBaseUrl('https://api.tnyu.org/v3');
 	// Configuring Restangular to work with JSONAPI spec

@@ -12,7 +12,7 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: 100px; 
+  margin-bottom: 100px;
   overflow-x: hidden;
 }
 .page-wrap:after {
@@ -22,13 +22,17 @@ html, body {
 body {
 	font-family: $body-font;
 	background: $background-blue;
-	color: white;
+	color: black;
 }
-::-moz-selection { 
-	background: $pink; 
+
+#title {
+	color:#2F3138;
 }
-::selection { 
-	background: $pink; 
+::-moz-selection {
+	background: $pink;
+}
+::selection {
+	background: $pink;
 }
 
 h1, h2, h3 {
@@ -100,11 +104,11 @@ input[type="submit"] {
 	width: 80px;
 	padding: 5px;
 	margin: 5px;
-	color: white;
+	color: black;
 }
 footer, .page-wrap:after {
   /* .push must be the same height as footer */
-	height: 105px; 
+	height: 105px;
 }
 
 footer {

@@ -16,7 +16,7 @@ angular.module('startupWeekApp')
 
 		function drawCircles() {
 		  for (var i = 0; i <= 30; i++) {
-		  	  circles[i] = new Circle(getColor(), Math.random()*5); 
+		  	  circles[i] = new Circle(getColor(), Math.random()*5);
 		  }
 		  draw();
 		}
@@ -30,8 +30,8 @@ angular.module('startupWeekApp')
 		}
 		drawCircles();
 		function getColor() {
-			var colors = ['#246c78', '#dda6a2', '#c25c6d'];
-			return colors[Math.floor(Math.random() * colors.length)];	
+			var colors = ['#3885ca', '#eba444', '#f9ccb2', '#f8f6cc'];
+			return colors[Math.floor(Math.random() * colors.length)];
 		}
 
 		function Circle(color, size) {
@@ -66,7 +66,7 @@ angular.module('startupWeekApp')
 				this.y = ((element[0].height-50) * Math.random());
 				this.draw();
 			};
-		} 
+		}
     }
   };
 });

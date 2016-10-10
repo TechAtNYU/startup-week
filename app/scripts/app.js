@@ -10,7 +10,7 @@
  */
 
 var app = angular.module('startupWeekApp', ['angularMoment', 'restangular']).config(function(RestangularProvider) {
-	RestangularProvider.setBaseUrl('https://api.tnyu.org/v3');
+	RestangularProvider.setBaseUrl('https://api.tnyu.org/v3-test');
 	// Configuring Restangular to work with JSONAPI spec
 	RestangularProvider.setDefaultHeaders({
 	'Accept': 'application/vnd.api+json, application/*, */*',

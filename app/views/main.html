@@ -42,11 +42,11 @@
     <object type="image/svg+xml" data="/images/salmon.svg" class="shape size3">
         <!-- Shape fallback image in CSS -->
     </object>
-    <!-- <section class="schedule">
+    <section class="schedule">
           <h2> Schedule </h2>
           <div class="clear"></div>
-          <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
-          </object>
+          <!-- <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
+          </object> -->
           <section fade class="day fade" ng-repeat="(day, events) in days">
             <h3>{{day}}</h3>
             <ul class="events">
@@ -56,7 +56,7 @@
                        <li class="description"><p>{{event.description}}</p></li>
                        <li>
                           <ul class="speakers">
-                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.url}}"> {{speaker.name}}</a>, <a href="{{speaker.currentEmployer.url}}">{{speaker.currentEmployer.name}}</a></li>
+                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.twitter}}" target="_blank"> {{speaker.name}}</a>, <a href="{{speaker.currentEmployer.url}}" target="_blank">{{speaker.currentEmployer.name}}</a></li>
                           </ul>
                       </li>
                        <li><span class="time">{{event.time}}</span> | <a href="{{event.location.address}}">{{event.location.name}}</a></li>
@@ -65,18 +65,18 @@
             </ul>
           <div class="clear"></div>
         </section>
-    </section> -->
+    </section>
     <!-- <div class="clear"></div>-->
 
     <section class="supporters">
         <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
         </object>
-        <object type="image/svg+xml" style="position:relative;top: 20px;" data="/images/blue.svg" class="shape size3">
+        <object type="image/svg+xml" style="position:relative;top: 20px;" data="/images/green.svg" class="shape size3">
               Shape <!-- fallback image in CSS -->
         </object>
       <h2>Our Supporters</h2>
       <div class="right">
-        <object type="image/svg+xml" data="/images/pink.svg" class="shape size3">
+        <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
             Shape <!-- fallback image in CSS -->
         </object>
         <ul class="grid">
@@ -90,7 +90,7 @@
           <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
               Shape <!-- fallback image in CSS -->
           </object>
-          <object type="image/svg+xml" data="/images/blue.svg" class="shape size1">
+          <object type="image/svg+xml" data="/images/peach.svg" class="shape size1">
               Shape <!-- fallback image in CSS -->
           </object>
         </div>

@@ -11,7 +11,7 @@ angular.module('startupWeekApp')
   .controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
 	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is here and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a mixer to get to know all of you! Make sure to subsribe to our newsletter to get all the latest news and updates!';
-	var dow = ['Monday, April 4th', 'Tuesday, April 5th', 'Wednesday, April 6th', 'Thursday, April 7th', 'Friday, April 8th', 'Saturday, April 9th'];
+	var dow = ['Monday, November 7th', 'Tuesday, November 8th', 'Wednesday, November 9th', 'Thursday, November 10th', 'Friday, November 11th', 'Saturday, November 12th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
         {
@@ -101,7 +101,7 @@ angular.module('startupWeekApp')
         	var swSp2016 = data.data.filter(function(event) {
         		var now = moment();
         		var theEvent = moment(event.attributes.startDateTime);
-        		var springMonth = 3; //april is the 3rd month in moment
+        		var springMonth = 10; //november month - index 0
                 var isPast = theEvent.isAfter(now) ? false: true;
         		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth) && !isPast);
         	});
@@ -109,7 +109,7 @@ angular.module('startupWeekApp')
             var l = additionalData.length;
             var venues = {};
             var thePresenters = {};
-            var presenterID, orgID;
+            var presenterID, orgID, twitter;
 
             function assign(presenterID, orgID) {
                 Restangular.one('organizations/' + orgID + '/')
@@ -132,12 +132,18 @@ angular.module('startupWeekApp')
                 if (additionalData[m].type === 'presenters') {
                     orgID = additionalData[m].relationships.currentEmployer.data;
                     orgID = orgID ? orgID.id : '';
+                    twitter = additionalData[m].attributes.contact;
+                    twitter = twitter ? twitter.twitter : '';
+                    twitter = "https://twitter.com/" + twitter;
+
                     thePresenters[additionalData[m].id] = {
                         name: additionalData[m].attributes.name,
                         url: additionalData[m].attributes.url,
-                        orgID: orgID
+                        orgID: orgID,
+                        twitter:twitter
                     };
                     presenterID = additionalData[m].id;
+                    console.log("twitter: " , thePresenters[presenterID].twitter);
                     if (orgID) {
                         thePresenters[presenterID].currentEmployer = assign(presenterID, orgID);
                     }
@@ -162,6 +168,7 @@ angular.module('startupWeekApp')
                 if (presenters) {
                     for (var j = 0; j < presenters.length; j++) {
                         if (presenters[j]) {
+                            // console.log("presenter info: " , presenters[j]);
                             speakers.push(thePresenters[presenters[j].id]);
                         }
                     }

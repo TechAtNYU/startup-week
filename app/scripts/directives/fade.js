@@ -11,7 +11,7 @@ angular.module('startupWeekApp')
     return {
         restrict: 'A',
         link: function(){
-            angular.element($window).bind('scroll', function() {    
+            angular.element($window).bind('scroll', function() {
                 $('.fade').each( function(){
                     var bottomOfObject = $(this).offset().top + $(this).outerHeight();
                     var bottomOfWindow = $(window).scrollTop() + $(window).height();

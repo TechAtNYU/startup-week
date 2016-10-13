@@ -18,6 +18,12 @@
 		left: 10px;
 		margin: 15px;
 	}
+	#tnyu-logo {
+		position:absolute;
+		top: 0px;
+		left: 0px;
+		margin:0px;
+	}
 	.info {
 		position: absolute;
 		top: 80%;
@@ -30,9 +36,9 @@
 	}
 
 }
-.logo {
-	 filter: invert(100%);
-}
+// .logo {
+// 	 filter: invert(100%);
+// }
 .full-description, .supporters, .schedule {
 	margin: 35px;
 	margin-top: 100px;
@@ -54,7 +60,7 @@
 .day {
 	position: relative;
 	top: 50px;
-	margin-top: 50px;
+	// margin-top: 50px;
 }
 .fade  {
   opacity:0;
@@ -79,6 +85,7 @@
 }
 .event:hover {
 	background: $teal;
+	color: white;
 }
 .description > p {
 	max-width: 800px;
@@ -196,6 +203,5 @@
 // temporatily hide supporters until we get them
 
 section.supporters {
-
 	display: none;
 }

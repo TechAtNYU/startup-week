@@ -85,6 +85,7 @@
 }
 .event:hover {
 	background: $teal;
+	color: white;
 }
 .description > p {
 	max-width: 800px;
@@ -201,7 +202,6 @@
 
 // temporatily hide supporters until we get them
 
-// section.supporters {
-//
-// 	display: none;
-// }
+section.supporters {
+	display: none;
+}

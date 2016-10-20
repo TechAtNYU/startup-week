@@ -15,70 +15,16 @@ angular.module('startupWeekApp')
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
         {
-            href: 'http://devbootcamp.com/',
-            title: 'Dev Bootcamp',
-            src: '../images/logos/dev-bootcamp.png',
-            alt: 'Devbootcamp'
+            href: 'https://seatgeek.com',
+            title: 'SeatGeek',
+            src: '../images/logos/seatgeek.png',
+            alt: 'SeatGeek'
           },
           {
-            href: 'https://www.thisalso.com',
-            title: 'This Also',
-            src: '../images/logos/thisalso.png',
-            alt: 'This Also'
-          },
-          {
-            href: 'http://roughdraft.vc/',
-            title: 'Rough Draft Ventures',
-            src: '../images/logos/rdv.png',
-            alt: 'Rough Draft Ventures'
-          },
-          {
-            href: 'https://www.microsoft.com/en-us/',
-            title: 'Microsoft',
-            src: '../images/logos/microsoft.png',
-            alt: 'Microsoft'
-          },
-          {
-            href: 'https://hired.com',
-            title: 'Hired',
-            src: '../images/logos/hired.png',
-            alt: 'Hired'
-          },
-          {
-            href: 'https://www.tumblr.com',
-            title: 'Tumblr',
-            src: '../images/logos/tumblr.png',
-            alt: 'Tumblr'
-          },
-          {
-            href: 'http://www.sheworx.co',
-            title: 'SheWorx',
-            src: '../images/logos/sheworx.png',
-            alt: 'SheWorx'
-          },
-          {
-            href: 'https://www.clarifai.com/',
-            title: 'Clarifai',
-            src: '../images/logos/clarifai.png',
-            alt: 'Clarifai'
-          },
-          {
-            href: 'http://entrepreneur.nyu.edu/',
-            title: 'NYU Leslie Entrepreneurship Institute',
-            src: '../images/logos/elab.png',
-            alt: 'NYU Leslie Entrepreneurship Institute'
-          },
-          {
-            href: 'https://www.mongodb.com',
-            title: 'MongoDB',
-            src: '../images/logos/mongo.png',
-            alt: 'MongoDB'
-          },
-           {
-            href: 'https://www.handy.com/',
-            title: 'Handy',
-            src: '../images/logos/handy.png',
-            alt: 'Handy'
+            href: 'https://www.hioscar.com',
+            title: 'Oscar',
+            src: '../images/logos/oscar.png',
+            alt: 'Oscar'
           }
         ];
         $scope.socialMedia = [

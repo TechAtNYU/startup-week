@@ -25,6 +25,18 @@ angular.module('startupWeekApp')
             title: 'Oscar',
             src: '../images/logos/oscar.png',
             alt: 'Oscar'
+          },
+          {
+            href: 'http://giphy.com/',
+            title: 'Giphy',
+            src: '../images/logos/giphy.png',
+            alt: 'Giphy'
+          },
+          {
+            href: 'https://www.hugeinc.com/',
+            title: 'Huge',
+            src: '../images/logos/huge.jpg',
+            alt: 'Huge'
           }
         ];
         $scope.socialMedia = [

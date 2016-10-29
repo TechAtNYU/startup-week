@@ -37,7 +37,37 @@ angular.module('startupWeekApp')
             title: 'Huge',
             src: '../images/logos/huge.jpg',
             alt: 'Huge'
-          }
+          },
+          {
+            href: 'http://www.alluvium.io/',
+            title: 'Alluvium',
+            src: '../images/logos/alluvium.png',
+            alt: 'Alluvium'
+          },
+          {
+            href: 'https://www.microsoft.com/en-us/',
+            title: 'Microsoft',
+            src: '../images/logos/Microsoft.png',
+            alt: 'Microsoft'
+          },
+          {
+            href: 'https://pivotal.io/',
+            title: 'Pivotal',
+            src: '../images/logos/pivotal.jpeg',
+            alt: 'Pivotal'
+          },
+          {
+            href: 'https://www.twosigma.com/',
+            title: 'Two Sigma',
+            src: '../images/logos/twosigma.jpg',
+            alt: 'Two Sigma'
+          },
+          {
+            href: 'https://www.younow.com/',
+            title: 'You Now',
+            src: '../images/logos/Younow-logo.png',
+            alt: 'You Now'
+          },
         ];
         $scope.socialMedia = [
         	{

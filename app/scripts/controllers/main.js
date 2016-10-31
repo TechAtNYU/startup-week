@@ -29,20 +29,33 @@ angular.module('startupWeekApp')
           {
             href: 'http://giphy.com/',
             title: 'Giphy',
-            src: '../images/logos/giphy.png',
+            src: '../images/logos/giphy2.png',
             alt: 'Giphy'
           },
           {
             href: 'https://www.hugeinc.com/',
             title: 'Huge',
-            src: '../images/logos/huge.jpg',
+            src: '../images/logos/huge2.png',
             alt: 'Huge'
           },
+
           {
             href: 'http://www.alluvium.io/',
             title: 'Alluvium',
-            src: '../images/logos/alluvium.png',
+            src: '../images/logos/alluvium2.png',
             alt: 'Alluvium'
+          },
+          {
+            href: 'https://www.twosigma.com/',
+            title: 'Two Sigma',
+            src: '../images/logos/twosigma2.png',
+            alt: 'Two Sigma'
+          },
+          {
+            href: 'https://pivotal.io/',
+            title: 'Pivotal',
+            src: '../images/logos/pivotal2.png',
+            alt: 'Pivotal'
           },
           {
             href: 'https://www.microsoft.com/en-us/',
@@ -51,22 +64,34 @@ angular.module('startupWeekApp')
             alt: 'Microsoft'
           },
           {
-            href: 'https://pivotal.io/',
-            title: 'Pivotal',
-            src: '../images/logos/pivotal.jpeg',
-            alt: 'Pivotal'
+            href: 'https://www.etsy.com/',
+            title: 'Etsy',
+            src: '../images/logos/etsy2.png',
+            alt: 'Etsy'
           },
           {
-            href: 'https://www.twosigma.com/',
-            title: 'Two Sigma',
-            src: '../images/logos/twosigma.jpg',
-            alt: 'Two Sigma'
+            href: 'https://clarifai.com/',
+            title: 'Clarifai',
+            src: '../images/logos/clarifai.png',
+            alt: 'Clarifai'
           },
           {
             href: 'https://www.younow.com/',
             title: 'You Now',
-            src: '../images/logos/Younow-logo.png',
+            src: '../images/logos/younow2.png',
             alt: 'You Now'
+          },
+          {
+            href: 'https://www.dropbox.com/',
+            title: 'Dropbox',
+            src: '../images/logos/dropbox2.png',
+            alt: 'Dropbox'
+          },
+          {
+            href: 'https://www.digitalocean.com/',
+            title: 'Digital Ocean',
+            src: '../images/logos/digitalocean.png',
+            alt: 'Digital Ocean'
           },
         ];
         $scope.socialMedia = [

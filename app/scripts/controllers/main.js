@@ -60,7 +60,7 @@ angular.module('startupWeekApp')
           {
             href: 'https://www.microsoft.com/en-us/',
             title: 'Microsoft',
-            src: '../images/logos/Microsoft.png',
+            src: '../images/logos/microsoft.png',
             alt: 'Microsoft'
           },
           {

@@ -93,6 +93,12 @@ angular.module('startupWeekApp')
             src: '../images/logos/digitalocean.png',
             alt: 'Digital Ocean'
           },
+          {
+            href: 'http://www.voxmedia.com/pages/about-vox-media',
+            title: 'Vox',
+            src: '../images/logos/vox.png',
+            alt: 'Vox'
+          },
         ];
         $scope.socialMedia = [
         	{

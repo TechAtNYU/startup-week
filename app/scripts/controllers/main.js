@@ -11,94 +11,15 @@ angular.module('startupWeekApp')
   .controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
 	$scope.about = 'Tech@NYU’s weeklong celebration of technology, design, and entrepreneurship is here and our event lineup is better than ever! We have got workshops, speakers, panels, demos, and a mixer to get to know all of you! Make sure to subsribe to our newsletter to get all the latest news and updates!';
-	var dow = ['Monday, November 7th', 'Tuesday, November 8th', 'Wednesday, November 9th', 'Thursday, November 10th', 'Friday, November 11th', 'Saturday, November 12th'];
+	var dow = ['Monday, April 10th', 'Tuesday, April 11th', 'Wednesday, April 12th', 'Thursday, April 13th', 'Friday, April 14th', 'Saturday, April 15th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
-        {
-            href: 'https://seatgeek.com',
-            title: 'SeatGeek',
-            src: '../images/logos/seatgeek.png',
-            alt: 'SeatGeek'
-          },
-          {
-            href: 'https://www.hioscar.com',
-            title: 'Oscar',
-            src: '../images/logos/oscar.png',
-            alt: 'Oscar'
-          },
-          {
-            href: 'http://giphy.com/',
-            title: 'Giphy',
-            src: '../images/logos/giphy2.png',
-            alt: 'Giphy'
-          },
-          {
-            href: 'https://www.hugeinc.com/',
-            title: 'Huge',
-            src: '../images/logos/huge2.png',
-            alt: 'Huge'
-          },
-
-          {
-            href: 'http://www.alluvium.io/',
-            title: 'Alluvium',
-            src: '../images/logos/alluvium2.png',
-            alt: 'Alluvium'
-          },
-          {
-            href: 'https://www.twosigma.com/',
-            title: 'Two Sigma',
-            src: '../images/logos/twosigma2.png',
-            alt: 'Two Sigma'
-          },
-          {
-            href: 'https://pivotal.io/',
-            title: 'Pivotal',
-            src: '../images/logos/pivotal2.png',
-            alt: 'Pivotal'
-          },
-          {
-            href: 'https://www.microsoft.com/en-us/',
-            title: 'Microsoft',
-            src: '../images/logos/microsoft.png',
-            alt: 'Microsoft'
-          },
-          {
-            href: 'https://www.etsy.com/',
-            title: 'Etsy',
-            src: '../images/logos/etsy2.png',
-            alt: 'Etsy'
-          },
-          {
-            href: 'https://clarifai.com/',
-            title: 'Clarifai',
-            src: '../images/logos/clarifai.png',
-            alt: 'Clarifai'
-          },
-          {
-            href: 'https://www.younow.com/',
-            title: 'You Now',
-            src: '../images/logos/younow2.png',
-            alt: 'You Now'
-          },
-          {
-            href: 'https://www.dropbox.com/',
-            title: 'Dropbox',
-            src: '../images/logos/dropbox2.png',
-            alt: 'Dropbox'
-          },
-          {
-            href: 'https://www.digitalocean.com/',
-            title: 'Digital Ocean',
-            src: '../images/logos/digitalocean.png',
-            alt: 'Digital Ocean'
-          },
-          {
-            href: 'http://www.voxmedia.com/pages/about-vox-media',
-            title: 'Vox',
-            src: '../images/logos/vox.png',
-            alt: 'Vox'
-          },
+        //{
+        //    href: 'https://seatgeek.com',
+        //    title: 'SeatGeek',
+        //    src: '../images/logos/seatgeek.png',
+        //    alt: 'SeatGeek'
+        //  },
         ];
         $scope.socialMedia = [
         	{
@@ -120,7 +41,7 @@ angular.module('startupWeekApp')
         	var swSp2016 = data.data.filter(function(event) {
         		var now = moment();
         		var theEvent = moment(event.attributes.startDateTime);
-        		var springMonth = 10; //november month - index 0
+        		var springMonth = 3; //november month - index 0
                 var isPast = theEvent.isAfter(now) ? false: true;
         		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth) && !isPast);
         	});

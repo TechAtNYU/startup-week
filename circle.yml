@@ -30,3 +30,7 @@ deployment:
     branch: v2
     commands:
       - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/dist -c $CONTAINER
+  staging:
+    branch: dev
+    commands:
+      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/dist -c $STAGING_CONTAINER

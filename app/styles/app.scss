@@ -53,7 +53,7 @@
 .schedule {
     background-image: url(/images/rocketship-trajectory-b.png);
     background-repeat: no-repeat;
-    background-size: 400px;
+    background-size: 350px;
     background-position-x: 50%;
     background-position-y: -10px;
     margin-top: 0px;
@@ -239,7 +239,7 @@
     height: 42px;
     border: none;
     background: #ef4855;
-    top: 23px;
+    top: 13px;
     left: -4px;
     cursor: pointer;
     position: relative;
@@ -307,6 +307,7 @@ $c   : #fff;
 .arrow{
   width: $w;
   height: $h;
+  pointer-events:none;
   position: relative;
   display: inline-block;
   margin: 10px;

@@ -19,6 +19,18 @@ $big-space: 150px;
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
 /*$heading-font: "pier_sansregular", "Inconsolata", "Helvetica", sans-serif;*/
 $heading-font: "Rubik", "Helvetica", sans-serif;
 $body-font: "Rubik", "Helvetica", sans-serif;

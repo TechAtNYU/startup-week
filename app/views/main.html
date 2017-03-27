@@ -16,21 +16,21 @@
     <object type="image/png" data="/images/rocketship-trajectory-a.png" class="rocket size1"></object>
     <object type="image/png" style="height: 200px;
     position: absolute;
-    left: -68px;
-    top: 270px;" data="/images/planet.png" class=""></object>
+    left: -100px;
+    top: 270px; z-index: 2000" data="/images/planet.png" class=""></object>
 
     <object type="image/png" style="height: 120px;
     position: absolute;
     left: 250px;
-    top: 80px;" data="/images/star-1.png" class=""></object>
+    top: 80px; z-index: 2000" data="/images/star-1.png" class="mobile-hides"></object>
     <object type="image/png" style="height: 120px;
     position: absolute;
     right: 120px;
-    top: 250px;" data="/images/star-2.png" class=""></object>
+    top: 250px; z-index: 2000" data="/images/star-2.png" class="mobile-hides"></object>
     <object type="image/png" style="height: 120px;
     position: absolute;
     left: 20px;
-    top: 750px;" data="/images/star-3.png" class=""></object>
+    top: 750px; z-index: 2000" data="/images/star-3.png" class="mobile-hides"></object>
       <h1 id="title">startup week</h1>
       <!-- <div class="info">
         <p class="description">{{description}}</p>
@@ -41,7 +41,7 @@
       <object type="image/png" style="height: 400px;
     position: absolute;
     right: -230px;
-    top: 510px;" data="/images/cloud-1.png" class=""></object>
+    top: 510px; z-index: 2000" data="/images/cloud-1.png" class="mobile-hides"></object>
     </section>
     <section id="about" class="full-description">
       <!-- <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
@@ -50,11 +50,11 @@
       <object type="image/png" style="height: 400px;
     position: absolute;
     left: -300px;
-    top: 1150px;" data="/images/cloud-1.png" class=""></object>
+    top: 1150px; z-index: 2000" data="/images/cloud-1.png" class="mobile-hides"></object>
     <object type="image/png" style="height: 350px;
     position: absolute;
     right: -270px;
-    top: 1550px;" data="/images/cloud-2.png" class=""></object>
+    top: 1550px; z-index: 2000" data="/images/cloud-2.png" class="mobile-hides"></object>
       <div>
         <h3>Learning from the best and brightest in NYC tech.</h3>
         <p class="about">{{about}}</p>
@@ -171,15 +171,17 @@
 </footer>
 <style>
   .rocket {
-
+    z-index: 2000
   }
   .rocket.size1 {
-    height: 900px;
+    height: 800px;
+    margin-top: 50px;
   }
   .rocket.size2 {
     height: 200px;
-    position: relative;
-    left: 37%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .shape:nth-child(3n+1) {
     opacity: 0.8;

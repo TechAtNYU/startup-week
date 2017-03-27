@@ -2,7 +2,7 @@
 @media all and (max-width: 400px){
 	body, .page-wrap {
 		overflow-x: hidden;
-		width: 100%;
+		max-width: 100%;
 		padding: none;
 	}
 	h1 {
@@ -15,19 +15,46 @@
 	.fade {
 		opacity: 1;
 	}
+	.nav-right {
+		visibility: hidden;
+	}
+	.about {
+		width: 100%
+	}
 	footer {
 		width: 100%;
-		padding: none;
+		padding: 20px 0px;
+	}
+	.submit-button {
+		height: 45px;
+		top: 4px;
+		right: -15px;
+		position: absolute;
+	}
+	input[type="email"] {
+	    width: 100%;
+	}
+	form {
+		width: 100%;
+	}
+	.schedule {
+		background-image: none;
 	}
 }
 @media only screen and (max-width: 480px){
 	body, .page-wrap {
 		overflow-x: hidden;
-		width: 100%;
+		max-width: 100%;
 		padding: none;
 	}
 	h1 {
 		font-size: 5em;
+	}
+	.nav-right {
+		visibility: hidden;
+	}
+	.mobile-hides {
+		visibility: hidden;
 	}
 	.intro .info {
 		width: 90%;
@@ -36,8 +63,33 @@
 	.fade {
 		opacity: 1;
 	}
+	.about {
+		width: 100%
+	}
 	footer {
 		width: 100%;
-		padding: none;
+		padding: 20px 0px;
+	}
+	input[type="email"] {
+	    width: 100%;
+	}
+	form {
+		width: 100%;
+	}
+	.submit-button {
+		height: 45px;
+		top: 4px;
+		right: -15px;
+		position: absolute;
+	}
+	.schedule {
+		background-image: none;
+	}
+	.day {
+		width: 100%;
+		top: 40px;
+		&.right {
+			padding: 0px
+		}
 	}
 }

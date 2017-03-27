@@ -1,6 +1,7 @@
 @import "variables";
 .intro {
   margin-top: 50px;
+  margin-bottom: 80px;
 	height: 100vh;
 	display:flex;
     align-items: center;
@@ -13,6 +14,7 @@
         margin: 0px;
         text-align: center;
 		position: absolute;
+    left: 0px;
 	}
 	img {
 		position: absolute;

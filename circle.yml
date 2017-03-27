@@ -2,6 +2,7 @@ general:
   branches:
     only:
       - v2
+      - dev
 
 machine:
   timezone:

@@ -74,11 +74,14 @@
   /*top: 20px;*/
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  width: 900px;
 	// margin-top: 50px;
   &.right {
     padding-left:60%;
     width: 420px;
+    .events {
+      width: 70%;
+    }
   }
 }
 .fade  {
@@ -86,7 +89,7 @@
 }
 
 .events {
-  width: 50%;
+  width: 40%;
 }
 
 .nav-left {

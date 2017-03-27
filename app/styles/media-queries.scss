@@ -79,7 +79,7 @@
 	.submit-button {
 		height: 45px;
 		top: 4px;
-		right: -15px;
+		left: 92%;
 		position: absolute;
 	}
 	.schedule {
@@ -91,5 +91,16 @@
 		&.right {
 			padding: 0px
 		}
+	}
+	.events {
+		width: 100%;
+	}
+	.rocket1 {
+		top: 50px;
+		left: 4%;
+	}
+	.planet {
+		left: -150px;
+		top: 400px;
 	}
 }

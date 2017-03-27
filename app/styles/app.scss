@@ -10,7 +10,7 @@
 	h1 {
         font-weight: lighter;
 		width: 100%;
-		top: 40%;
+		top: 50%;
         margin: 0px;
         text-align: center;
 		position: absolute;
@@ -90,6 +90,7 @@
 }
 
 .nav-left {
+    padding-left: 13px;
   cursor: pointer;
   display: inline;
   a {
@@ -99,6 +100,7 @@
 }
 
 .nav-right {
+    padding-right: 13px;
   float: right;
   margin-right: 50px;
   display: inline;
@@ -176,7 +178,7 @@
   text-align: center;
   width: 100%;
   max-width: none;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 200;
 }
 /** in footer **/
@@ -208,15 +210,15 @@
 
 .about {
     font-weight: 400;
-    font-size: 1.3em;
-    text-align: center;
-    width: 900px;
+    font-size: 1.2em;
+    text-align: left;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .cheryl {
-  height: 40px;
+  height: 30px;
   top: 10px;
   position: relative;
   left: 20px;
@@ -331,4 +333,3 @@ $c   : #fff;
   &:before{ @include body(50%,30%,50% - 30%/2,0); }
   &:after { @include arrow($w/2,$h/2,0,50%,left); }
 }
-

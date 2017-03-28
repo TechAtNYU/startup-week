@@ -5,9 +5,9 @@
 .rocket1 {
   @extend .rockets;
   margin-top: 50px;
-  height: 650px;
+  height: 630px;
   position: absolute;
-  top: 100px;
+  top: 115px;
   left: 37%;
 }
 .rocket3 {
@@ -39,7 +39,7 @@
 /* STARS */
 
 .stars {
-  height: 90px;
+  height: 80px;
   position: absolute;
   z-index: 2000
 }

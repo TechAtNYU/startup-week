@@ -43,7 +43,7 @@
 // .logo {
 // 	 filter: invert(100%);
 // }
-.full-description, .supporters, .schedule {
+.full-description, .supporters {
 	margin: 35px;
 	margin-bottom: 100px;
 }
@@ -51,8 +51,10 @@
   margin-bottom: 60px;
 }
 .schedule {
+    margin: 35px;
     padding-top: 90px;
     margin-top: 0px;
+    margin-bottom: 50px;
 }
 #signup {
 	position: relative;

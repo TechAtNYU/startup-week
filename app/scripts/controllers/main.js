@@ -20,6 +20,24 @@ angular.module('startupWeekApp')
         //    src: '../images/logos/seatgeek.png',
         //    alt: 'SeatGeek'
         //  },
+          {
+            href: 'http://engineering.nyu.edu/business/future-labs/programs/data-future-lab',
+            title: 'Data Future Labs',
+            src: '../images/logos/futurelabs.png',
+            alt: 'Data Future Labs'
+          },
+          {
+            href: 'https://thinkrise.com/newyork.html',
+            title: 'Rise New York',
+            src: '../images/logos/rise.jpg',
+            alt: 'Rise New York'
+          },
+          {
+            href: 'https://www.purpose.com/',
+            title: 'Purpose',
+            src: '../images/logos/purpose.svg',
+            alt: 'Purpose'
+          }
         ];
         $scope.socialMedia = [
         	{

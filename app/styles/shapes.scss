@@ -67,9 +67,11 @@
 /* CLOUDS */
 
 .clouds {
-  height: 400px;
+  height: 200px;
   position: absolute;
-  z-index: 2000
+  z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
 }
 
 .cloud1 {
@@ -77,26 +79,16 @@
   position: relative;
   right: -47%;
   top: 230px;
-  z-index: 4000;
-  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
-  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
 }
 
 .cloud2 {
   @extend .clouds;
-  left: -300px;
-  top: 1150px;
-  z-index: 4000;
-  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
-  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  left: -175px;
+  top: 950px;
 }
 
 .cloud3 {
   @extend .clouds;
-  height: 350px;
-  right: -270px;
-  top: -1250px;
-  z-index: 4000;
-  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
-  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  right: -150px;
+  top: -1150px;
 }

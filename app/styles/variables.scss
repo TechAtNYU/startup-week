@@ -1,4 +1,6 @@
 $background-blue: #f2f2f2;
+$background: #2D243F;
+$tangerine: #ef4855;
 $salmon: #EBA444;
 $pink: #EBA444;
 $teal: #3885CA;
@@ -6,15 +8,16 @@ $peach: #EBA444;
 $light-blue: #0E1E39;
 $big-space: 150px;
 @font-face {
-    font-family: "pier_sansregular";
-    src: url("fonts/pier-regular-webfont.eot");
-    src: url("fonts/pier-regular-webfont.eot?#iefix") format("embedded-opentype"),
-	url("fonts/pier-regular-webfont.woff2") format("woff2"),
-	url("fonts/pier-regular-webfont.woff") format("woff"),
-	url("fonts/pier-regular-webfont.ttf") format("truetype"),
-	url("fonts/pier-regular-webfont.svg#pier_sansregular") format("svg");
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Light.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
-$heading-font: "pier_sansregular", "Inconsolata", "Helvetica", sans-serif;
-$body-font: "Inconsolata", sans-serif;
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+$heading-font: "Rubik", "Helvetica", sans-serif;
+$body-font: "Rubik", "Helvetica", sans-serif;

@@ -1,138 +1,89 @@
 <div class="page-wrap clearfix">
-    <section class="intro">
-      <canvas id="circles" width="600" height="600" drawing></canvas>
-      <h1 id="title">Startup Week</h1>
-      <a href="https://techatnyu.org/" target="_blank" id="tnyu-logo">
-        <img src="/images/techatnyu.png" alt="tech@nyu" class="logo"/>
-      </a>
-      <div class="info">
+    <header>
+      <section class="nav-left">
+        <a href="http://techatnyu.org">tech@nyu</a>
+      </section>
+      <section class="nav-right">
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#anchor1">about</a></li>
+          <li><a href="#signup">schedule</a></li>
+          <li><a href="#anchor2">supporters</a></li>
+        </ul>
+      </section>
+    </header>
+    <section id="home" class="intro">
+    <object type="image/png" data="/images/rocketship-trajectory-a.png" class="rocket1"></object>
+    <object type="image/png" data="/images/planet.png" class="planet"></object>
+
+    <object type="image/png" data="/images/star-1.png" class="mobile-hides star1"></object>
+    <object type="image/png" data="/images/star-2.png" class="mobile-hides star2"></object>
+    <object type="image/png" data="/images/star-3.png" class="mobile-hides star3"></object>
+      <h1 id="title">startup week</h1>
+      <!-- <div class="info">
         <p class="description">{{description}}</p>
         <ul>
             <li>Apr 10-15, 2017 | </li><li>New York City | </li><li><a href="https://balloon.io/tnyuresumes" target="_blank">Resume Drop</a></li><br>
         </ul>
-      </div>
+      </div> -->
+      <object type="image/png" data="/images/cloud-1.png" class="mobile-hides cloud1"></object>
     </section>
-    <section class="full-description">
-      <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
-        Shape <!-- fallback image in CSS -->
-      </object>
-      <h2> Get Excited. </h2>
-      <div class="right">
+    <section id="about" class="full-description">
+        <span class= "anchor1" id="anchor1"></span>
+      <div>
+        <h3>Learning from the best and brightest in NYC tech.</h3>
         <p class="about">{{about}}</p>
         <div id="signup">
-          <form action="//mailtrain.tnyu.org/subscription/Syi7grfYe" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-             <input type="email" value="" name="name" class="email signup__form" id="mce-EMAIL" placeholder="email address" required>
+          <form action="//mailtrain.tnyu.org/subscription/ryeVfPjte" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+             <input type="email" value="" name="email" class="email signup__form" id="mce-EMAIL" placeholder="email address" required>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;"><input type="text" name="b_260d258c262a03b1f8f599591_a7523c433b" tabindex="-1" value=""></div>
-              <div class="hvr-underline-from-center">
-                <input type="submit" class="hvr-outline-in" value="Subscribe" name="subscribe">
-              </div>
+              <button type="submit" class="submit-button">
+                <span class="arrow arrow-right"></span>
+              </button>
           </form>
         </div>
-        <div class="shapes">
-          <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
-              Shape <!-- fallback image in CSS -->
-          </object>
-          <object type="image/svg+xml" data="/images/green.svg" class="shape size1">
-              Shape <!-- fallback image in CSS -->
-          </object>
-        </div>
       </div>
+      <object type="image/png" data="/images/cloud-1.png" class="mobile-hides cloud2"></object>
     </section>
-    <object type="image/svg+xml" data="/images/salmon.svg" class="shape size3">
-        <!-- Shape fallback image in CSS -->
-    </object>
-    <section class="schedule">
-          <h2> Schedule </h2>
+    <section id="schedule" class="schedule">
           <div class="clear"></div>
-          <!-- <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
-          </object> -->
-          <section fade class="day fade" ng-repeat="(day, events) in days">
-            <h3>{{day}}</h3>
+          <section fade class="day fade" ng-class="{'right': $odd, 'first':$first}" ng-repeat="(day, events) in days">
+            <h4>{{day}}</h4>
             <ul class="events">
                 <li ng-repeat="event in events"><section class="event">
                     <ul>
-                       <li><h4><a href="{{event.url}}">{{event.title}}</a></h4></li>
+                       <li><span class="time">{{event.time}}</span> | <a ng-show="{{event.location}}" href="{{event.location.address}}">{{event.location.name}}</a><span ng-hide="{{event.location}}">TBD</span></li>
+                       <li><h5><a href="{{event.url}}">{{event.title}}</a></h5></li>
                        <li class="description"><p>{{event.description}}</p></li>
-                       <li>
-                          <ul class="speakers">
-                            Speaker(s):<li ng-repeat="speaker in event.speakers"><a href="{{speaker.twitter}}" target="_blank"> {{speaker.name}}</a>, <a href="{{speaker.currentEmployer.url}}" target="_blank">{{speaker.currentEmployer.name}}</a></li>
-                          </ul>
-                      </li>
-                       <li><span class="time">{{event.time}}</span> | <a href="{{event.location.address}}">{{event.location.name}}</a></li>
                     </ul>
                 </section></li>
             </ul>
           <div class="clear"></div>
         </section>
+        <div style="position: relative;">
+          <object type="image/png" data="/images/cloud-2.png" class="mobile-hides cloud3"></object>
+        </div>
     </section>
-    <!-- <div class="clear"></div>-->
 
-    <section class="supporters">
-        <object type="image/svg+xml" data="/images/salmon.svg" class="shape size2">
-        </object>
-        <object type="image/svg+xml" style="position:relative;top: 20px;" data="/images/green.svg" class="shape size3">
-              Shape <!-- fallback image in CSS -->
-        </object>
-      <h2>Our Supporters</h2>
+    <section id="supporters" class="supporters">
+        <span class= "anchor2" id="anchor2"></span>
+      <h2>Thank you to our sponsors and supporters:</h2>
       <div class="right">
-        <object type="image/svg+xml" data="/images/peach.svg" class="shape size3">
-            Shape <!-- fallback image in CSS -->
-        </object>
         <ul class="grid">
           <li ng-repeat="sponsor in prevSponsorsImg"><a class="sponsors" href="{{ sponsor.href }}" title="{{ sponsor.title }}"><img src="{{ sponsor.src }}" alt="{{ sponsor.alt }}"></a></li>
         </ul>
-        <object style="position:relative;right:40%" type="image/svg+xml" data="/images/peach.svg" class="shape size1">
+        <object type="image/png" data="/images/rocketship-trajectory-c.png" class="rocket3">
             Shape <!-- fallback image in CSS -->
         </object>
-        <p>If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
-        <div class="shapes">
-          <object type="image/svg+xml" data="/images/green.svg" class="shape size3">
-              Shape <!-- fallback image in CSS -->
-          </object>
-          <object type="image/svg+xml" data="/images/peach.svg" class="shape size1">
-              Shape <!-- fallback image in CSS -->
-          </object>
-        </div>
+        <p class="sponsor">If you want to sponsor, please email <a href="mailto:startupweek@techatnyu.org">startupweek@techatnyu.org</a> for the partner prospectus.</p>
       </div>
     </section>
     <div class="clear"></div>
 </div>
 <footer>
-  <p> In loving memory of <a href="https://twitter.com/grungerabbit">Cheryl Wu.</a></p>
+  <p> In memory of our dearly beloved <a href="https://twitter.com/grungerabbit">Cheryl Wu.</a> <img class="cheryl" src="/images/cheryl-icon.png" /></p>
   <ul class="social-media">
       <li ng-repeat="platform in socialMedia"><a href="{{ platform.href }}" title="{{ platform.title }}"><img src="{{ platform.src }}" alt="{{ platform.alt }}"></a></li>
   </ul>
 </footer>
-<style>
-  .shape:nth-child(3n+1) {
-    opacity: 0.8;
-  }
-  .shape.size1 {
-    width: 60px;
-  }
-  .shape.size2 {
-    width: 50px;
-  }
-  .shape.size3 {
-    width: 30px;
-  }
-  .shapes {
-    width: 120px;
-  }
-  .schedule > object, .right > .shapes {
-    position: relative;
-  }
-  .right > .shapes {
-    left: 80%;
-  }
-  .right > .shapes object:nth-child(odd) {
-      position: relative;
-      top: 10px;
-      left: 20px;
-  }
-  .schedule > object {
-     left: 60%;
-     top: 40px;
-  }
-</style>

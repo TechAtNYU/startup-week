@@ -2,11 +2,17 @@
 @media all and (max-width: 400px){
 	body, .page-wrap {
 		overflow-x: hidden;
-		width: 100%;
+		max-width: 100%;
 		padding: none;
 	}
 	h1 {
-		font-size: 5em;
+		font-size: 3em !important;
+	}
+	.nav-right {
+		visibility: hidden;
+	}
+	.mobile-hides {
+		visibility: hidden;
 	}
 	.intro .info {
 		width: 90%;
@@ -15,19 +21,69 @@
 	.fade {
 		opacity: 1;
 	}
+	.about {
+		width: 100%
+	}
 	footer {
 		width: 100%;
-		padding: none;
+		padding: 20px 0px;
+	}
+	input[type="email"] {
+	    width: 100%;
+	}
+	form {
+		width: 100%;
+	}
+	.submit-button {
+		height: 45px;
+		top: 4px;
+		left: 92%;
+		position: absolute;
+	}
+	.schedule {
+		background-image: none;
+	}
+	.day {
+		width: 100%;
+		top: 40px;
+		&.right {
+			padding: 0px
+		}
+	}
+	.events {
+		width: 100%;
+	}
+	.rocket1 {
+		top: 50px;
+		left: 4%;
+	}
+	.planet {
+		left: -150px;
+		top: 400px;
+	}
+}
+@media only screen and (max-width: 1200px){
+	.cloud2 {
+		visibility: hidden;
+	}
+	.cloud3 {
+		visibility: hidden;
 	}
 }
 @media only screen and (max-width: 480px){
 	body, .page-wrap {
 		overflow-x: hidden;
-		width: 100%;
+		max-width: 100%;
 		padding: none;
 	}
 	h1 {
-		font-size: 5em;
+		font-size: 3em !important;
+	}
+	.nav-right {
+		visibility: hidden;
+	}
+	.mobile-hides {
+		visibility: hidden;
 	}
 	.intro .info {
 		width: 90%;
@@ -36,8 +92,44 @@
 	.fade {
 		opacity: 1;
 	}
+	.about {
+		width: 100%
+	}
 	footer {
 		width: 100%;
-		padding: none;
+		padding: 20px 0px;
+	}
+	input[type="email"] {
+	    width: 100%;
+	}
+	form {
+		width: 100%;
+	}
+	.submit-button {
+		height: 45px;
+		top: 4px;
+		left: 92%;
+		position: absolute;
+	}
+	.schedule {
+		background-image: none;
+	}
+	.day {
+		width: 100%;
+		top: 40px;
+		&.right {
+			padding: 0px
+		}
+	}
+	.events {
+		width: 100%;
+	}
+	.rocket1 {
+		top: 50px;
+		left: 4%;
+	}
+	.planet {
+		left: -150px;
+		top: 400px;
 	}
 }

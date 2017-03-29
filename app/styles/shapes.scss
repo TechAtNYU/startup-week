@@ -1,0 +1,94 @@
+/* ROCKET IMAGE SET*/
+.rockets {
+  z-index: 2000
+}
+.rocket1 {
+  @extend .rockets;
+  margin-top: 50px;
+  height: 630px;
+  position: absolute;
+  top: 115px;
+  left: 37%;
+}
+.rocket3 {
+  @extend .rockets;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* middle rocket set is a background image*/
+.schedule {
+  background-image: url(/images/rocketship-trajectory-b.png);
+  background-repeat: no-repeat;
+  background-size: 245px;
+  background-position-x: 50%;
+  background-position-y: -10px;
+}
+
+/* THE PLANET */
+
+.planet {
+  height: 275px;
+  position: absolute;
+  left: -90px;
+  top: 125px; z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+}
+
+/* STARS */
+
+.stars {
+  height: 80px;
+  position: absolute;
+  z-index: 2000
+}
+
+.star1 {
+  @extend .stars;
+  left: 350px;
+  top: 120px;
+}
+
+.star2 {
+  @extend .stars;
+  right: 265px;
+  top: 225px;
+}
+
+.star3 {
+  @extend .stars;
+  left: 200px;
+  top: 575px;
+}
+
+/* CLOUDS */
+
+.clouds {
+  height: 200px;
+  position: absolute;
+  z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+}
+
+.cloud1 {
+  @extend .clouds;
+  position: relative;
+  right: -47%;
+  top: 230px;
+}
+
+.cloud2 {
+  @extend .clouds;
+  left: -175px;
+  top: 950px;
+}
+
+.cloud3 {
+  @extend .clouds;
+  right: -150px;
+  top: -1150px;
+}

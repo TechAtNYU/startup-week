@@ -12,7 +12,7 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
   overflow-x: hidden;
 }
 .page-wrap:after {
@@ -21,12 +21,14 @@ html, body {
 }
 body {
 	font-family: $body-font;
-	background: $background-blue;
-	color: black;
+	background: $background;
+	color: white;
+	overflow-x: hidden;
 }
 
 #title {
-	color:#2F3138;
+	color:white;
+	font-size: 125px;
 }
 ::-moz-selection {
 	background: $pink;
@@ -41,34 +43,30 @@ h1, h2, h3 {
 h1, h2, h3 {
 	font-family: $heading-font;
 	text-align: center;
-	font-weight: 400;
+	font-weight: lighter;
 }
 a:not(.sponsors) {
 	text-decoration: none;
 	color: inherit;
 	position: relative;
 }
-a:not(.sponsors):after{
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background-color: $salmon;
-  content: "";
-  transition: width 0.2s;
-}
-a:not(.sponsors):hover:after{
-  width: 100%;
-}
 h1 {
-	font-size: 7em;
+	font-size: 9em;
 	z-index: 100;
 }
 h2 {
-	font-size: 3em;
-	float: left;
+	font-size: 1.65em;
+    font-weight: 400;
+}
+h3 {
+	font-size: 1.65em;
+	padding-bottom: 30px;
+}
+h4 {
+	font-family: $heading-font;
+	text-align: left;
+	font-size: 1.7em;
+	font-weight: bold;
 }
 p {
 	font-size: 1.2em;
@@ -83,6 +81,12 @@ ul li {
 ul li, span {
 	font-size: 1em;
 }
+form {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 input, input:focus {
 	outline: none;
 	background: white;
@@ -95,16 +99,18 @@ input {
 	font-family: $body-font;
 }
 input[type="email"] {
-	width: 50%;
 	padding: 10px;
+    font-size: 14pt;
+    border: none;
+    width: 430px;
 }
 input[type="submit"] {
 	border: none;
-	background: transparent;
-	width: 80px;
-	padding: 5px;
-	margin: 5px;
-	color: black;
+    background: transparent;
+    width: 42px;
+    margin-top: 2px;
+    font-size: 2em;
+    color: white;
 }
 footer, .page-wrap:after {
   /* .push must be the same height as footer */
@@ -113,16 +119,30 @@ footer, .page-wrap:after {
 
 footer {
 	width:100%;
-	background: $teal;
+	background: $tangerine;
 	position: absolute;
 	text-align: center;
 	color:white;
 	p {
+		font-size: 1em;
 		width: 100%;
 		display: inline-block;
 		position: relative;
-		margin: 20px auto;
+		margin: 10px auto;
+		padding-top: 7px;
 	}
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    padding: 30px 20px 20px;
+    background-color: $background;
+	-webkit-box-shadow: 0px 1.5px 6px 0px rgba(0,0,0,0.42);
+-moz-box-shadow: 0px 1.5px 6px 0px rgba(0,0,0,0.42);
+box-shadow: 0px 1.5px 6px 0px rgba(0,0,0,0.42);
+    z-index: 3000;
 }
 canvas {
 	padding-left: 0;

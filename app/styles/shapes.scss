@@ -33,7 +33,9 @@
   height: 275px;
   position: absolute;
   left: -90px;
-  top: 125px; z-index: 2000
+  top: 125px; z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
 }
 
 /* STARS */
@@ -75,12 +77,18 @@
   position: relative;
   right: -47%;
   top: 250px;
+  z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
 }
 
 .cloud2 {
   @extend .clouds;
   left: -300px;
   top: 1150px;
+  z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
 }
 
 .cloud3 {
@@ -88,4 +96,7 @@
   height: 350px;
   right: -270px;
   top: -1250px;
+  z-index: 4000;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
+  filter:         drop-shadow(4px 4px 4px rgba(0,0,0,0.42));
 }

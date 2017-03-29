@@ -50,6 +50,10 @@
 .full-description {
   margin-bottom: 60px;
 }
+.full-description .anchor1 {
+    position: absolute;
+    top: 740px;
+}
 .schedule {
     margin: 35px;
     padding-top: 90px;
@@ -165,7 +169,10 @@
 		margin-top: 30px;
 	}
 }
-
+.supporters span {
+    position: absolute;
+    top: -130px;
+}
 .supporters .grid {
   margin-left: auto;
   margin-right: auto;

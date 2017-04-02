@@ -21,10 +21,10 @@ angular.module('startupWeekApp')
         //    alt: 'SeatGeek'
         //  },
           {
-            href: 'http://engineering.nyu.edu/business/future-labs/programs/data-future-lab',
-            title: 'Data Future Labs',
-            src: '../images/logos/futurelabs.png',
-            alt: 'Data Future Labs'
+            href: 'https://www.hioscar.com/',
+            title: 'Oscar',
+            src: '../images/logos/oscar.jpg',
+            alt: 'Oscar'
           },
           {
             href: 'https://thinkrise.com/newyork.html',
@@ -33,10 +33,34 @@ angular.module('startupWeekApp')
             alt: 'Rise New York'
           },
           {
+            href: 'http://engineering.nyu.edu/business/future-labs/programs/data-future-lab',
+            title: 'Data Future Labs',
+            src: '../images/logos/futurelabs.png',
+            alt: 'Data Future Labs'
+          },
+          {
             href: 'https://www.purpose.com/',
             title: 'Purpose',
             src: '../images/logos/purpose.svg',
             alt: 'Purpose'
+          },
+          {
+            href: 'https://www.linkedin.com/',
+            title: 'LinkedIn',
+            src: '../images/logos/linkedin.png',
+            alt: 'LinkedIn'
+          },
+          {
+            href: 'https://www.galvanize.com/',
+            title: 'Galvanize',
+            src: '../images/logos/galvanize.png',
+            alt: 'Galvanize'
+          },
+          {
+            href: 'https://www.weightwatchers.com/',
+            title: 'Weight Watchers',
+            src: '../images/logos/weightwatchers.png',
+            alt: 'Weight Watchers'
           }
         ];
         $scope.socialMedia = [

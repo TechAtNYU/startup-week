@@ -11,7 +11,7 @@ angular.module('startupWeekApp')
   .controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
 	$scope.about = 'Tech@NYU’s weeklong celebration of entrepreneurship, technology, and design is here, and our event lineup is better than ever! We have workshops, speakers, panels, and fantastic demos! Make sure to subscribe to our newsletter to get all the latest news and updates!';
-	var dow = ['Monday, April 10th', 'Tuesday, April 11th', 'Wednesday, April 12th', 'Thursday, April 13th', 'Friday, April 14th', 'Saturday, April 15th'];
+	var dow = ['Monday, November 13th', 'Tuesday, November 14th', 'Wednesday, November 15th', 'Thursday, November 16th', 'Friday, November 17th', 'Saturday, November 18th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
         //{
@@ -20,48 +20,6 @@ angular.module('startupWeekApp')
         //    src: '../images/logos/seatgeek.png',
         //    alt: 'SeatGeek'
         //  },
-          {
-            href: 'https://www.hioscar.com/',
-            title: 'Oscar',
-            src: '../images/logos/oscar.jpg',
-            alt: 'Oscar'
-          },
-          {
-            href: 'https://thinkrise.com/newyork.html',
-            title: 'Rise New York',
-            src: '../images/logos/rise.jpg',
-            alt: 'Rise New York'
-          },
-          {
-            href: 'http://engineering.nyu.edu/business/future-labs/programs/data-future-lab',
-            title: 'Data Future Labs',
-            src: '../images/logos/futurelabs.png',
-            alt: 'Data Future Labs'
-          },
-          {
-            href: 'https://www.purpose.com/',
-            title: 'Purpose',
-            src: '../images/logos/purpose.svg',
-            alt: 'Purpose'
-          },
-          {
-            href: 'https://www.linkedin.com/',
-            title: 'LinkedIn',
-            src: '../images/logos/linkedin.png',
-            alt: 'LinkedIn'
-          },
-          {
-            href: 'https://www.galvanize.com/',
-            title: 'Galvanize',
-            src: '../images/logos/galvanize.png',
-            alt: 'Galvanize'
-          },
-          {
-            href: 'https://www.weightwatchers.com/',
-            title: 'Weight Watchers',
-            src: '../images/logos/weightwatchers.png',
-            alt: 'Weight Watchers'
-          }
         ];
         $scope.socialMedia = [
         	{
@@ -80,10 +38,10 @@ angular.module('startupWeekApp')
 	Restangular.one('events?filter[simple][teams]=5440609d6b0287336dfc51cf&sort=startDateTime&include=presenters,venue')
  	.get()
 		.then(function(data) {
-        	var swSp2016 = data.data.filter(function(event) {
+        	var swFl2017 = data.data.filter(function(event) {
         		var now = moment();
         		var theEvent = moment(event.attributes.startDateTime);
-        		var springMonth = 3; //november month - index 0
+        		var springMonth = 10; //november month - index 0
                 var isPast = theEvent.isAfter(now) ? false: true;
         		return ((theEvent.year() === now.year()) && (theEvent.month() === springMonth) && !isPast);
         	});
@@ -137,8 +95,8 @@ angular.module('startupWeekApp')
                     };
                 }
             }
-        	for (var i = 0; i < swSp2016.length; i++) {
-                var current = swSp2016[i];
+        	for (var i = 0; i < swFl2017.length; i++) {
+                var current = swFl2017[i];
         		var timing = moment(current.attributes.startDateTime);
         		var details = current.attributes;
     			var title = details.title;

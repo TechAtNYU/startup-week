@@ -14,12 +14,60 @@ angular.module('startupWeekApp')
 	var dow = ['Monday, November 13th', 'Tuesday, November 14th', 'Wednesday, November 15th', 'Thursday, November 16th', 'Friday, November 17th', 'Saturday, November 18th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
-        //{
-        //    href: 'https://seatgeek.com',
-        //    title: 'SeatGeek',
-        //    src: '../images/logos/seatgeek.png',
-        //    alt: 'SeatGeek'
-        //  },
+        {
+            href: 'https://hioscar.com',
+            title: 'Oscar',
+            src: '../images/logos/oscar.jpg',
+            alt: 'Oscar'
+        },
+        {
+            href: 'http://roughdraft.vc/',
+            title: 'Rough Draft Ventures',
+            src: '../images/logos/rdv.png',
+            alt: 'Rough Draft Ventures'
+        },
+        {
+           href: 'https://giphy.com/',
+           title: 'Giphy',
+           src: '../images/logos/giphy.png',
+           alt: 'Giphy'
+        },
+        {
+           href: 'https://www.codecademy.com',
+           title: 'Codecademy',
+           src: '../images/logos/codecademy.png',
+           alt: 'Codecademy'
+        },
+        {
+           href: 'https://dev.to/',
+           title: 'The Practical Developer',
+           src: '../images/logos/dev.jpg',
+           alt: 'The Practical Developer'
+        },
+        {
+           href: 'https://www.ideo.com/',
+           title: 'IDEO',
+           src: '../images/logos/IDEO.png',
+           alt: 'IDEO'
+        },
+        {
+           href: 'http://www.newinc.org/',
+           title: 'New Inc',
+           src: '../images/logos/newinc.png',
+           alt: 'New Inc'
+        },
+        {
+           href: 'https://www.microsoft.com/',
+           title: 'Microsoft',
+           src: '../images/logos/microsoft.png',
+           alt: 'Microsoft'
+        },
+        {
+           href: 'http://generalcatalyst.com/',
+           title: 'General Catalyst',
+           src: '../images/logos/generalcatalyst.png',
+           alt: 'General Catalyst'
+        }
         ];
         $scope.socialMedia = [
         	{

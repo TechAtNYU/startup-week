@@ -1,7 +1,6 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 845px) {
 	.supporters .grid img {
-		padding: 2px;
-		max-width: 150px;
+		padding: 10px;
 	}
 	footer {
 		padding: 20px 10px;
@@ -11,8 +10,19 @@
 		height: 110vmax;
 	}
 	.schedule {
-		//background-image: none;
-		margin-left: 30%;
+		background-image: none;
+		margin-left: 5%;
+	}
+	.day {
+		width: 100%;
+		top: 40px;
+		&.right {
+			padding-left: 0px;
+		}
+		margin-left: 0%;
+	}
+	.events {
+		width: 100%;
 	}
 }
 @media all and (max-width: 400px){
@@ -60,18 +70,18 @@
 		position: absolute;
 	}
 	.supporters .grid img {
-		padding: 2px;
-		max-width: 48%;
+		padding: 1%;
+		max-width: 30%;
 	}
 	.schedule {
-		//background-image: none;
-		margin-left: 30%;
+		background-image: none;
+		margin-left:5%;
 	}
 	.day {
 		width: 100%;
 		top: 40px;
 		&.right {
-			padding: 0px
+			padding: 0px;
 		}
 	}
 	.events {
@@ -136,7 +146,7 @@
 		position: absolute;
 	}
 	.schedule {
-		//background-image: none;
+		background-image: none;
 	}
 	.day {
 		width: 100%;

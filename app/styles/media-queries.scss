@@ -1,4 +1,30 @@
-
+@media screen and (max-width: 845px) {
+	.supporters .grid img {
+		padding: 10px;
+	}
+	footer {
+		padding: 20px 10px;
+		overflow-x: hidden;
+	}
+	.intro {
+		height: 110vmax;
+	}
+	.schedule {
+		background-image: none;
+		margin-left: 5%;
+	}
+	.day {
+		width: 100%;
+		top: 40px;
+		&.right {
+			padding-left: 0px;
+		}
+		margin-left: 0%;
+	}
+	.events {
+		width: 100%;
+	}
+}
 @media all and (max-width: 400px){
 	body, .page-wrap {
 		overflow-x: hidden;
@@ -13,6 +39,9 @@
 	}
 	.mobile-hides {
 		visibility: hidden;
+	}
+	.intro {
+		height: 110vmax;
 	}
 	.intro .info {
 		width: 90%;
@@ -40,14 +69,19 @@
 		left: 92%;
 		position: absolute;
 	}
+	.supporters .grid img {
+		padding: 1%;
+		max-width: 30%;
+	}
 	.schedule {
 		background-image: none;
+		margin-left:5%;
 	}
 	.day {
 		width: 100%;
 		top: 40px;
 		&.right {
-			padding: 0px
+			padding: 0px;
 		}
 	}
 	.events {
@@ -128,8 +162,19 @@
 		top: 50px;
 		left: 4%;
 	}
+	.star1 {
+		top: 120px;
+		left: 100px;
+	}
 	.planet {
 		left: -150px;
 		top: 400px;
+	}
+}
+@media only screen and (max-width: 320px){
+	footer {
+		width: 100%;
+		padding: 20px 10px;
+		overflow-x: hidden;;
 	}
 }

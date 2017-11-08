@@ -45,6 +45,18 @@ angular.module('startupWeekApp')
            alt: 'The Practical Developer'
         },
         {
+          href: 'https://www.meetup.com/',
+          title: 'Meetup',
+          src: '../images/logos/meetup.png',
+          alt: 'Meetup'
+        },
+        {
+           href: 'http://generalcatalyst.com/',
+           title: 'General Catalyst',
+           src: '../images/logos/generalcatalyst.png',
+           alt: 'General Catalyst'
+        },
+        {
            href: 'https://www.ideo.com/',
            title: 'IDEO',
            src: '../images/logos/IDEO.png',
@@ -61,12 +73,6 @@ angular.module('startupWeekApp')
            title: 'Microsoft',
            src: '../images/logos/microsoft.png',
            alt: 'Microsoft'
-        },
-        {
-           href: 'http://generalcatalyst.com/',
-           title: 'General Catalyst',
-           src: '../images/logos/generalcatalyst.png',
-           alt: 'General Catalyst'
         }
         ];
         $scope.socialMedia = [

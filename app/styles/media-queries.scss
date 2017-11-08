@@ -1,6 +1,10 @@
 @media screen and (max-width: 845px) {
-	.supporters .grid img {
-		padding: 10px;
+	.supporters .grid {
+		max-width: 80%;
+		img {
+			max-width: 40%;
+			padding: 10px;
+		}
 	}
 	footer {
 		padding: 20px 10px;
@@ -69,9 +73,12 @@
 		left: 92%;
 		position: absolute;
 	}
-	.supporters .grid img {
-		padding: 1%;
-		max-width: 30%;
+	.supporters .grid{
+		max-width: 90%;
+		img {
+			padding: 1%;
+			max-width: 45%;
+		}
 	}
 	.schedule {
 		background-image: none;

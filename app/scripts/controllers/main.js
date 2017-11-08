@@ -10,7 +10,7 @@
 angular.module('startupWeekApp')
   .controller('MainCtrl', function ($scope, Restangular, moment) {
 	$scope.description = 'A week of hacking, designing, networking, and learning with the best and brightest in NYC tech.';
-	$scope.about = 'Tech@NYU’s weeklong celebration of entrepreneurship, technology, and design is here, and our event lineup is better than ever! We have workshops, speakers, panels, and fantastic demos! Make sure to subscribe to our newsletter to get all the latest news and updates!';
+	$scope.about = 'Tech@NYU’s weeklong conference celebrating entrepreneurship, tech, and design is here!  Startup Week is dedicated to introducing students to the NYC tech scene. We host a series of talks and workshops that span a wide range of topics and are led by the best and brightest in the industry. Make sure to subscribe to our newsletter to get all the latest news and updates.';
 	var dow = ['Monday, November 13th', 'Tuesday, November 14th', 'Wednesday, November 15th', 'Thursday, November 16th', 'Friday, November 17th', 'Saturday, November 18th'];
 	$scope.days = {};
 	$scope.prevSponsorsImg = [
